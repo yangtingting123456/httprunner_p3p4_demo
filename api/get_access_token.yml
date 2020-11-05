@@ -1,0 +1,12 @@
+# 获取token接口定义
+name: get access_token api
+base_url: ${ENV(BASE_URL)}
+output: base_url
+request:
+  method: GET
+  url: "/member/login"
+  json:
+    name: "admin"
+    password: "e10adc3949ba59abbe56e057f20f883e"
+validate:  # 一般这里做非业务的断言 简单
+  - eq: ['status_code',200]
