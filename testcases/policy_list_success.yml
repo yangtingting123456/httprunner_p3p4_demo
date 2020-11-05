@@ -1,0 +1,17 @@
+#httprunner get请求
+- config:
+    name: "获取政策列表"
+    base_url: ${ENV(BASE_URL)}
+
+# 测试步骤
+- test:
+    name: "成功获取政策列表"
+    request:
+      url: "/policy/list"
+      method: GET
+      params:       #get请求入参
+        pageNum: 1
+        pageSize: 10
+
+    validate:
+      - eq: ["status_code",200]
