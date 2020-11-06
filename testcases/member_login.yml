@@ -2,11 +2,8 @@
 - config:
     name: "登录"
     base_url: ${ENV(BASE_URL)}
-
     output:
       - access_token
-
-
 # 测试步骤
 - test:
     name: "成功登录"
@@ -20,6 +17,5 @@
         password: "e10adc3949ba59abbe56e057f20f883e"
     extract:
       - access_token: content.data.token
-
     validate:
       - eq: ["status_code",200]
