@@ -1,10 +1,17 @@
 - config:
     name: "验证百度搜索是否正确"
     base_url: "https://www.baidu.com"
+    setup_hooks:
+      - ${setup(验证百度搜索执行开始)}
+    teardown_hooks:
+      - ${teardown(验证百度搜索执行结束)}
     variables:
       - search_word: ${get_keyword()}   #将debugtalk 里面定义的get_keyword函数定义为全局变量
 - test:
     name: "百度搜索请求"
+#    skip: 该测试步骤不执行
+#    skipIf: 1==1
+    skipUnless: False
     request:
       url: "/s"
       method: GET

@@ -14,4 +14,8 @@ def get_keyword():
     for i in range(0,len(keys)-1):
         return keys[i]
 
+def setup(case_name):
+    print("测试用例 %s 初始化工作"%case_name)
 
+def teardown(case_name):
+    print("测试用例 %s 执行完毕，进行清理操作"%case_name)

@@ -1,21 +1,8 @@
 #httprunner post请求，获取响应中的token
 - config:
-    name: "登录"
-    base_url: ${ENV(BASE_URL)}
-    output:
-      - access_token
-# 测试步骤
+    name: "验证获取token接口"
 - test:
-    name: "成功登录"
-    request:
-      url: "/member/login"
-      method: "POST"
-      headers:
-        Content-Type: "application/json"
-      json:
-        name: "admin"
-        password: "e10adc3949ba59abbe56e057f20f883e"
-    extract:
-      - access_token: content.data.token
+    name: "执行token接口"
+    api: api/get_access_token.yml
     validate:
       - eq: ["status_code",200]
