@@ -43,8 +43,12 @@ def get_random_string(base_str,str_len,count=3):
 #生成随机手机号
 def get_random_phone(*mobile_num,count=3):
     phone_list = []
-
-    return False
+    for i in range(0,count):
+        str_start = random.choice(mobile_num)
+        str_end = ''.join(random.sample('0123456789',8))
+        str_phone = str(str_start) + str_end
+        phone_list.append(str_phone)
+    return phone_list
 
 if __name__ == '__main__':
-    print(get_random_string('1234567890!@#$%^&*)',10))
+    print(get_random_phone('155',count=6))
