@@ -25,9 +25,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4a831319-a7d4-4d06-94ae-160a84d32ca4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/data/test_data.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/debugtalk.py" beforeDir="false" afterPath="$PROJECT_DIR$/debugtalk.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testsuites/test_baidu4.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -178,7 +176,7 @@
       <workItem from="1604885958616" duration="114000" />
       <workItem from="1604889342855" duration="22593000" />
       <workItem from="1605145496168" duration="6579000" />
-      <workItem from="1605152567472" duration="33087000" />
+      <workItem from="1605152567472" duration="33410000" />
     </task>
     <task id="LOCAL-00001" summary="aa">
       <created>1604479417441</created>
@@ -243,7 +241,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605259529255</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="httprunner csv文件参数化">
+      <created>1605260910426</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1605260910426</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -273,7 +278,8 @@
     <MESSAGE value="httprunner 分层" />
     <MESSAGE value="httprunner 接口测试参数01" />
     <MESSAGE value="httprunner 接口测试代码提交2" />
-    <option name="LAST_COMMIT_MESSAGE" value="httprunner 接口测试代码提交2" />
+    <MESSAGE value="httprunner csv文件参数化" />
+    <option name="LAST_COMMIT_MESSAGE" value="httprunner csv文件参数化" />
   </component>
   <component name="WindowStateProjectService">
     <state x="674" y="113" key="#Project_Structure" timestamp="1604888221283">
@@ -288,38 +294,38 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1021" y="321" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1605152337026" />
-    <state x="839" y="107" key="CommitChangelistDialog2" timestamp="1605259501447">
+    <state x="839" y="107" key="CommitChangelistDialog2" timestamp="1605260908003">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="839" y="107" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1605259501447" />
+    <state x="839" y="107" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1605260908003" />
     <state x="1175" y="267" key="FileChooserDialogImpl" timestamp="1604455621408">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1175" y="267" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1604455621408" />
-    <state width="949" height="279" key="GridCell.Tab.0.bottom" timestamp="1605260554824">
+    <state width="949" height="361" key="GridCell.Tab.0.bottom" timestamp="1605260918244">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="949" height="279" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1605260554824" />
-    <state width="949" height="279" key="GridCell.Tab.0.center" timestamp="1605260554821">
+    <state width="949" height="361" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1605260918244" />
+    <state width="949" height="361" key="GridCell.Tab.0.center" timestamp="1605260918243">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="949" height="279" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1605260554821" />
-    <state width="949" height="279" key="GridCell.Tab.0.left" timestamp="1605260554819">
+    <state width="949" height="361" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1605260918243" />
+    <state width="949" height="361" key="GridCell.Tab.0.left" timestamp="1605260918243">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="949" height="279" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1605260554819" />
-    <state width="949" height="279" key="GridCell.Tab.0.right" timestamp="1605260554822">
+    <state width="949" height="361" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1605260918243" />
+    <state width="949" height="361" key="GridCell.Tab.0.right" timestamp="1605260918243">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="949" height="279" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1605260554822" />
+    <state width="949" height="361" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1605260918243" />
     <state x="922" y="167" key="SettingsEditor" timestamp="1605259569412">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="922" y="167" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1605259569412" />
-    <state x="982" y="246" key="Vcs.Push.Dialog.v2" timestamp="1605259583473">
+    <state x="982" y="246" key="Vcs.Push.Dialog.v2" timestamp="1605260916259">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="982" y="246" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1605259583473" />
+    <state x="982" y="246" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1605260916259" />
     <state x="1029" y="261" key="VcsDiffUtil.ChangesDialog" timestamp="1604483406822">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
