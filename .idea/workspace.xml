@@ -25,28 +25,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4a831319-a7d4-4d06-94ae-160a84d32ca4" name="Default Changelist" comment="httprunner 接口测试代码提交2">
-      <change afterPath="$PROJECT_DIR$/api/Random_Demo.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/get_baidu_content.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/get_policy_list.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testcases/baidu_search_keys.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testcases/baidu_search_keys02.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testcases/baidu_search_keys03.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testcases/policy_list.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testsuites/test_baidu.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testsuites/test_baidu2.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testsuites/test_baidu3.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testsuites/test_policy_list_demo.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httprunner_demo.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/httprunner_demo.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/get_access_token.yml" beforeDir="false" afterPath="$PROJECT_DIR$/api/get_access_token.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/login_success.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/login_success.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/debugtalk.py" beforeDir="false" afterPath="$PROJECT_DIR$/debugtalk.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testcases/baidu_search.yml" beforeDir="false" afterPath="$PROJECT_DIR$/testcases/baidu_search.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testcases/member_login.yml" beforeDir="false" afterPath="$PROJECT_DIR$/testcases/member_login.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testcases/member_updatepassword_success.yml" beforeDir="false" afterPath="$PROJECT_DIR$/testcases/member_updatepassword_success.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testcases/policy_list_success.yml" beforeDir="false" afterPath="$PROJECT_DIR$/testcases/policy_list_success.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testsuites/test_suits_demo.yml" beforeDir="false" afterPath="$PROJECT_DIR$/testsuites/test_suits_demo.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../interfac_request/homework/2020-10-21.rar" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -198,7 +176,7 @@
       <workItem from="1604885958616" duration="114000" />
       <workItem from="1604889342855" duration="22593000" />
       <workItem from="1605145496168" duration="6579000" />
-      <workItem from="1605152567472" duration="31290000" />
+      <workItem from="1605152567472" duration="31600000" />
     </task>
     <task id="LOCAL-00001" summary="aa">
       <created>1604479417441</created>
@@ -249,7 +227,14 @@
       <option name="project" value="LOCAL" />
       <updated>1604915582812</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="httprunner 接口测试参数01">
+      <created>1605259228156</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1605259228156</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -278,7 +263,8 @@
     <MESSAGE value="httprunner 接口测试代码提交2" />
     <MESSAGE value="httprunner 接口测试函数封装的使用" />
     <MESSAGE value="httprunner 分层" />
-    <option name="LAST_COMMIT_MESSAGE" value="httprunner 分层" />
+    <MESSAGE value="httprunner 接口测试参数01" />
+    <option name="LAST_COMMIT_MESSAGE" value="httprunner 接口测试参数01" />
   </component>
   <component name="WindowStateProjectService">
     <state x="674" y="113" key="#Project_Structure" timestamp="1604888221283">
@@ -293,38 +279,38 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1021" y="321" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1605152337026" />
-    <state x="839" y="107" key="CommitChangelistDialog2" timestamp="1604915561940">
+    <state x="839" y="107" key="CommitChangelistDialog2" timestamp="1605259222111">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="839" y="107" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1604915561940" />
+    <state x="839" y="107" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1605259222111" />
     <state x="1175" y="267" key="FileChooserDialogImpl" timestamp="1604455621408">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1175" y="267" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1604455621408" />
-    <state width="949" height="279" key="GridCell.Tab.0.bottom" timestamp="1605258925234">
+    <state width="949" height="279" key="GridCell.Tab.0.bottom" timestamp="1605259172741">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="949" height="279" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1605258925234" />
-    <state width="949" height="279" key="GridCell.Tab.0.center" timestamp="1605258925234">
+    <state width="949" height="279" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1605259172741" />
+    <state width="949" height="279" key="GridCell.Tab.0.center" timestamp="1605259172739">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="949" height="279" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1605258925234" />
-    <state width="949" height="279" key="GridCell.Tab.0.left" timestamp="1605258925233">
+    <state width="949" height="279" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1605259172739" />
+    <state width="949" height="279" key="GridCell.Tab.0.left" timestamp="1605259172739">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="949" height="279" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1605258925233" />
-    <state width="949" height="279" key="GridCell.Tab.0.right" timestamp="1605258925234">
+    <state width="949" height="279" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1605259172739" />
+    <state width="949" height="279" key="GridCell.Tab.0.right" timestamp="1605259172740">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="949" height="279" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1605258925234" />
+    <state width="949" height="279" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1605259172740" />
     <state x="922" y="167" key="SettingsEditor" timestamp="1605152856575">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="922" y="167" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1605152856575" />
-    <state x="982" y="246" key="Vcs.Push.Dialog.v2" timestamp="1604915587979">
+    <state x="982" y="246" key="Vcs.Push.Dialog.v2" timestamp="1605259242483">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="982" y="246" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1604915587979" />
+    <state x="982" y="246" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1605259242483" />
     <state x="1029" y="261" key="VcsDiffUtil.ChangesDialog" timestamp="1604483406822">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -356,6 +342,6 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/httprunner_demo$debugtalk.coverage" NAME="debugtalk Coverage Results" MODIFIED="1605173154880" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/httprunner_demo$Random_Demo.coverage" NAME="Random_Demo Coverage Results" MODIFIED="1605258925202" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/api" />
+    <SUITE FILE_PATH="coverage/httprunner_demo$Random_Demo.coverage" NAME="Random_Demo Coverage Results" MODIFIED="1605259172720" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/api" />
   </component>
 </project>
