@@ -3,5 +3,3 @@ config:
 testcases:
   member login case:
     testcase: testcases/member_login.yml
-    variables:
-      username: admin

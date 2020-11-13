@@ -1,12 +1,14 @@
 - config:
     name: "验证百度搜索是否正确"
     base_url: "https://www.baidu.com"
+    output: $result
     setup_hooks:
       - ${setup(验证百度搜索执行开始)}
     teardown_hooks:
       - ${teardown(验证百度搜索执行结束)}
     variables:
-      - search_word: ${get_keyword()}   #将debugtalk 里面定义的get_keyword函数定义为全局变量
+      - search_word: $search_word  #将testsuites 里面定义的search_word变量定义为全局变量
+      - result:  $result
 - test:
     name: "百度搜索请求"
 #    skip: 该测试步骤不执行
@@ -23,9 +25,8 @@
         Accept-Encoding: "gzip, deflate, br"
         Accept-Language: "zh-CN,zh;q=0.9"
 
-
       params:
-        wd: $search_word    #引用全局变量
+        search_word: $search_word    #引用全局变量
         ie: utf-8
     validate:
       - eq: ["status_code",200]

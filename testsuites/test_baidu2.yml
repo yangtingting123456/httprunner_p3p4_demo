@@ -1,0 +1,11 @@
+config:
+  name: baidu apitest
+testcases:
+  member login case:
+    testcase: testcases/baidu_search_keys02.yml
+    parameters:
+      search_word-result: [
+        ['request','request_百度搜索'],
+        ['httprunner','httprunner_百度搜索'],
+        ['pytest','pytest_百度搜索']
+      ]

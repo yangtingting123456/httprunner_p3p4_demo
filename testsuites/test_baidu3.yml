@@ -1,0 +1,7 @@
+config:
+  name: baidu apitest
+testcases:
+  member login case:
+    testcase: testcases/baidu_search_keys03.yml
+    parameters:
+      search_word: ${get_param_01()}

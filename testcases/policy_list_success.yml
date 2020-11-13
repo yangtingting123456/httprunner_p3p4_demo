@@ -2,6 +2,10 @@
 - config:
     name: "获取政策列表"
     base_url: ${ENV(BASE_URL)}
+    setup_hooks:
+      - ${setup(验证百度搜索执行开始)}
+    teardown_hooks:
+      - ${teardown(验证百度搜索执行结束)}
 
 # 测试步骤
 - test:

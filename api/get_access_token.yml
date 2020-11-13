@@ -1,5 +1,5 @@
 # 获取token接口定义
-name: get access_token api
+name: get access token api
 base_url: ${ENV(BASE_URL)}
 output: base_url,access_token
 request:

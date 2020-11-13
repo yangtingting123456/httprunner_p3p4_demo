@@ -13,9 +13,38 @@ def get_keyword():
     keys = [' request','httprunner','ui',12306]
     for i in range(0,len(keys)-1):
         return keys[i]
-
+#执行测试用例之前的工作
 def setup(case_name):
     print("测试用例 %s 初始化工作"%case_name)
-
+#执行测试用例之后的工作
 def teardown(case_name):
     print("测试用例 %s 执行完毕，进行清理操作"%case_name)
+
+#调用 debugtalk.py 中自定义的函数生成参数列表
+def get_param_01():
+    return ['httprunner','12306','火车票']
+
+#生成随机数字
+def get_random_param(min,max,count=3):
+    random_list = []
+    for i in range(count):
+        random_list.append(random.randint(min,max))
+    return random_list
+#生成随机字符串
+def get_random_string(base_str,str_len,count=3):
+    random_list = []
+    for i in  range(count):
+        str = ''
+        for j in range(0,str_len):
+            str = str +base_str[random.randint(0,len(base_str)-1)]
+        random_list.append(str)
+
+    return random_list
+#生成随机手机号
+def get_random_phone(*mobile_num,count=3):
+    phone_list = []
+
+    return False
+
+if __name__ == '__main__':
+    print(get_random_string('1234567890!@#$%^&*)',10))

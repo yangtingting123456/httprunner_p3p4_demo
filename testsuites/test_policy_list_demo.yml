@@ -1,0 +1,7 @@
+config:
+  name: test_suite
+testcases:
+  member login case:
+    testcase: testcases/policy_list.yml
+    variables:
+      search_word: "httprunner"

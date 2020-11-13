@@ -1,5 +1,4 @@
 import requests
-
 def get_token():
     host ='http://dev.commerce.juneyaokc.com:8081/member/login'
     params_data = {

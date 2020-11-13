@@ -1,0 +1,12 @@
+# 获取政策列表
+name: get policy list
+base_url: ${ENV(BASE_URL)}
+
+request:
+  method: POST
+  url: "/policy/list"
+  params:
+    pageNum: 1
+    pageSize: 10
+validate:  # 一般这里做非业务的断言 简单
+  - eq: ['status_code',200]

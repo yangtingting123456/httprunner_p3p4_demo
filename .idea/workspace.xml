@@ -25,16 +25,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4a831319-a7d4-4d06-94ae-160a84d32ca4" name="Default Changelist" comment="httprunner 接口测试代码提交2">
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testsuites/test_suits_demo.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/Random_Demo.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/get_baidu_content.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/get_policy_list.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testcases/baidu_search_keys.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testcases/baidu_search_keys02.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testcases/baidu_search_keys03.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testcases/policy_list.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testsuites/test_baidu.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testsuites/test_baidu2.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testsuites/test_baidu3.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testsuites/test_policy_list_demo.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httprunner_demo.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/httprunner_demo.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/get_access_token.yml" beforeDir="false" afterPath="$PROJECT_DIR$/api/get_access_token.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/login_success.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/login_success.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/debugtalk.py" beforeDir="false" afterPath="$PROJECT_DIR$/debugtalk.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reports/20201106T083156.949295.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/testcases/baidu_search.yml" beforeDir="false" afterPath="$PROJECT_DIR$/testcases/baidu_search.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/testcases/member_login.yml" beforeDir="false" afterPath="$PROJECT_DIR$/testcases/member_login.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testcases/member_updatepassword_success.yml" beforeDir="false" afterPath="$PROJECT_DIR$/testcases/member_updatepassword_success.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testcases/policy_list_success.yml" beforeDir="false" afterPath="$PROJECT_DIR$/testcases/policy_list_success.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testsuites/test_suits_demo.yml" beforeDir="false" afterPath="$PROJECT_DIR$/testsuites/test_suits_demo.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../interfac_request/homework/2020-10-21.rar" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -79,20 +91,45 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/testsuites" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\pythonwokebook\python-unittest-requests-htmlrunner\httprunner_demo\testsuites" />
+      <recent name="E:\pythonwokebook\python-unittest-requests-htmlrunner\httprunner_demo\testcases" />
+      <recent name="E:\pythonwokebook\python-unittest-requests-htmlrunner\httprunner_demo\api" />
       <recent name="E:\pythonwokebook\python-unittest-requests-htmlrunner\httprunner_demo" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.debugtalk">
+  <component name="RunManager" selected="Python.Random_Demo">
+    <configuration name="Random_Demo" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="httprunner_demo" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/api" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/api/Random_Demo.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="debugtalk" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="httprunner_demo" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -137,6 +174,12 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.Random_Demo" />
+        <item itemvalue="Python.debugtalk" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
@@ -153,7 +196,9 @@
       <workItem from="1604472153997" duration="53973000" />
       <workItem from="1604885843662" duration="12000" />
       <workItem from="1604885958616" duration="114000" />
-      <workItem from="1604889342855" duration="18530000" />
+      <workItem from="1604889342855" duration="22593000" />
+      <workItem from="1605145496168" duration="6579000" />
+      <workItem from="1605152567472" duration="31290000" />
     </task>
     <task id="LOCAL-00001" summary="aa">
       <created>1604479417441</created>
@@ -197,13 +242,21 @@
       <option name="project" value="LOCAL" />
       <updated>1604651983902</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="httprunner 分层">
+      <created>1604915582812</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1604915582812</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.yml" />
     <option featureType="com.intellij.fileTypeFactory" implementationName=".env" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -224,7 +277,8 @@
     <MESSAGE value="httprunner 接口测试代码提交" />
     <MESSAGE value="httprunner 接口测试代码提交2" />
     <MESSAGE value="httprunner 接口测试函数封装的使用" />
-    <option name="LAST_COMMIT_MESSAGE" value="httprunner 接口测试函数封装的使用" />
+    <MESSAGE value="httprunner 分层" />
+    <option name="LAST_COMMIT_MESSAGE" value="httprunner 分层" />
   </component>
   <component name="WindowStateProjectService">
     <state x="674" y="113" key="#Project_Structure" timestamp="1604888221283">
@@ -235,42 +289,42 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="772" y="168" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1604479732318" />
-    <state x="1021" y="321" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1604565542687">
+    <state x="1021" y="321" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1605152337026">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1021" y="321" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1604565542687" />
-    <state x="839" y="107" key="CommitChangelistDialog2" timestamp="1604651852502">
+    <state x="1021" y="321" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1605152337026" />
+    <state x="839" y="107" key="CommitChangelistDialog2" timestamp="1604915561940">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="839" y="107" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1604651852502" />
+    <state x="839" y="107" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1604915561940" />
     <state x="1175" y="267" key="FileChooserDialogImpl" timestamp="1604455621408">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1175" y="267" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1604455621408" />
-    <state width="1036" height="258" key="GridCell.Tab.0.bottom" timestamp="1604651235039">
+    <state width="949" height="279" key="GridCell.Tab.0.bottom" timestamp="1605258925234">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1036" height="258" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1604651235039" />
-    <state width="1036" height="258" key="GridCell.Tab.0.center" timestamp="1604651235039">
+    <state width="949" height="279" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1605258925234" />
+    <state width="949" height="279" key="GridCell.Tab.0.center" timestamp="1605258925234">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1036" height="258" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1604651235039" />
-    <state width="1036" height="258" key="GridCell.Tab.0.left" timestamp="1604651235039">
+    <state width="949" height="279" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1605258925234" />
+    <state width="949" height="279" key="GridCell.Tab.0.left" timestamp="1605258925233">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1036" height="258" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1604651235039" />
-    <state width="1036" height="258" key="GridCell.Tab.0.right" timestamp="1604651235039">
+    <state width="949" height="279" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1605258925233" />
+    <state width="949" height="279" key="GridCell.Tab.0.right" timestamp="1605258925234">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1036" height="258" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1604651235039" />
-    <state x="926" y="167" key="SettingsEditor" timestamp="1604567191551">
+    <state width="949" height="279" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1605258925234" />
+    <state x="922" y="167" key="SettingsEditor" timestamp="1605152856575">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="926" y="167" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1604567191551" />
-    <state x="982" y="246" key="Vcs.Push.Dialog.v2" timestamp="1604652048283">
+    <state x="922" y="167" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1605152856575" />
+    <state x="982" y="246" key="Vcs.Push.Dialog.v2" timestamp="1604915587979">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="982" y="246" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1604652048283" />
+    <state x="982" y="246" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1604915587979" />
     <state x="1029" y="261" key="VcsDiffUtil.ChangesDialog" timestamp="1604483406822">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -299,5 +353,9 @@
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
     <select />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/httprunner_demo$debugtalk.coverage" NAME="debugtalk Coverage Results" MODIFIED="1605173154880" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/httprunner_demo$Random_Demo.coverage" NAME="Random_Demo Coverage Results" MODIFIED="1605258925202" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/api" />
   </component>
 </project>
