@@ -1,0 +1,25 @@
+- config:
+    name: '验证获取token接口'
+    base_url: 'http://www.zhufu.juneyaokc.com/'
+    export:
+      - token
+      - code
+      - message
+- test:
+    name: '调用登录接口'
+    request:
+      url: 'commerceapi/member/login'
+      method: "POST"
+      headers:
+        Content-Type: 'application/json'
+      json:
+        name: "admin"
+        password: "e10adc3949ba59abbe56e057f20f883e"
+    extract:
+      - code: content.code
+      - token: content.data.token
+      - message: content.message
+    validata:
+      - eq: [$code,200]
+
+

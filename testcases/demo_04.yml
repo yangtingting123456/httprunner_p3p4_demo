@@ -1,0 +1,6 @@
+- config:
+    name: ""
+    base_url: ""
+- test:
+    name: ""
+    request: ""
