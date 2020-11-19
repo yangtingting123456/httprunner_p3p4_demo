@@ -1,0 +1,20 @@
+#httprunner post请求，获取响应中的token
+- config:
+    name: "打开新梦想首页"
+    base_url: "https://www.baidu.com"
+    validate: false
+    setup_hooks:
+      - ${setup(验证百度搜索执行开始)}
+    teardown_hooks:
+      - ${teardown(验证百度搜索执行结束)}
+    export:
+      - v
+- test:
+    name: "执行打开新梦想首页"
+    request:
+      url: /
+      method: GET
+    extract: #提取值存储到变量
+      v:  <a href=http://news.baidu.com name=(.+?) class=mnav>
+    validate:
+      - eq: [$v,"tj_trnews"]

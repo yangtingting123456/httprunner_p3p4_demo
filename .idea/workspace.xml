@@ -25,11 +25,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4a831319-a7d4-4d06-94ae-160a84d32ca4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/testcases/demo01.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testcases/demo02.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testcases/demo_03.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testcases/demo_04.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_demo.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testcases/company_list.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testcases/demo_05.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testcases/hcontract_01.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testcases/member_info.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testcases/trueorfalse.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testcases/demo02.yml" beforeDir="false" afterPath="$PROJECT_DIR$/testcases/demo02.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,6 +47,17 @@
       <list>
         <option value="Python Script" />
       </list>
+    </option>
+  </component>
+  <component name="FlaskConsoleOptions" custom-start-script="import sys&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo&#10;locals().update(ScriptInfo(create_app=None).load_app().make_shell_context())&#10;print(&quot;Python %s on %s\nApp: %s [%s]\nInstance: %s&quot; % (sys.version, sys.platform, app.import_name, app.env, app.instance_path))">
+    <envs>
+      <env key="FLASK_APP" value="app" />
+    </envs>
+    <option name="myCustomStartScript" value="import sys&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo&#10;locals().update(ScriptInfo(create_app=None).load_app().make_shell_context())&#10;print(&quot;Python %s on %s\nApp: %s [%s]\nInstance: %s&quot; % (sys.version, sys.platform, app.import_name, app.env, app.instance_path))" />
+    <option name="myEnvs">
+      <map>
+        <entry key="FLASK_APP" value="app" />
+      </map>
     </option>
   </component>
   <component name="Git.Settings">
@@ -73,7 +87,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/testsuites" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/testcases" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -83,8 +97,8 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\pythonwokebook\python-unittest-requests-htmlrunner\httprunner_demo\testsuites" />
       <recent name="E:\pythonwokebook\python-unittest-requests-htmlrunner\httprunner_demo\testcases" />
+      <recent name="E:\pythonwokebook\python-unittest-requests-htmlrunner\httprunner_demo\testsuites" />
       <recent name="E:\pythonwokebook\python-unittest-requests-htmlrunner\httprunner_demo\api" />
       <recent name="E:\pythonwokebook\python-unittest-requests-htmlrunner\httprunner_demo" />
     </key>
@@ -180,7 +194,7 @@
       <workItem from="1604885958616" duration="114000" />
       <workItem from="1604889342855" duration="22593000" />
       <workItem from="1605145496168" duration="6579000" />
-      <workItem from="1605152567472" duration="81139000" />
+      <workItem from="1605152567472" duration="125545000" />
     </task>
     <task id="LOCAL-00001" summary="aa">
       <created>1604479417441</created>
@@ -259,7 +273,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605261271807</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="httprunner csv文件参数化222">
+      <created>1605606008974</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1605606008974</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -290,7 +311,8 @@
     <MESSAGE value="httprunner 接口测试参数01" />
     <MESSAGE value="httprunner 接口测试代码提交2" />
     <MESSAGE value="httprunner csv文件参数化" />
-    <option name="LAST_COMMIT_MESSAGE" value="httprunner csv文件参数化" />
+    <MESSAGE value="httprunner csv文件参数化222" />
+    <option name="LAST_COMMIT_MESSAGE" value="httprunner csv文件参数化222" />
   </component>
   <component name="WindowStateProjectService">
     <state x="674" y="113" key="#Project_Structure" timestamp="1604888221283">
@@ -301,14 +323,14 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="772" y="168" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1604479732318" />
-    <state x="1021" y="321" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1605593831769">
+    <state x="1021" y="321" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1605768680476">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1021" y="321" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1605593831769" />
-    <state x="839" y="107" key="CommitChangelistDialog2" timestamp="1605261259819">
+    <state x="1021" y="321" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1605768680476" />
+    <state x="839" y="107" key="CommitChangelistDialog2" timestamp="1605606006131">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="839" y="107" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1605261259819" />
+    <state x="839" y="107" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1605606006131" />
     <state x="1175" y="267" key="FileChooserDialogImpl" timestamp="1604455621408">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -329,14 +351,14 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="949" height="361" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1605260918243" />
-    <state x="922" y="167" key="SettingsEditor" timestamp="1605495453948">
+    <state x="922" y="167" key="SettingsEditor" timestamp="1605665069726">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="922" y="167" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1605495453948" />
-    <state x="982" y="246" key="Vcs.Push.Dialog.v2" timestamp="1605261277990">
+    <state x="922" y="167" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1605665069726" />
+    <state x="982" y="246" key="Vcs.Push.Dialog.v2" timestamp="1605606015670">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="982" y="246" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1605261277990" />
+    <state x="982" y="246" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1605606015670" />
     <state x="1029" y="261" key="VcsDiffUtil.ChangesDialog" timestamp="1604483406822">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

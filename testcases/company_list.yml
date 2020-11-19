@@ -1,0 +1,20 @@
+- config:
+    name: "获取单位列表"
+    base_url: ${ENV(BASE_URL)}
+    export:
+      - logo
+
+- test:
+    name: "执行获取单位列表接口"
+    request:
+      url: "commerceapi/company/list"
+      method: "GET"
+      params:
+        pageSize: 100
+    extract:
+      logo: content.data.list.0.logo
+    validate:
+      - eq: [$logo,"http://dev.api.shfscc.com/images/tmp/5f9277667a9b1.jpg"]
+
+
+

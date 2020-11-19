@@ -1,0 +1,23 @@
+# 断言
+- config:
+    name: '借用百度做断言'
+    base_url: 'https://www.baidu.com'
+
+- test:
+    name: "断言"
+    request:
+      url: "/"
+      method: GET
+      params:
+        wd: "httprunner"
+    extract:
+      scode: "reason"
+    validate:
+#      - eq: ["status_code",200]
+#      - is: ["status_code",200]
+#      - equals: ["status_code",200]
+      - == : ["status_code",200]
+#      - {'check':$reason,'comparator':'eq','except':'ok'}
+
+
+

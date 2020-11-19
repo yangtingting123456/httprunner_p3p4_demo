@@ -1,0 +1,26 @@
+#
+- config:
+    name: "获取用户信息"
+    base_url: ${ENV(BASE_URL)}
+    validate: false
+    setup_hooks:
+      - ${setup(获取用户信息开始执行)}
+    teardown_hooks:
+      - ${teardown(获取用户信息结束执行)}
+    export:
+      - email
+
+- test:
+    name: "执行打开新梦想首页"
+    request:
+      url: "commerceapi/member/info"
+      method: GET
+      Headers:
+        token: "eyJpZCI6IjE1IiwibmFtZSI6ImFkbWluIiwicGFzc3dvcmQiOiJlMTBhZGMzOTQ5YmE1OWFiYmU1NmUwNTdmMjBmODgzZSIsInVuaXFpZCI6IjVmYjYwZGFjZTFmN2UifQ=="
+        Accept: "application/json, text/plain, */*"
+        Content-Type: "application/json;charset=UTF-8"
+        User-Agent: "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.83 Safari/537.36"
+    extract:
+      email: content.data.email   #contet表示json的根
+    validate:
+      - eq: [$email,"admin@12.com"]

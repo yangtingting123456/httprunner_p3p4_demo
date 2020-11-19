@@ -1,3 +1,4 @@
+#关联
 - config:
     name: '验证获取token接口'
     base_url: ${ENV(BASE_URL)}
@@ -6,6 +7,7 @@
       - code
       - message
       - header_con
+
 - test:
     name: '调用登录接口'
     request:
@@ -25,4 +27,15 @@
       - eq: [$code,200]
       - eq: [$message,'成功']
 
-
+- test:
+    name: "执行会员激活接口"
+    request:
+      url: "commerceapi/member/active"
+      method: "GET"
+      headers:
+        token: $token
+    extract:
+      - message_active: content.message
+    validata:
+      - eq: [ $message,'会员状态错误,不可激活' ]
+      - is: [1+8,10]
