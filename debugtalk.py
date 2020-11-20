@@ -10,9 +10,9 @@ def get_access_token():
     return token
 #定义获取关键字函数
 def get_keyword():
-    keys = [' request','httprunner','ui',12306]
-    for i in range(0,len(keys)-1):
-        return keys[i]
+    word_list = [' request','httprunner','ui',12306]
+    num = random.randint(0,len(word_list)-1)
+    return word_list[num]
 #执行测试用例之前的工作
 def setup(case_name):
     print("测试用例 %s 初始化工作"%case_name)
@@ -51,4 +51,4 @@ def get_random_phone(*mobile_num,count=3):
     return phone_list
 
 if __name__ == '__main__':
-    print(get_random_phone('155',count=6))
+    print(get_keyword())
