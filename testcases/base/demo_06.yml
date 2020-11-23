@@ -1,0 +1,18 @@
+- config:
+    name: "获取用户详情接口"
+    base_url: ${ENV(BASE_URL)}
+    variables:
+      - token: ${get_access_token()}
+
+- test:
+    name: "执行获取用户详情接口"
+    skipUnless: $token
+    request:
+      url: "commerceapi/member/info"
+      method: GET
+      headers:
+        token: $token
+
+    validate:
+      - eq: ['status_code',200]
+

@@ -5,8 +5,11 @@ import random
 def get_access_token():
     json_data= {"name": "admin","password": "e10adc3949ba59abbe56e057f20f883e"}
     headers_data = {"Content-Type": "application/json"}
-    response = requests.post(url='http://dev.commerce.juneyaokc.com:8081/member/login',json=json_data,headers=headers_data)
-    token = response.json()['data']['token']
+    try:
+        response = requests.post(url='http://www.zhufu.juneyaokc.com/commerceapi/member/login',json=json_data,headers=headers_data)
+        token = response.json()['data']['token']
+    except KeyError as e:
+        token = None
     return token
 #定义获取关键字函数
 def get_keyword():
@@ -51,4 +54,4 @@ def get_random_phone(*mobile_num,count=3):
     return phone_list
 
 if __name__ == '__main__':
-    print(get_keyword())
+    print(get_access_token())
