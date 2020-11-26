@@ -1,0 +1,21 @@
+- config:
+    name: member logout
+    base_url: ${ENV(BASE_URL)}
+
+- test:
+    name: exec get token
+    testcase: testcases/base/member_login02.yml
+    extract:
+      - token_id
+
+- test:
+    name: exec member logout
+    request:
+      method: POST
+      url: /commerceapi/member/logout
+      headers:
+        Content-Type: application/json
+        token: $token_id
+
+    validate:
+      - eq: ['status_code',200]

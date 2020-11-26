@@ -53,5 +53,8 @@ def get_random_phone(*mobile_num,count=3):
         phone_list.append(str_phone)
     return phone_list
 
+def get_random_int(a,b):
+    return random.randint(a,b)
+
 if __name__ == '__main__':
-    print(get_access_token())
+    print(get_random_int(1,3))

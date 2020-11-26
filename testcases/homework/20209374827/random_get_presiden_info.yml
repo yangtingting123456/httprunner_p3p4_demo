@@ -1,0 +1,20 @@
+#3、用httprunner实现调用 微信公众平台创建标签请求，并用debugtalk编写函数实现随机新增标签名的功能
+- config:
+    name: get president info
+    base_url: ${ENV(BASE_URL)}
+
+- test:
+    name: exec get president info
+    request:
+      method: GET
+      url: "commerceapi/president/info"
+      params:
+        id: ${get_random_int(1,10)}
+
+
+    extract:
+      token_id: content.data.id
+
+    validate:
+      - eq: ['status_code',200]
+

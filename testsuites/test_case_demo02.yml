@@ -1,0 +1,9 @@
+config:
+  name: demo_01,demo_02
+
+testcases:
+  demo01:
+    testcase: testcases/base/demo01.yml
+
+  demo_02:
+    testcase: testcases/base/demo02.yml

@@ -1,0 +1,3 @@
+1、完成requests模块的基础封装（包含get/post封装--整合--顺序执行）
+2、解释eval()及ast.literal_eval()用法的区别
+3、requests中 apparent_encoding 的作用

@@ -1,0 +1,20 @@
+#1、2、根据 上次 微信公众平台 的接口用例，完成把用例通过 skip设置为条件为真时不执行
+- config:
+    name: 打开腾讯首页
+    base_url: https://www.qq.com
+    output:
+      - title
+- test:
+    name: 执行打开腾讯首页
+    skipIf: True
+    request:
+      url: /
+      method: GET
+      verify: False
+    extract:
+      title: <title>(.+?)</title>
+    variable:
+      - eq: ['status_code',200]
+
+
+

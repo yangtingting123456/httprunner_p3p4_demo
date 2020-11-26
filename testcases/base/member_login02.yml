@@ -1,0 +1,21 @@
+#httprunner post请求，获取响应中的token
+- config:
+    name: get access token api
+    base_url: ${ENV(BASE_URL)}
+    export:
+      - token_id
+
+- test:
+    name: exec et access token api
+    request:
+      method: POST
+      url: "commerceapi/member/login"
+      json:
+        name: "admin"
+        password: "e10adc3949ba59abbe56e057f20f883e"
+
+    extract:
+      token_id: content.data.token
+
+    validate:
+      - eq: ['status_code',200]
