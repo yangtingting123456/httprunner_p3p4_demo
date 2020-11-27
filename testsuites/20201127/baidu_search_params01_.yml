@@ -1,0 +1,9 @@
+#参数化
+config:
+  name: baidu_search_params
+
+testcases:
+  test_baidu_search:
+    testcase: testcases/20201127/test_baidu_search.yml
+    parameters:
+      search_word: ['ui自动化测试','接口自动化测试','app自动化测试']

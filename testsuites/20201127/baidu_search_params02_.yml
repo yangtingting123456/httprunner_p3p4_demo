@@ -1,0 +1,9 @@
+#参数化
+config:
+  name: baidu_search_params
+
+testcases:
+  test_baidu_search:
+    testcase: testcases/20201127/test_baidu_search.yml
+    parameters:
+      search_word-excepted_result: [['ui','ui_百度搜索'],['request','request_百度搜索'],['app','app_百度搜索']]

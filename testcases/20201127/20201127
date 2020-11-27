@@ -1,0 +1,4 @@
+1.在YAML/JSOAN中直接指定参数列表
+2.调用debugtalk.py中自定义的函数生成参数列表
+3.通过内置的函数应用csv文件
+4.通过debugtalk.py调用faker库，pymysql库实现参数化
