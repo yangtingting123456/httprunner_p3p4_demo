@@ -1,4 +1,5 @@
-search_word,result
+search_word,excepted_result
 httprunner,httprunner_百度搜索
 requests,requests_百度搜索
 12306,12306_百度搜索
+天天向上,天天向上_百度搜索

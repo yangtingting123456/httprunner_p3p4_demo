@@ -24,8 +24,26 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4a831319-a7d4-4d06-94ae-160a84d32ca4" name="Default Changelist" comment="">
+    <list default="true" id="4a831319-a7d4-4d06-94ae-160a84d32ca4" name="Default Changelist" comment="测试用例与测试用例之间的使用，补作业2">
+      <change afterPath="$PROJECT_DIR$/api/20201130/baidu_search_api01.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testcases/20201130/testsuit01.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testsuites/20201130/testsuit01.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testsuites/20201130/testsuit02.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testsuites/20201130/testsuit03.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/test_data.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/test_data.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/debugtalk.py" beforeDir="false" afterPath="$PROJECT_DIR$/debugtalk.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testcases/20201127/test_baidu_search.yml" beforeDir="false" afterPath="$PROJECT_DIR$/testcases/20201127/test_baidu_search.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testsuites/20201127/baidu_search_params02_.yml" beforeDir="false" afterPath="$PROJECT_DIR$/testsuites/20201127/baidu_search_params02_.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testsuites/test_baidu.yml" beforeDir="false" afterPath="$PROJECT_DIR$/testsuites/test/test_baidu.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testsuites/test_baidu2.yml" beforeDir="false" afterPath="$PROJECT_DIR$/testsuites/test/test_baidu2.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testsuites/test_baidu3.yml" beforeDir="false" afterPath="$PROJECT_DIR$/testsuites/test/test_baidu3.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testsuites/test_baidu4.yml" beforeDir="false" afterPath="$PROJECT_DIR$/testsuites/test/test_baidu4.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testsuites/test_case_demo01.yml" beforeDir="false" afterPath="$PROJECT_DIR$/testsuites/test/test_case_demo01.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testsuites/test_case_demo02.yml" beforeDir="false" afterPath="$PROJECT_DIR$/testsuites/test/test_case_demo02.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testsuites/test_policy_list_demo.yml" beforeDir="false" afterPath="$PROJECT_DIR$/testsuites/test/test_policy_list_demo.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testsuites/test_suits_demo.yml" beforeDir="false" afterPath="$PROJECT_DIR$/testsuites/test/test_suits_demo.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,27 +104,28 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/testsuites/20201127" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/testsuites/20201130" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\pythonwokebook\python-unittest-requests-htmlrunner\httprunner_demo\testsuites\20201127" />
-      <recent name="E:\pythonwokebook\python-unittest-requests-htmlrunner\httprunner_demo\api" />
-      <recent name="E:\pythonwokebook\python-unittest-requests-htmlrunner\httprunner_demo\testsuites" />
-      <recent name="E:\pythonwokebook\python-unittest-requests-htmlrunner\httprunner_demo\testcases\base" />
-      <recent name="E:\pythonwokebook\python-unittest-requests-htmlrunner\httprunner_demo\testcases" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\pythonwokebook\python-unittest-requests-htmlrunner\httprunner_demo\testsuites\test" />
       <recent name="E:\pythonwokebook\python-unittest-requests-htmlrunner\httprunner_demo\api\20201126" />
       <recent name="E:\pythonwokebook\python-unittest-requests-htmlrunner\httprunner_demo\testcases\homework\20209412766" />
       <recent name="E:\pythonwokebook\python-unittest-requests-htmlrunner\httprunner_demo\testcases\homework\20209374827" />
       <recent name="E:\pythonwokebook\python-unittest-requests-htmlrunner\httprunner_demo\testcases\base" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\pythonwokebook\python-unittest-requests-htmlrunner\httprunner_demo\testsuites\20201130" />
+      <recent name="E:\pythonwokebook\python-unittest-requests-htmlrunner\httprunner_demo\api\20201130" />
+      <recent name="E:\pythonwokebook\python-unittest-requests-htmlrunner\httprunner_demo\testsuites\20201127" />
+      <recent name="E:\pythonwokebook\python-unittest-requests-htmlrunner\httprunner_demo\api" />
+      <recent name="E:\pythonwokebook\python-unittest-requests-htmlrunner\httprunner_demo\testsuites" />
     </key>
   </component>
   <component name="RunManager" selected="Python.debugtalk">
@@ -179,6 +198,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.debugtalk" />
+        <item itemvalue="Python.login_success" />
         <item itemvalue="Python.Random_Demo" />
       </list>
     </recent_temporary>
@@ -206,6 +226,7 @@
       <workItem from="1606700433531" duration="129000" />
       <workItem from="1606700671301" duration="256000" />
       <workItem from="1606701033085" duration="12000" />
+      <workItem from="1606701496460" duration="22612000" />
     </task>
     <task id="LOCAL-00001" summary="aa">
       <created>1604479417441</created>
@@ -326,7 +347,14 @@
       <option name="project" value="LOCAL" />
       <updated>1606386337628</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="测试用例与测试用例之间的使用，补作业2">
+      <created>1606701217035</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1606701217035</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -366,10 +394,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="测试用例与测试用例之间的使用，补作业2" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="674" y="113" key="#Project_Structure" timestamp="1604888221283">
+    <state x="674" y="113" key="#Project_Structure" timestamp="1606701233397">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="674" y="113" key="#Project_Structure/0.0.1920.1040@0.0.1920.1040" timestamp="1604888221283" />
+    <state x="674" y="113" key="#Project_Structure/0.0.1920.1040@0.0.1920.1040" timestamp="1606701233397" />
     <state x="772" y="168" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1604479732318">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -386,30 +414,30 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="869" y="124" width="955" height="840" key="DiffContextDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1606386403436" />
-    <state x="1175" y="267" key="FileChooserDialogImpl" timestamp="1604455621408">
+    <state x="1175" y="267" key="FileChooserDialogImpl" timestamp="1606701185463">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1175" y="267" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1604455621408" />
-    <state width="1095" height="361" key="GridCell.Tab.0.bottom" timestamp="1606385426900">
+    <state x="1175" y="267" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1606701185463" />
+    <state width="1010" height="361" key="GridCell.Tab.0.bottom" timestamp="1606730038256">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1095" height="361" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1606385426900" />
-    <state width="1095" height="361" key="GridCell.Tab.0.center" timestamp="1606385426899">
+    <state width="1010" height="361" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1606730038256" />
+    <state width="1010" height="361" key="GridCell.Tab.0.center" timestamp="1606730038256">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1095" height="361" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1606385426899" />
-    <state width="1095" height="361" key="GridCell.Tab.0.left" timestamp="1606385426899">
+    <state width="1010" height="361" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1606730038256" />
+    <state width="1010" height="361" key="GridCell.Tab.0.left" timestamp="1606730038256">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1095" height="361" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1606385426899" />
-    <state width="1095" height="361" key="GridCell.Tab.0.right" timestamp="1606385426900">
+    <state width="1010" height="361" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1606730038256" />
+    <state width="1010" height="361" key="GridCell.Tab.0.right" timestamp="1606730038256">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1095" height="361" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1606385426900" />
-    <state x="922" y="167" key="SettingsEditor" timestamp="1605665069726">
+    <state width="1010" height="361" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1606730038256" />
+    <state x="349" y="172" key="SettingsEditor" timestamp="1606729679537">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="922" y="167" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1605665069726" />
+    <state x="349" y="172" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1606729679537" />
     <state x="983" y="231" key="VCS.ChangeListViewerDialog" timestamp="1606386318271">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -460,7 +488,6 @@
     <select />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/httprunner_demo$debugtalk.coverage" NAME="debugtalk Coverage Results" MODIFIED="1606384388338" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/httprunner_demo$Random_Demo.coverage" NAME="Random_Demo Coverage Results" MODIFIED="1605259172720" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/api" />
+    <SUITE FILE_PATH="coverage/httprunner_demo$debugtalk.coverage" NAME="debugtalk Coverage Results" MODIFIED="1606730038239" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

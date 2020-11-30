@@ -1,6 +1,8 @@
 #encoding=utf-8
 import requests
 import random
+from faker import Faker
+import pymysql
 #获取商会网站登录的token
 def get_access_token():
     json_data= {"name": "admin","password": "e10adc3949ba59abbe56e057f20f883e"}
@@ -35,10 +37,11 @@ def get_random_param(min,max,count=3):
     return random_list
 #生成随机字符串
 def get_random_string(base_str,str_len,count=3):
+    base_str = base_str +'!@#$%^&*()_<?'
     random_list = []
     for i in  range(count):
         str = ''
-        for j in range(0,str_len):
+        for j in range(0,int(str_len)):
             str = str +base_str[random.randint(0,len(base_str)-1)]
         random_list.append(str)
 
@@ -56,5 +59,29 @@ def get_random_phone(*mobile_num,count=3):
 def get_random_int(a,b):
     return random.randint(a,b)
 
+def get_random_name(count=5):
+    f = Faker(locale='zh_CN')  # 文化设置,默认en_US
+    name_phone_list = []
+    for i in range(count):
+        name_phone_list.append(f.name() + '手机号：' + f.phone_number())
+    return name_phone_list
+def connmysql():
+    conn =pymysql.connect(host ='192.168.177.37',port = 3306,user='root',
+                          password='szh^l5UCeo&6*s9F',
+                          database='shfscc',charset='utf8')
+    cur = conn.cursor(cursor=pymysql.cursors.DictCursor)
+    cur.execute('SELECT name FROM users')
+    cur.close()
+    conn.close()
+    return cur.fetchall()
+
+
+
 if __name__ == '__main__':
-    print(get_random_int(1,3))
+    print(connmysql())
+
+
+
+
+
+

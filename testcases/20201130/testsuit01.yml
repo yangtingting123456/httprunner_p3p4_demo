@@ -2,14 +2,13 @@
     name: 验证百度搜索功能
     export:
       - title
-      - except_result
 - test:
     name: exec baidu search api
-    api: api/20201127/baidu_search_api.yml
+    api: api/20201130/baidu_search_api01.yml
     verify: False
 #    variables:
 #      word: $search_word
     extract:
       title: <title>(.+?)</title>
     validate:
-      - eq: [$title,$except_result]
+      - eq: ['status_code',200]
