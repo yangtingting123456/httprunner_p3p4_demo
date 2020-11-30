@@ -25,12 +25,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4a831319-a7d4-4d06-94ae-160a84d32ca4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/api/20201127/baidu_search_api.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testcases/20201127/20201127" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testcases/20201127/test_baidu_search.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testsuites/20201127/baidu_search_params01_.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testsuites/20201127/baidu_search_params02_.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testsuites/20201127/baidu_search_params_.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -209,6 +203,9 @@
       <workItem from="1605152567472" duration="128348000" />
       <workItem from="1605838795379" duration="31263000" />
       <workItem from="1606291291116" duration="41742000" />
+      <workItem from="1606700433531" duration="129000" />
+      <workItem from="1606700671301" duration="256000" />
+      <workItem from="1606701033085" duration="12000" />
     </task>
     <task id="LOCAL-00001" summary="aa">
       <created>1604479417441</created>
@@ -453,6 +450,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1248" y="303" key="refactoring.ChangeSignatureDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1605260552459" />
+    <state x="943" y="269" key="search.everywhere.popup" timestamp="1606700501606">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="943" y="269" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1606700501606" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
