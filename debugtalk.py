@@ -65,20 +65,22 @@ def get_random_name(count=5):
     for i in range(count):
         name_phone_list.append(f.name() + '手机号：' + f.phone_number())
     return name_phone_list
-def connmysql():
+#链接数据库
+def connmysql_params(case_name):
     conn =pymysql.connect(host ='192.168.177.37',port = 3306,user='root',
                           password='szh^l5UCeo&6*s9F',
                           database='shfscc',charset='utf8')
     cur = conn.cursor(cursor=pymysql.cursors.DictCursor)
-    cur.execute('SELECT name FROM users')
+    cur.execute("SELECT name,password FROM users where name like  '%s%%';"%'admin')
+    names =cur.fetchall()
     cur.close()
     conn.close()
-    return cur.fetchall()
-
+    return names
 
 
 if __name__ == '__main__':
-    print(connmysql())
+    result = connmysql_params('testsuit04.yml')
+    print(result)
 
 
 
