@@ -1,0 +1,15 @@
+name: commerce member login api
+base_url: http://www.zhufu.juneyaokc.com
+request:
+  method: POST
+  url: /commerceapi/member/login
+  json:
+    name: $name
+    password: $password
+  headers:
+    User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Safari/537.36
+    Accept: application/json, text/plain, */*
+validate:  # 一般这里做非业务的断言 简单
+  - eq: ['status_code',200]
+
+

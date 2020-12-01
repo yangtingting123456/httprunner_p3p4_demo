@@ -3,6 +3,7 @@ import requests
 import random
 from faker import Faker
 import pymysql
+
 #获取商会网站登录的token
 def get_access_token():
     json_data= {"name": "admin","password": "e10adc3949ba59abbe56e057f20f883e"}
@@ -66,17 +67,16 @@ def get_random_name(count=5):
         name_phone_list.append(f.name() + '手机号：' + f.phone_number())
     return name_phone_list
 #链接数据库
-def connmysql_params(case_name):
-    conn =pymysql.connect(host ='192.168.177.37',port = 3306,user='root',
-                          password='szh^l5UCeo&6*s9F',
+def connmysql_params(name):
+    conn =pymysql.connect(host ='192.168.177.42',port = 3306,user='root',
+                          password='Php123&juneyaokc',
                           database='shfscc',charset='utf8')
     cur = conn.cursor(cursor=pymysql.cursors.DictCursor)
-    cur.execute("SELECT name,password FROM users where name like  '%s%%';"%'admin')
+    cur.execute("SELECT name,password FROM member ;")
     names =cur.fetchall()
     cur.close()
     conn.close()
     return names
-
 
 if __name__ == '__main__':
     result = connmysql_params('testsuit04.yml')

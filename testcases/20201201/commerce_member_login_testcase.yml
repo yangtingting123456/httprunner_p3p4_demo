@@ -1,0 +1,13 @@
+- config:
+    name: commerce member login
+    export:
+      - token
+- test:
+    name: exec commerce member login
+    api: api/20201201/commerce_member_login_api.yml
+#    variables:
+#      word: $search_word
+    extract:
+      token: content.data.token
+    validate:
+      - eq: ['status_code',200]

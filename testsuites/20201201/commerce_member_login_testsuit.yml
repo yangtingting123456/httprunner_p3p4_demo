@@ -1,0 +1,9 @@
+#参数化
+config:
+  name: commerce_member login testsuit
+
+testcases:
+  test_baidu_search:
+    testcase: testcases/20201201/commerce_member_login_testcase.yml
+    parameters:
+      name-password: ${connmysql_params(admin1)}
