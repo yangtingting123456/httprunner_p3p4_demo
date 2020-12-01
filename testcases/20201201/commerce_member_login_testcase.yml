@@ -5,6 +5,7 @@
 - test:
     name: exec commerce member login
     api: api/20201201/commerce_member_login_api.yml
+    times: 3
 #    variables:
 #      word: $search_word
     extract:
