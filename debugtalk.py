@@ -77,10 +77,19 @@ def connmysql_params(name):
     cur.close()
     conn.close()
     return names
+def to_iso8859(str):
+    return str.encode('utf-8').decode('iso8859-1')
+
+def to_utf_8(str):
+    return str.encode("ISO-8859-1").decode("utf8")
 
 if __name__ == '__main__':
-    result = connmysql_params('testsuit04.yml')
-    print(result)
+    # result = connmysql_params('testsuit04.yml')
+    # print(result)
+    print(to_iso8859("_湖南新梦想软测教育咨询有限公司"))
+    print(to_utf_8(" æ°æ¢¦æ³,æ°æ¢¦æ³IT,æ°æ¢¦æ³ITæè²,æ°æ¢¦æ³ITæè²å¹è®­,é¿æ²æ°æ¢¦æ³IT,"
+                   "è½¯ä»¶æµè¯å¹è®­,é¿æ²è½¯ä»¶æµè¯å¹è®­,"
+                   "é¿æ²javaå¹è®­,é¿æ²Pythonå¹è®­,é¿æ²ITå¹è®­,é¿æ²ITå¹è®­æºæ"))
 
 
 

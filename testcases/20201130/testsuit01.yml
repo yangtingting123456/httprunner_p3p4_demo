@@ -4,7 +4,7 @@
       - title
 - test:
     name: exec baidu search api
-    times: 10
+#    times: 10
     api: api/20201130/baidu_search_api01.yml
     verify: False
 #    variables:

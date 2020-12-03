@@ -2,7 +2,8 @@
 config:
   name: baidu_search_params
 
-testcases:
+testcases:cls
+
   test_baidu_search:
     testcase: testcases/20201130/testsuit01.yml
     parameters: #yml中参数不能参加特殊字符
