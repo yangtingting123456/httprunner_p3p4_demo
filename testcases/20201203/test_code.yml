@@ -6,8 +6,8 @@
 
 - test:
     name: exec newdream open index
-    variables:
-      excepted_result: ${to_iso8859(_湖南新梦想软测教育咨询有限公司)}
+#    variables:
+#      excepted_result: ${to_iso8859(_湖南新梦想软测教育咨询有限公司)}
     request:
       url: /
       method: GET
@@ -15,5 +15,20 @@
       title: <title>(.+?)</title>
 #      actral_tile: ${to_utf_8($title)}
     validate:
-#      - eq: ['status_code',200]
-      - eq: [$title,$excepted_result]
+      - eq: ['status_code',200]
+#      - eq: [$title,$excepted_result]
+
+
+- test:
+    name: exec newdream open index
+    variables:
+      utf_8_title: ${to_utf_8($title)}
+    request:
+      url: /
+      method: GET
+    extract:
+      title: <title>(.+?)</title>
+#      actral_tile: ${to_utf_8($title)}
+    validate:
+      - eq: ['status_code',200]
+      - eq: [$utf_8_title,"_湖南新梦想软测教育咨询有限公司"]
