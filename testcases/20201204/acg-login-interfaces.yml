@@ -1,0 +1,223 @@
+config:
+    name: testcase description
+    variables: {
+
+    }
+    output:
+        - token
+teststeps:
+-   name: /auth/auth/login
+    request:
+        data:
+            password: Qwer@1234
+            username: test02
+        headers:
+            Content-Type: application/x-www-form-urlencoded
+            User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:80.0) Gecko/20100101
+                Firefox/80.0
+            bcode: 273b5a3956c7fedd6f66a9278a9f6f8d
+            deviceMode: pc
+            os: web
+        method: POST
+        url: https://w3-test.aboutcg.org/auth/auth/login
+    extract:
+        token: content.data.access_token
+    validate:
+    -   eq:
+        - status_code
+        - 200
+    -   eq:
+        - headers.Content-Type
+        - application/json;charset=UTF-8
+    -   eq:
+        - content.code
+        - '1000'
+    -   eq:
+        - content.message
+        - 成功
+
+
+
+-   name: /api/auth/message/sendSmsCode
+    request:
+        headers:
+            User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:80.0) Gecko/20100101
+                Firefox/80.0
+            bcode: 273b5a3956c7fedd6f66a9278a9f6f8d
+            deviceMode: pc
+            os: web
+        method: GET
+        params:
+            phone: '17633710286'
+            type: '7'
+        url: https://w3-test.aboutcg.org/api/auth/message/sendSmsCode
+    validate:
+    -   eq:
+        - status_code
+        - 200
+    -   eq:
+        - headers.Content-Type
+        - application/json;charset=UTF-8
+    -   eq:
+        - content.code
+        - '1000'
+    -   eq:
+        - content.message
+        - 成功
+
+
+-   name: /api/auth/checkSmsCode
+    request:
+        data:
+            code: '460633'
+            phone: '17633710286'
+            type: '7'
+        headers:
+            Content-Type: application/x-www-form-urlencoded
+            User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:80.0) Gecko/20100101
+                Firefox/80.0
+            bcode: 273b5a3956c7fedd6f66a9278a9f6f8d
+            deviceMode: pc
+            os: web
+        method: POST
+        url: https://w3-test.aboutcg.org/api/auth/checkSmsCode
+    validate:
+    -   eq:
+        - status_code
+        - 200
+    -   eq:
+        - headers.Content-Type
+        - application/json;charset=UTF-8
+    -   eq:
+        - content.code
+        - '9001'
+    -   eq:
+        - content.message
+        - 系统异常
+    -   eq:
+        - content.data
+        - null
+
+-   name: /api/auth/getLoginValidToken
+    request:
+        data:
+            userId: '231550'
+        headers:
+            Content-Type: application/x-www-form-urlencoded
+            User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:80.0) Gecko/20100101
+                Firefox/80.0
+            bcode: 273b5a3956c7fedd6f66a9278a9f6f8d
+            deviceMode: pc
+            os: web
+        method: POST
+        url: https://w3-test.aboutcg.org/api/auth/getLoginValidToken
+    validate:
+    -   eq:
+        - status_code
+        - 200
+    -   eq:
+        - headers.Content-Type
+        - application/json;charset=UTF-8
+    -   eq:
+        - content.code
+        - '3003'
+    -   eq:
+        - content.message
+        - 登录异常请重新登录
+
+
+-   name: /api/api/member/info
+    request:
+        headers:
+            Authorization: Bearer $token
+            User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:80.0) Gecko/20100101
+                Firefox/80.0
+            bcode: 273b5a3956c7fedd6f66a9278a9f6f8d
+            deviceMode: pc
+            os: web
+        method: GET
+        url: https://w3-test.aboutcg.org/api/api/member/info
+    validate:
+    -   eq:
+        - status_code
+        - 200
+    -   eq:
+        - headers.Content-Type
+        - application/json;charset=UTF-8
+    -   eq:
+        - content.code
+        - '1000'
+    -   eq:
+        - content.message
+        - 成功
+
+
+
+-   name: /api/api/member/cart/getCart
+    request:
+        headers:
+            Authorization: Bearer $token
+            User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:80.0) Gecko/20100101
+                Firefox/80.0
+            bcode: 273b5a3956c7fedd6f66a9278a9f6f8d
+            deviceMode: pc
+            os: web
+        method: GET
+        url: https://w3-test.aboutcg.org/api/api/member/cart/getCart
+    validate:
+    -   eq:
+        - status_code
+        - 200
+    -   eq:
+        - headers.Content-Type
+        - application/json;charset=UTF-8
+    -   eq:
+        - content.code
+        - '1000'
+    -   eq:
+        - content.message
+        - 成功
+
+
+-   name: /api/api/member/homepageMessages
+    request:
+        headers:
+            Authorization: Bearer $token
+            User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:80.0) Gecko/20100101
+                Firefox/80.0
+            bcode: 273b5a3956c7fedd6f66a9278a9f6f8d
+            deviceMode: pc
+            os: web
+        method: GET
+        url: https://w3-test.aboutcg.org/api/api/member/homepageMessages
+    validate:
+    -   eq:
+        - status_code
+        - 200
+    -   eq:
+        - headers.Content-Type
+        - application/json;charset=UTF-8
+    -   eq:
+        - content.code
+        - '1000'
+    -   eq:
+        - content.message
+        - 成功
+
+
+
+-   name: /home
+    request:
+        headers:
+            If-None-Match: '"224b9-RCfI+cxwi0Ge2fu8BqrkmUEkl9E"'
+            User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:80.0) Gecko/20100101
+                Firefox/80.0
+        method: GET
+        url: https://w3-test.aboutcg.org/home
+    validate:
+    -   eq:
+        - status_code
+        - 200
+    -   eq:
+        - headers.Content-Type
+        - text/html; charset=utf-8
