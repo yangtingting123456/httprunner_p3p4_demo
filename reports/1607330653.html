@@ -1,0 +1,2584 @@
+<head>
+  <meta content="text/html; charset=utf-8" http-equiv="content-type" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> - TestReport</title>
+  <style>
+    body {
+      background-color: #f2f2f2;
+      color: #333;
+      margin: 0 auto;
+      width: 960px;
+    }
+    #summary {
+      width: 960px;
+      margin-bottom: 20px;
+    }
+    #summary th {
+      background-color: skyblue;
+      padding: 5px 12px;
+    }
+    #summary td {
+      background-color: lightblue;
+      text-align: center;
+      padding: 4px 8px;
+    }
+    .details {
+      width: 960px;
+      margin-bottom: 20px;
+    }
+    .details th {
+      background-color: skyblue;
+      padding: 5px 12px;
+    }
+    .details tr .passed {
+      background-color: lightgreen;
+    }
+    .details tr .failed {
+      background-color: red;
+    }
+    .details tr .unchecked {
+      background-color: gray;
+    }
+    .details td {
+      background-color: lightblue;
+      padding: 5px 12px;
+    }
+    .details .detail {
+      background-color: lightgrey;
+      font-size: smaller;
+      padding: 5px 10px;
+      line-height: 20px;
+      text-align: left;
+    }
+    .details .success {
+      background-color: greenyellow;
+    }
+    .details .error {
+      background-color: red;
+    }
+    .details .failure {
+      background-color: salmon;
+    }
+    .details .skipped {
+      background-color: gray;
+    }
+
+    .button {
+      font-size: 1em;
+      padding: 6px;
+      width: 4em;
+      text-align: center;
+      background-color: #06d85f;
+      border-radius: 20px/50px;
+      cursor: pointer;
+      transition: all 0.3s ease-out;
+    }
+    a.button{
+      color: gray;
+      text-decoration: none;
+      display: inline-block;
+    }
+    .button:hover {
+      background: #2cffbd;
+    }
+
+    .overlay {
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(0, 0, 0, 0.7);
+      transition: opacity 500ms;
+      visibility: hidden;
+      opacity: 0;
+      line-height: 25px;
+    }
+    .overlay:target {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    .popup {
+      margin: 70px auto;
+      padding: 20px;
+      background: #fff;
+      border-radius: 10px;
+      width: 50%;
+      position: relative;
+      transition: all 3s ease-in-out;
+    }
+
+    .popup h2 {
+      margin-top: 0;
+      color: #333;
+      font-family: Tahoma, Arial, sans-serif;
+    }
+    .popup .close {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      transition: all 200ms;
+      font-size: 30px;
+      font-weight: bold;
+      text-decoration: none;
+      color: #333;
+    }
+    .popup .close:hover {
+      color: #06d85f;
+    }
+    .popup .content {
+      max-height: 80%;
+      overflow: auto;
+      text-align: left;
+    }
+    .popup .separator {
+      color:royalblue
+    }
+
+    @media screen and (max-width: 700px) {
+      .box {
+        width: 70%;
+      }
+      .popup {
+        width: 70%;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+  <h1>Test Report: </h1>
+
+  <h2>Summary</h2>
+  <table id="summary">
+    <tr>
+      <th>START AT</th>
+      <td colspan="4">2020-12-07 16:44:13</td>
+    </tr>
+    <tr>
+      <th>DURATION</th>
+      <td colspan="4">1.732 seconds</td>
+    </tr>
+    <tr>
+      <th>PLATFORM</th>
+      <td>HttpRunner 2.4.3 </td>
+      <td>CPython 3.7.0 </td>
+      <td colspan="2">Windows-10-10.0.18362-SP0</td>
+    </tr>
+    <tr>
+      <th>STAT</th>
+      <th colspan="2">TESTCASES (success/fail)</th>
+      <th colspan="2">TESTSTEPS (success/fail/error/skip)</th>
+    </tr>
+    <tr>
+      <td>total (details) =></td>
+      <td colspan="2">1 (1/0)</td>
+      <td colspan="2">8 (8/0/0/0)</td>
+    </tr>
+  </table>
+
+  <h2>Details</h2>
+
+  
+  
+  <h3>testcase description</h3>
+  <table id="suite_1" class="details">
+    <tr>
+      <td>TOTAL: 8</td>
+      <td>SUCCESS: 8</td>
+      <td>FAILED: 0</td>
+      <td>ERROR: 0</td>
+      <td>SKIPPED: 0</td>
+    </tr>
+    <tr>
+      <th>Status</th>
+      <th colspan="2">Name</th>
+      <th>Response Time</th>
+      <th>Detail</th>
+    </tr>
+
+    
+    
+    
+    <tr id="record_1_1">
+      <th class="success" style="width:5em;">success</th>
+      <td colspan="2">/auth/auth/login</td>
+      <td style="text-align:center;width:6em;">389.77 ms</td>
+      <td class="detail">
+
+        
+        
+        <a class="button" href="#popup_log_1_1_1">log-1</a>
+        <div id="popup_log_1_1_1" class="overlay">
+          <div class="popup">
+            <h2>Request and Response data</h2>
+            <a class="close" href="#record_1_1_1">&times;</a>
+
+            <div class="content">
+              <h3>Name: /auth/auth/login</h3>
+
+              
+
+              
+
+              <h3>Request:</h3>
+              <div style="overflow: auto">
+                <table>
+                  
+                    <tr>
+                      <th>url</th>
+                      <td>
+                        
+                          https://w3-test.aboutcg.org/auth/auth/login
+                        
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <th>method</th>
+                      <td>
+                        
+                          POST
+                        
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <th>headers</th>
+                      <td>
+                        
+                          
+                          <div>
+                            <strong>User-Agent</strong>: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:80.0) Gecko/20100101 Firefox/80.0
+                          </div>
+                          
+                          <div>
+                            <strong>Accept-Encoding</strong>: gzip, deflate
+                          </div>
+                          
+                          <div>
+                            <strong>Accept</strong>: */*
+                          </div>
+                          
+                          <div>
+                            <strong>Connection</strong>: keep-alive
+                          </div>
+                          
+                          <div>
+                            <strong>Content-Type</strong>: application/x-www-form-urlencoded
+                          </div>
+                          
+                          <div>
+                            <strong>bcode</strong>: 273b5a3956c7fedd6f66a9278a9f6f8d
+                          </div>
+                          
+                          <div>
+                            <strong>deviceMode</strong>: pc
+                          </div>
+                          
+                          <div>
+                            <strong>os</strong>: web
+                          </div>
+                          
+                          <div>
+                            <strong>Content-Length</strong>: 36
+                          </div>
+                          
+                        
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <th>body</th>
+                      <td>
+                        
+                          password=Qwer%401234&username=test02
+                        
+                      </td>
+                    </tr>
+                  
+                </table>
+              </div>
+
+              <h3>Response:</h3>
+              <div style="overflow: auto">
+                <table>
+                    
+                      <tr>
+                        <th>ok</th>
+                        <td>
+                          
+                            True
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>url</th>
+                        <td>
+                          
+                            https://w3-test.aboutcg.org/auth/auth/login
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>status_code</th>
+                        <td>
+                          
+                            200
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>reason</th>
+                        <td>
+                          
+                            OK
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>cookies</th>
+                        <td>
+                          
+                            {'acw_tc': '76b20f4616073306534141586e29ce756ac153874482cf817d7e535e329e0b'}
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>encoding</th>
+                        <td>
+                          
+                            UTF-8
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>headers</th>
+                        <td>
+                          
+                            
+                            <div>
+                              <strong>Date</strong>: Mon, 07 Dec 2020 08:44:13 GMT
+                            </div>
+                            
+                            <div>
+                              <strong>Content-Type</strong>: application/json;charset=UTF-8
+                            </div>
+                            
+                            <div>
+                              <strong>Transfer-Encoding</strong>: chunked
+                            </div>
+                            
+                            <div>
+                              <strong>Set-Cookie</strong>: acw_tc=76b20f4616073306534141586e29ce756ac153874482cf817d7e535e329e0b;path=/;HttpOnly;Max-Age=1800
+                            </div>
+                            
+                            <div>
+                              <strong>Server</strong>: nginx/1.16.1
+                            </div>
+                            
+                            <div>
+                              <strong>Connection</strong>: keep-alive
+                            </div>
+                            
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>content_type</th>
+                        <td>
+                          
+                            application/json;charset=UTF-8
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>json</th>
+                        <td>
+                          
+                              <pre>{&#39;code&#39;: &#39;1000&#39;, &#39;message&#39;: &#39;成功&#39;, &#39;data&#39;: {&#39;access_token&#39;: &#39;c68e1607-d520-4a1b-bfd5-1115dfe86a9e&#39;, &#39;refresh_token&#39;: &#39;c5f95d65-34ba-4bb8-8cfb-79e2a693c60e&#39;, &#39;scope&#39;: &#39;server&#39;, &#39;token_type&#39;: &#39;bearer&#39;, &#39;expires_in&#39;: None, &#39;error&#39;: None, &#39;error_description&#39;: None, &#39;user_id&#39;: 231550, &#39;username&#39;: &#39;test02&#39;, &#39;isGuest&#39;: False, &#39;code&#39;: None, &#39;message&#39;: None, &#39;phone&#39;: None, &#39;email&#39;: None}}</pre>
+                          
+                        </td>
+                      </tr>
+                    
+                  </table>
+              </div>
+              
+
+              <h3>Validators:</h3>
+                <div style="overflow: auto">
+                
+                
+                <table>
+                    <tr>
+                      <th>check</th>
+                      <th>comparator</th>
+                      <th>expect value</th>
+                      <th>actual value</th>
+                    </tr>
+                    
+                    <tr>
+                      
+                      <td class="passed">
+                      
+                        status_code
+                      </td>
+                      <td>equals</td>
+                      <td>200</td>
+                      <td>200</td>
+                    </tr>
+                    
+                    <tr>
+                      
+                      <td class="passed">
+                      
+                        headers.Content-Type
+                      </td>
+                      <td>equals</td>
+                      <td>application/json;charset=UTF-8</td>
+                      <td>application/json;charset=UTF-8</td>
+                    </tr>
+                    
+                    <tr>
+                      
+                      <td class="passed">
+                      
+                        content.code
+                      </td>
+                      <td>equals</td>
+                      <td>1000</td>
+                      <td>1000</td>
+                    </tr>
+                    
+                    <tr>
+                      
+                      <td class="passed">
+                      
+                        content.message
+                      </td>
+                      <td>equals</td>
+                      <td>成功</td>
+                      <td>成功</td>
+                    </tr>
+                    
+                </table>
+                
+
+                
+                
+              </div>
+
+              <h3>Statistics:</h3>
+              <div style="overflow: auto">
+                <table>
+                  <tr>
+                      <th>content_size(bytes)</th>
+                      <td>353</td>
+                    </tr>
+                  <tr>
+                    <th>response_time(ms)</th>
+                    <td>389.77</td>
+                  </tr>
+                  <tr>
+                    <th>elapsed(ms)</th>
+                    <td>380.214</td>
+                  </tr>
+                </table>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        
+
+        
+
+      </td>
+    </tr>
+  
+    
+    
+    <tr id="record_1_2">
+      <th class="success" style="width:5em;">success</th>
+      <td colspan="2">/api/auth/message/sendSmsCode</td>
+      <td style="text-align:center;width:6em;">35.98 ms</td>
+      <td class="detail">
+
+        
+        
+        <a class="button" href="#popup_log_1_2_1">log-1</a>
+        <div id="popup_log_1_2_1" class="overlay">
+          <div class="popup">
+            <h2>Request and Response data</h2>
+            <a class="close" href="#record_1_2_1">&times;</a>
+
+            <div class="content">
+              <h3>Name: /api/auth/message/sendSmsCode</h3>
+
+              
+
+              
+
+              <h3>Request:</h3>
+              <div style="overflow: auto">
+                <table>
+                  
+                    <tr>
+                      <th>url</th>
+                      <td>
+                        
+                          https://w3-test.aboutcg.org/api/auth/message/sendSmsCode?phone=17633710286&type=7
+                        
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <th>method</th>
+                      <td>
+                        
+                          GET
+                        
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <th>headers</th>
+                      <td>
+                        
+                          
+                          <div>
+                            <strong>User-Agent</strong>: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:80.0) Gecko/20100101 Firefox/80.0
+                          </div>
+                          
+                          <div>
+                            <strong>Accept-Encoding</strong>: gzip, deflate
+                          </div>
+                          
+                          <div>
+                            <strong>Accept</strong>: */*
+                          </div>
+                          
+                          <div>
+                            <strong>Connection</strong>: keep-alive
+                          </div>
+                          
+                          <div>
+                            <strong>bcode</strong>: 273b5a3956c7fedd6f66a9278a9f6f8d
+                          </div>
+                          
+                          <div>
+                            <strong>deviceMode</strong>: pc
+                          </div>
+                          
+                          <div>
+                            <strong>os</strong>: web
+                          </div>
+                          
+                          <div>
+                            <strong>Cookie</strong>: acw_tc=76b20f4616073306534141586e29ce756ac153874482cf817d7e535e329e0b
+                          </div>
+                          
+                        
+                      </td>
+                    </tr>
+                  
+                </table>
+              </div>
+
+              <h3>Response:</h3>
+              <div style="overflow: auto">
+                <table>
+                    
+                      <tr>
+                        <th>ok</th>
+                        <td>
+                          
+                            True
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>url</th>
+                        <td>
+                          
+                            https://w3-test.aboutcg.org/api/auth/message/sendSmsCode?phone=17633710286&type=7
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>status_code</th>
+                        <td>
+                          
+                            200
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>reason</th>
+                        <td>
+                          
+                            OK
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>cookies</th>
+                        <td>
+                          
+                            {}
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>encoding</th>
+                        <td>
+                          
+                            UTF-8
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>headers</th>
+                        <td>
+                          
+                            
+                            <div>
+                              <strong>Date</strong>: Mon, 07 Dec 2020 08:44:13 GMT
+                            </div>
+                            
+                            <div>
+                              <strong>Content-Type</strong>: application/json;charset=UTF-8
+                            </div>
+                            
+                            <div>
+                              <strong>Transfer-Encoding</strong>: chunked
+                            </div>
+                            
+                            <div>
+                              <strong>Server</strong>: nginx/1.16.1
+                            </div>
+                            
+                            <div>
+                              <strong>Connection</strong>: keep-alive
+                            </div>
+                            
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>content_type</th>
+                        <td>
+                          
+                            application/json;charset=UTF-8
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>json</th>
+                        <td>
+                          
+                              <pre>{&#39;code&#39;: &#39;1000&#39;, &#39;message&#39;: &#39;成功&#39;, &#39;data&#39;: {&#39;key&#39;: &#39;eb6320ad-3397-4377-a1df-67e7ecbe635c&#39;}}</pre>
+                          
+                        </td>
+                      </tr>
+                    
+                  </table>
+              </div>
+              
+
+              <h3>Validators:</h3>
+                <div style="overflow: auto">
+                
+                
+                <table>
+                    <tr>
+                      <th>check</th>
+                      <th>comparator</th>
+                      <th>expect value</th>
+                      <th>actual value</th>
+                    </tr>
+                    
+                    <tr>
+                      
+                      <td class="passed">
+                      
+                        status_code
+                      </td>
+                      <td>equals</td>
+                      <td>200</td>
+                      <td>200</td>
+                    </tr>
+                    
+                    <tr>
+                      
+                      <td class="passed">
+                      
+                        headers.Content-Type
+                      </td>
+                      <td>equals</td>
+                      <td>application/json;charset=UTF-8</td>
+                      <td>application/json;charset=UTF-8</td>
+                    </tr>
+                    
+                    <tr>
+                      
+                      <td class="passed">
+                      
+                        content.code
+                      </td>
+                      <td>equals</td>
+                      <td>1000</td>
+                      <td>1000</td>
+                    </tr>
+                    
+                    <tr>
+                      
+                      <td class="passed">
+                      
+                        content.message
+                      </td>
+                      <td>equals</td>
+                      <td>成功</td>
+                      <td>成功</td>
+                    </tr>
+                    
+                </table>
+                
+
+                
+                
+              </div>
+
+              <h3>Statistics:</h3>
+              <div style="overflow: auto">
+                <table>
+                  <tr>
+                      <th>content_size(bytes)</th>
+                      <td>88</td>
+                    </tr>
+                  <tr>
+                    <th>response_time(ms)</th>
+                    <td>35.98</td>
+                  </tr>
+                  <tr>
+                    <th>elapsed(ms)</th>
+                    <td>34.191</td>
+                  </tr>
+                </table>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        
+
+        
+
+      </td>
+    </tr>
+  
+    
+    
+    <tr id="record_1_3">
+      <th class="success" style="width:5em;">success</th>
+      <td colspan="2">/api/auth/checkSmsCode</td>
+      <td style="text-align:center;width:6em;">29.98 ms</td>
+      <td class="detail">
+
+        
+        
+        <a class="button" href="#popup_log_1_3_1">log-1</a>
+        <div id="popup_log_1_3_1" class="overlay">
+          <div class="popup">
+            <h2>Request and Response data</h2>
+            <a class="close" href="#record_1_3_1">&times;</a>
+
+            <div class="content">
+              <h3>Name: /api/auth/checkSmsCode</h3>
+
+              
+
+              
+
+              <h3>Request:</h3>
+              <div style="overflow: auto">
+                <table>
+                  
+                    <tr>
+                      <th>url</th>
+                      <td>
+                        
+                          https://w3-test.aboutcg.org/api/auth/checkSmsCode
+                        
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <th>method</th>
+                      <td>
+                        
+                          POST
+                        
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <th>headers</th>
+                      <td>
+                        
+                          
+                          <div>
+                            <strong>User-Agent</strong>: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:80.0) Gecko/20100101 Firefox/80.0
+                          </div>
+                          
+                          <div>
+                            <strong>Accept-Encoding</strong>: gzip, deflate
+                          </div>
+                          
+                          <div>
+                            <strong>Accept</strong>: */*
+                          </div>
+                          
+                          <div>
+                            <strong>Connection</strong>: keep-alive
+                          </div>
+                          
+                          <div>
+                            <strong>Content-Type</strong>: application/x-www-form-urlencoded
+                          </div>
+                          
+                          <div>
+                            <strong>bcode</strong>: 273b5a3956c7fedd6f66a9278a9f6f8d
+                          </div>
+                          
+                          <div>
+                            <strong>deviceMode</strong>: pc
+                          </div>
+                          
+                          <div>
+                            <strong>os</strong>: web
+                          </div>
+                          
+                          <div>
+                            <strong>Cookie</strong>: acw_tc=76b20f4616073306534141586e29ce756ac153874482cf817d7e535e329e0b
+                          </div>
+                          
+                          <div>
+                            <strong>Content-Length</strong>: 36
+                          </div>
+                          
+                        
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <th>body</th>
+                      <td>
+                        
+                          code=460633&phone=17633710286&type=7
+                        
+                      </td>
+                    </tr>
+                  
+                </table>
+              </div>
+
+              <h3>Response:</h3>
+              <div style="overflow: auto">
+                <table>
+                    
+                      <tr>
+                        <th>ok</th>
+                        <td>
+                          
+                            True
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>url</th>
+                        <td>
+                          
+                            https://w3-test.aboutcg.org/api/auth/checkSmsCode
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>status_code</th>
+                        <td>
+                          
+                            200
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>reason</th>
+                        <td>
+                          
+                            OK
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>cookies</th>
+                        <td>
+                          
+                            {}
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>encoding</th>
+                        <td>
+                          
+                            UTF-8
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>headers</th>
+                        <td>
+                          
+                            
+                            <div>
+                              <strong>Date</strong>: Mon, 07 Dec 2020 08:44:13 GMT
+                            </div>
+                            
+                            <div>
+                              <strong>Content-Type</strong>: application/json;charset=UTF-8
+                            </div>
+                            
+                            <div>
+                              <strong>Transfer-Encoding</strong>: chunked
+                            </div>
+                            
+                            <div>
+                              <strong>Server</strong>: nginx/1.16.1
+                            </div>
+                            
+                            <div>
+                              <strong>Connection</strong>: keep-alive
+                            </div>
+                            
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>content_type</th>
+                        <td>
+                          
+                            application/json;charset=UTF-8
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>json</th>
+                        <td>
+                          
+                              <pre>{&#39;code&#39;: &#39;9001&#39;, &#39;message&#39;: &#39;系统异常&#39;, &#39;data&#39;: None}</pre>
+                          
+                        </td>
+                      </tr>
+                    
+                  </table>
+              </div>
+              
+
+              <h3>Validators:</h3>
+                <div style="overflow: auto">
+                
+                
+                <table>
+                    <tr>
+                      <th>check</th>
+                      <th>comparator</th>
+                      <th>expect value</th>
+                      <th>actual value</th>
+                    </tr>
+                    
+                    <tr>
+                      
+                      <td class="passed">
+                      
+                        status_code
+                      </td>
+                      <td>equals</td>
+                      <td>200</td>
+                      <td>200</td>
+                    </tr>
+                    
+                    <tr>
+                      
+                      <td class="passed">
+                      
+                        headers.Content-Type
+                      </td>
+                      <td>equals</td>
+                      <td>application/json;charset=UTF-8</td>
+                      <td>application/json;charset=UTF-8</td>
+                    </tr>
+                    
+                    <tr>
+                      
+                      <td class="passed">
+                      
+                        content.code
+                      </td>
+                      <td>equals</td>
+                      <td>9001</td>
+                      <td>9001</td>
+                    </tr>
+                    
+                    <tr>
+                      
+                      <td class="passed">
+                      
+                        content.message
+                      </td>
+                      <td>equals</td>
+                      <td>系统异常</td>
+                      <td>系统异常</td>
+                    </tr>
+                    
+                    <tr>
+                      
+                      <td class="passed">
+                      
+                        content.data
+                      </td>
+                      <td>equals</td>
+                      <td>None</td>
+                      <td>None</td>
+                    </tr>
+                    
+                </table>
+                
+
+                
+                
+              </div>
+
+              <h3>Statistics:</h3>
+              <div style="overflow: auto">
+                <table>
+                  <tr>
+                      <th>content_size(bytes)</th>
+                      <td>52</td>
+                    </tr>
+                  <tr>
+                    <th>response_time(ms)</th>
+                    <td>29.98</td>
+                  </tr>
+                  <tr>
+                    <th>elapsed(ms)</th>
+                    <td>27.934</td>
+                  </tr>
+                </table>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        
+
+        
+
+      </td>
+    </tr>
+  
+    
+    
+    <tr id="record_1_4">
+      <th class="success" style="width:5em;">success</th>
+      <td colspan="2">/api/auth/getLoginValidToken</td>
+      <td style="text-align:center;width:6em;">28.98 ms</td>
+      <td class="detail">
+
+        
+        
+        <a class="button" href="#popup_log_1_4_1">log-1</a>
+        <div id="popup_log_1_4_1" class="overlay">
+          <div class="popup">
+            <h2>Request and Response data</h2>
+            <a class="close" href="#record_1_4_1">&times;</a>
+
+            <div class="content">
+              <h3>Name: /api/auth/getLoginValidToken</h3>
+
+              
+
+              
+
+              <h3>Request:</h3>
+              <div style="overflow: auto">
+                <table>
+                  
+                    <tr>
+                      <th>url</th>
+                      <td>
+                        
+                          https://w3-test.aboutcg.org/api/auth/getLoginValidToken
+                        
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <th>method</th>
+                      <td>
+                        
+                          POST
+                        
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <th>headers</th>
+                      <td>
+                        
+                          
+                          <div>
+                            <strong>User-Agent</strong>: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:80.0) Gecko/20100101 Firefox/80.0
+                          </div>
+                          
+                          <div>
+                            <strong>Accept-Encoding</strong>: gzip, deflate
+                          </div>
+                          
+                          <div>
+                            <strong>Accept</strong>: */*
+                          </div>
+                          
+                          <div>
+                            <strong>Connection</strong>: keep-alive
+                          </div>
+                          
+                          <div>
+                            <strong>Content-Type</strong>: application/x-www-form-urlencoded
+                          </div>
+                          
+                          <div>
+                            <strong>bcode</strong>: 273b5a3956c7fedd6f66a9278a9f6f8d
+                          </div>
+                          
+                          <div>
+                            <strong>deviceMode</strong>: pc
+                          </div>
+                          
+                          <div>
+                            <strong>os</strong>: web
+                          </div>
+                          
+                          <div>
+                            <strong>Cookie</strong>: acw_tc=76b20f4616073306534141586e29ce756ac153874482cf817d7e535e329e0b
+                          </div>
+                          
+                          <div>
+                            <strong>Content-Length</strong>: 13
+                          </div>
+                          
+                        
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <th>body</th>
+                      <td>
+                        
+                          userId=231550
+                        
+                      </td>
+                    </tr>
+                  
+                </table>
+              </div>
+
+              <h3>Response:</h3>
+              <div style="overflow: auto">
+                <table>
+                    
+                      <tr>
+                        <th>ok</th>
+                        <td>
+                          
+                            True
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>url</th>
+                        <td>
+                          
+                            https://w3-test.aboutcg.org/api/auth/getLoginValidToken
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>status_code</th>
+                        <td>
+                          
+                            200
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>reason</th>
+                        <td>
+                          
+                            OK
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>cookies</th>
+                        <td>
+                          
+                            {}
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>encoding</th>
+                        <td>
+                          
+                            UTF-8
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>headers</th>
+                        <td>
+                          
+                            
+                            <div>
+                              <strong>Date</strong>: Mon, 07 Dec 2020 08:44:13 GMT
+                            </div>
+                            
+                            <div>
+                              <strong>Content-Type</strong>: application/json;charset=UTF-8
+                            </div>
+                            
+                            <div>
+                              <strong>Transfer-Encoding</strong>: chunked
+                            </div>
+                            
+                            <div>
+                              <strong>Server</strong>: nginx/1.16.1
+                            </div>
+                            
+                            <div>
+                              <strong>Connection</strong>: keep-alive
+                            </div>
+                            
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>content_type</th>
+                        <td>
+                          
+                            application/json;charset=UTF-8
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>json</th>
+                        <td>
+                          
+                              <pre>{&#39;code&#39;: &#39;3003&#39;, &#39;message&#39;: &#39;登录异常请重新登录&#39;, &#39;data&#39;: None}</pre>
+                          
+                        </td>
+                      </tr>
+                    
+                  </table>
+              </div>
+              
+
+              <h3>Validators:</h3>
+                <div style="overflow: auto">
+                
+                
+                <table>
+                    <tr>
+                      <th>check</th>
+                      <th>comparator</th>
+                      <th>expect value</th>
+                      <th>actual value</th>
+                    </tr>
+                    
+                    <tr>
+                      
+                      <td class="passed">
+                      
+                        status_code
+                      </td>
+                      <td>equals</td>
+                      <td>200</td>
+                      <td>200</td>
+                    </tr>
+                    
+                    <tr>
+                      
+                      <td class="passed">
+                      
+                        headers.Content-Type
+                      </td>
+                      <td>equals</td>
+                      <td>application/json;charset=UTF-8</td>
+                      <td>application/json;charset=UTF-8</td>
+                    </tr>
+                    
+                    <tr>
+                      
+                      <td class="passed">
+                      
+                        content.code
+                      </td>
+                      <td>equals</td>
+                      <td>3003</td>
+                      <td>3003</td>
+                    </tr>
+                    
+                    <tr>
+                      
+                      <td class="passed">
+                      
+                        content.message
+                      </td>
+                      <td>equals</td>
+                      <td>登录异常请重新登录</td>
+                      <td>登录异常请重新登录</td>
+                    </tr>
+                    
+                </table>
+                
+
+                
+                
+              </div>
+
+              <h3>Statistics:</h3>
+              <div style="overflow: auto">
+                <table>
+                  <tr>
+                      <th>content_size(bytes)</th>
+                      <td>67</td>
+                    </tr>
+                  <tr>
+                    <th>response_time(ms)</th>
+                    <td>28.98</td>
+                  </tr>
+                  <tr>
+                    <th>elapsed(ms)</th>
+                    <td>27.278</td>
+                  </tr>
+                </table>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        
+
+        
+
+      </td>
+    </tr>
+  
+    
+    
+    <tr id="record_1_5">
+      <th class="success" style="width:5em;">success</th>
+      <td colspan="2">/api/api/member/info</td>
+      <td style="text-align:center;width:6em;">72.95 ms</td>
+      <td class="detail">
+
+        
+        
+        <a class="button" href="#popup_log_1_5_1">log-1</a>
+        <div id="popup_log_1_5_1" class="overlay">
+          <div class="popup">
+            <h2>Request and Response data</h2>
+            <a class="close" href="#record_1_5_1">&times;</a>
+
+            <div class="content">
+              <h3>Name: /api/api/member/info</h3>
+
+              
+
+              
+
+              <h3>Request:</h3>
+              <div style="overflow: auto">
+                <table>
+                  
+                    <tr>
+                      <th>url</th>
+                      <td>
+                        
+                          https://w3-test.aboutcg.org/api/api/member/info
+                        
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <th>method</th>
+                      <td>
+                        
+                          GET
+                        
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <th>headers</th>
+                      <td>
+                        
+                          
+                          <div>
+                            <strong>User-Agent</strong>: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:80.0) Gecko/20100101 Firefox/80.0
+                          </div>
+                          
+                          <div>
+                            <strong>Accept-Encoding</strong>: gzip, deflate
+                          </div>
+                          
+                          <div>
+                            <strong>Accept</strong>: */*
+                          </div>
+                          
+                          <div>
+                            <strong>Connection</strong>: keep-alive
+                          </div>
+                          
+                          <div>
+                            <strong>Authorization</strong>: Bearer c68e1607-d520-4a1b-bfd5-1115dfe86a9e
+                          </div>
+                          
+                          <div>
+                            <strong>bcode</strong>: 273b5a3956c7fedd6f66a9278a9f6f8d
+                          </div>
+                          
+                          <div>
+                            <strong>deviceMode</strong>: pc
+                          </div>
+                          
+                          <div>
+                            <strong>os</strong>: web
+                          </div>
+                          
+                          <div>
+                            <strong>Cookie</strong>: acw_tc=76b20f4616073306534141586e29ce756ac153874482cf817d7e535e329e0b
+                          </div>
+                          
+                        
+                      </td>
+                    </tr>
+                  
+                </table>
+              </div>
+
+              <h3>Response:</h3>
+              <div style="overflow: auto">
+                <table>
+                    
+                      <tr>
+                        <th>ok</th>
+                        <td>
+                          
+                            True
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>url</th>
+                        <td>
+                          
+                            https://w3-test.aboutcg.org/api/api/member/info
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>status_code</th>
+                        <td>
+                          
+                            200
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>reason</th>
+                        <td>
+                          
+                            OK
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>cookies</th>
+                        <td>
+                          
+                            {}
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>encoding</th>
+                        <td>
+                          
+                            UTF-8
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>headers</th>
+                        <td>
+                          
+                            
+                            <div>
+                              <strong>Date</strong>: Mon, 07 Dec 2020 08:44:13 GMT
+                            </div>
+                            
+                            <div>
+                              <strong>Content-Type</strong>: application/json;charset=UTF-8
+                            </div>
+                            
+                            <div>
+                              <strong>Transfer-Encoding</strong>: chunked
+                            </div>
+                            
+                            <div>
+                              <strong>Server</strong>: nginx/1.16.1
+                            </div>
+                            
+                            <div>
+                              <strong>Connection</strong>: keep-alive
+                            </div>
+                            
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>content_type</th>
+                        <td>
+                          
+                            application/json;charset=UTF-8
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>json</th>
+                        <td>
+                          
+                              <pre>{&#39;code&#39;: &#39;1000&#39;, &#39;message&#39;: &#39;成功&#39;, &#39;data&#39;: {&#39;manageFlag&#39;: True, &#39;name&#39;: &#39;test02&#39;, &#39;myCourseNum&#39;: 35, &#39;avatar&#39;: &#39;https://webcdn01.aboutcg.org/71d3541ceb3f4b1c8d6e874f4178eea4&#39;, &#39;isTeacher&#39;: False, &#39;isVip&#39;: True}}</pre>
+                          
+                        </td>
+                      </tr>
+                    
+                  </table>
+              </div>
+              
+
+              <h3>Validators:</h3>
+                <div style="overflow: auto">
+                
+                
+                <table>
+                    <tr>
+                      <th>check</th>
+                      <th>comparator</th>
+                      <th>expect value</th>
+                      <th>actual value</th>
+                    </tr>
+                    
+                    <tr>
+                      
+                      <td class="passed">
+                      
+                        status_code
+                      </td>
+                      <td>equals</td>
+                      <td>200</td>
+                      <td>200</td>
+                    </tr>
+                    
+                    <tr>
+                      
+                      <td class="passed">
+                      
+                        headers.Content-Type
+                      </td>
+                      <td>equals</td>
+                      <td>application/json;charset=UTF-8</td>
+                      <td>application/json;charset=UTF-8</td>
+                    </tr>
+                    
+                    <tr>
+                      
+                      <td class="passed">
+                      
+                        content.code
+                      </td>
+                      <td>equals</td>
+                      <td>1000</td>
+                      <td>1000</td>
+                    </tr>
+                    
+                    <tr>
+                      
+                      <td class="passed">
+                      
+                        content.message
+                      </td>
+                      <td>equals</td>
+                      <td>成功</td>
+                      <td>成功</td>
+                    </tr>
+                    
+                </table>
+                
+
+                
+                
+              </div>
+
+              <h3>Statistics:</h3>
+              <div style="overflow: auto">
+                <table>
+                  <tr>
+                      <th>content_size(bytes)</th>
+                      <td>198</td>
+                    </tr>
+                  <tr>
+                    <th>response_time(ms)</th>
+                    <td>72.95</td>
+                  </tr>
+                  <tr>
+                    <th>elapsed(ms)</th>
+                    <td>71.704</td>
+                  </tr>
+                </table>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        
+
+        
+
+      </td>
+    </tr>
+  
+    
+    
+    <tr id="record_1_6">
+      <th class="success" style="width:5em;">success</th>
+      <td colspan="2">/api/api/member/cart/getCart</td>
+      <td style="text-align:center;width:6em;">59.97 ms</td>
+      <td class="detail">
+
+        
+        
+        <a class="button" href="#popup_log_1_6_1">log-1</a>
+        <div id="popup_log_1_6_1" class="overlay">
+          <div class="popup">
+            <h2>Request and Response data</h2>
+            <a class="close" href="#record_1_6_1">&times;</a>
+
+            <div class="content">
+              <h3>Name: /api/api/member/cart/getCart</h3>
+
+              
+
+              
+
+              <h3>Request:</h3>
+              <div style="overflow: auto">
+                <table>
+                  
+                    <tr>
+                      <th>url</th>
+                      <td>
+                        
+                          https://w3-test.aboutcg.org/api/api/member/cart/getCart
+                        
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <th>method</th>
+                      <td>
+                        
+                          GET
+                        
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <th>headers</th>
+                      <td>
+                        
+                          
+                          <div>
+                            <strong>User-Agent</strong>: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:80.0) Gecko/20100101 Firefox/80.0
+                          </div>
+                          
+                          <div>
+                            <strong>Accept-Encoding</strong>: gzip, deflate
+                          </div>
+                          
+                          <div>
+                            <strong>Accept</strong>: */*
+                          </div>
+                          
+                          <div>
+                            <strong>Connection</strong>: keep-alive
+                          </div>
+                          
+                          <div>
+                            <strong>Authorization</strong>: Bearer c68e1607-d520-4a1b-bfd5-1115dfe86a9e
+                          </div>
+                          
+                          <div>
+                            <strong>bcode</strong>: 273b5a3956c7fedd6f66a9278a9f6f8d
+                          </div>
+                          
+                          <div>
+                            <strong>deviceMode</strong>: pc
+                          </div>
+                          
+                          <div>
+                            <strong>os</strong>: web
+                          </div>
+                          
+                          <div>
+                            <strong>Cookie</strong>: acw_tc=76b20f4616073306534141586e29ce756ac153874482cf817d7e535e329e0b
+                          </div>
+                          
+                        
+                      </td>
+                    </tr>
+                  
+                </table>
+              </div>
+
+              <h3>Response:</h3>
+              <div style="overflow: auto">
+                <table>
+                    
+                      <tr>
+                        <th>ok</th>
+                        <td>
+                          
+                            True
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>url</th>
+                        <td>
+                          
+                            https://w3-test.aboutcg.org/api/api/member/cart/getCart
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>status_code</th>
+                        <td>
+                          
+                            200
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>reason</th>
+                        <td>
+                          
+                            OK
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>cookies</th>
+                        <td>
+                          
+                            {}
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>encoding</th>
+                        <td>
+                          
+                            UTF-8
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>headers</th>
+                        <td>
+                          
+                            
+                            <div>
+                              <strong>Date</strong>: Mon, 07 Dec 2020 08:44:13 GMT
+                            </div>
+                            
+                            <div>
+                              <strong>Content-Type</strong>: application/json;charset=UTF-8
+                            </div>
+                            
+                            <div>
+                              <strong>Transfer-Encoding</strong>: chunked
+                            </div>
+                            
+                            <div>
+                              <strong>Server</strong>: nginx/1.16.1
+                            </div>
+                            
+                            <div>
+                              <strong>Connection</strong>: keep-alive
+                            </div>
+                            
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>content_type</th>
+                        <td>
+                          
+                            application/json;charset=UTF-8
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>json</th>
+                        <td>
+                          
+                              <pre>{&#39;code&#39;: &#39;1000&#39;, &#39;message&#39;: &#39;成功&#39;, &#39;data&#39;: {&#39;carts&#39;: {&#39;totalPrice&#39;: None, &#39;cartItemList&#39;: None, &#39;couponVO&#39;: None}}}</pre>
+                          
+                        </td>
+                      </tr>
+                    
+                  </table>
+              </div>
+              
+
+              <h3>Validators:</h3>
+                <div style="overflow: auto">
+                
+                
+                <table>
+                    <tr>
+                      <th>check</th>
+                      <th>comparator</th>
+                      <th>expect value</th>
+                      <th>actual value</th>
+                    </tr>
+                    
+                    <tr>
+                      
+                      <td class="passed">
+                      
+                        status_code
+                      </td>
+                      <td>equals</td>
+                      <td>200</td>
+                      <td>200</td>
+                    </tr>
+                    
+                    <tr>
+                      
+                      <td class="passed">
+                      
+                        headers.Content-Type
+                      </td>
+                      <td>equals</td>
+                      <td>application/json;charset=UTF-8</td>
+                      <td>application/json;charset=UTF-8</td>
+                    </tr>
+                    
+                    <tr>
+                      
+                      <td class="passed">
+                      
+                        content.code
+                      </td>
+                      <td>equals</td>
+                      <td>1000</td>
+                      <td>1000</td>
+                    </tr>
+                    
+                    <tr>
+                      
+                      <td class="passed">
+                      
+                        content.message
+                      </td>
+                      <td>equals</td>
+                      <td>成功</td>
+                      <td>成功</td>
+                    </tr>
+                    
+                </table>
+                
+
+                
+                
+              </div>
+
+              <h3>Statistics:</h3>
+              <div style="overflow: auto">
+                <table>
+                  <tr>
+                      <th>content_size(bytes)</th>
+                      <td>107</td>
+                    </tr>
+                  <tr>
+                    <th>response_time(ms)</th>
+                    <td>59.97</td>
+                  </tr>
+                  <tr>
+                    <th>elapsed(ms)</th>
+                    <td>58.628</td>
+                  </tr>
+                </table>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        
+
+        
+
+      </td>
+    </tr>
+  
+    
+    
+    <tr id="record_1_7">
+      <th class="success" style="width:5em;">success</th>
+      <td colspan="2">/api/api/member/homepageMessages</td>
+      <td style="text-align:center;width:6em;">57.97 ms</td>
+      <td class="detail">
+
+        
+        
+        <a class="button" href="#popup_log_1_7_1">log-1</a>
+        <div id="popup_log_1_7_1" class="overlay">
+          <div class="popup">
+            <h2>Request and Response data</h2>
+            <a class="close" href="#record_1_7_1">&times;</a>
+
+            <div class="content">
+              <h3>Name: /api/api/member/homepageMessages</h3>
+
+              
+
+              
+
+              <h3>Request:</h3>
+              <div style="overflow: auto">
+                <table>
+                  
+                    <tr>
+                      <th>url</th>
+                      <td>
+                        
+                          https://w3-test.aboutcg.org/api/api/member/homepageMessages
+                        
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <th>method</th>
+                      <td>
+                        
+                          GET
+                        
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <th>headers</th>
+                      <td>
+                        
+                          
+                          <div>
+                            <strong>User-Agent</strong>: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:80.0) Gecko/20100101 Firefox/80.0
+                          </div>
+                          
+                          <div>
+                            <strong>Accept-Encoding</strong>: gzip, deflate
+                          </div>
+                          
+                          <div>
+                            <strong>Accept</strong>: */*
+                          </div>
+                          
+                          <div>
+                            <strong>Connection</strong>: keep-alive
+                          </div>
+                          
+                          <div>
+                            <strong>Authorization</strong>: Bearer c68e1607-d520-4a1b-bfd5-1115dfe86a9e
+                          </div>
+                          
+                          <div>
+                            <strong>bcode</strong>: 273b5a3956c7fedd6f66a9278a9f6f8d
+                          </div>
+                          
+                          <div>
+                            <strong>deviceMode</strong>: pc
+                          </div>
+                          
+                          <div>
+                            <strong>os</strong>: web
+                          </div>
+                          
+                          <div>
+                            <strong>Cookie</strong>: acw_tc=76b20f4616073306534141586e29ce756ac153874482cf817d7e535e329e0b
+                          </div>
+                          
+                        
+                      </td>
+                    </tr>
+                  
+                </table>
+              </div>
+
+              <h3>Response:</h3>
+              <div style="overflow: auto">
+                <table>
+                    
+                      <tr>
+                        <th>ok</th>
+                        <td>
+                          
+                            True
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>url</th>
+                        <td>
+                          
+                            https://w3-test.aboutcg.org/api/api/member/homepageMessages
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>status_code</th>
+                        <td>
+                          
+                            200
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>reason</th>
+                        <td>
+                          
+                            OK
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>cookies</th>
+                        <td>
+                          
+                            {}
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>encoding</th>
+                        <td>
+                          
+                            UTF-8
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>headers</th>
+                        <td>
+                          
+                            
+                            <div>
+                              <strong>Date</strong>: Mon, 07 Dec 2020 08:44:13 GMT
+                            </div>
+                            
+                            <div>
+                              <strong>Content-Type</strong>: application/json;charset=UTF-8
+                            </div>
+                            
+                            <div>
+                              <strong>Transfer-Encoding</strong>: chunked
+                            </div>
+                            
+                            <div>
+                              <strong>Server</strong>: nginx/1.16.1
+                            </div>
+                            
+                            <div>
+                              <strong>Connection</strong>: keep-alive
+                            </div>
+                            
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>content_type</th>
+                        <td>
+                          
+                            application/json;charset=UTF-8
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>json</th>
+                        <td>
+                          
+                              <pre>{&#39;code&#39;: &#39;1000&#39;, &#39;message&#39;: &#39;成功&#39;, &#39;data&#39;: [{&#39;messageId&#39;: 32, &#39;title&#39;: &#39;倒萨大神&#39;, &#39;content&#39;: &#39;大神大神&#39;, &#39;isRead&#39;: False, &#39;understandEnabled&#39;: False, &#39;entityType&#39;: 0, &#39;entityId&#39;: None, &#39;receiveTime&#39;: None, &#39;appUrl&#39;: None, &#39;webUrl&#39;: None}, {&#39;messageId&#39;: 31, &#39;title&#39;: &#39;1234&#39;, &#39;content&#39;: &#39;1233590&#39;, &#39;isRead&#39;: False, &#39;understandEnabled&#39;: False, &#39;entityType&#39;: 0, &#39;entityId&#39;: None, &#39;receiveTime&#39;: None, &#39;appUrl&#39;: None, &#39;webUrl&#39;: None}, {&#39;messageId&#39;: 30, &#39;title&#39;: &#39;测试111&#39;, &#39;content&#39;: &#39;测试2222&#39;, &#39;isRead&#39;: False, &#39;understandEnabled&#39;: False, &#39;entityType&#39;: 0, &#39;entityId&#39;: None, &#39;receiveTime&#39;: None, &#39;appUrl&#39;: None, &#39;webUrl&#39;: None}, {&#39;messageId&#39;: 29, &#39;title&#39;: &#39;ceshi1111222222222222&#39;, &#39;content&#39;: &#39;ceshi1222223333333333&#39;, &#39;isRead&#39;: False, &#39;understandEnabled&#39;: False, &#39;entityType&#39;: 0, &#39;entityId&#39;: None, &#39;receiveTime&#39;: None, &#39;appUrl&#39;: None, &#39;webUrl&#39;: None}, {&#39;messageId&#39;: 28, &#39;title&#39;: &#39;qqq&#39;, &#39;content&#39;: &#39;eeeee&#39;, &#39;isRead&#39;: False, &#39;understandEnabled&#39;: False, &#39;entityType&#39;: 1, &#39;entityId&#39;: 1, &#39;receiveTime&#39;: None, &#39;appUrl&#39;: None, &#39;webUrl&#39;: None}, {&#39;messageId&#39;: 27, &#39;title&#39;: &#39;2334&#39;, &#39;content&#39;: &#39;556&#39;, &#39;isRead&#39;: False, &#39;understandEnabled&#39;: False, &#39;entityType&#39;: 1, &#39;entityId&#39;: 1, &#39;receiveTime&#39;: None, &#39;appUrl&#39;: None, &#39;webUrl&#39;: None}, {&#39;messageId&#39;: 26, &#39;title&#39;: &#39;测试课程&#39;, &#39;content&#39;: &#39;课程详情&#39;, &#39;isRead&#39;: False, &#39;understandEnabled&#39;: False, &#39;entityType&#39;: 1, &#39;entityId&#39;: 1, &#39;receiveTime&#39;: None, &#39;appUrl&#39;: None, &#39;webUrl&#39;: None}, {&#39;messageId&#39;: 25, &#39;title&#39;: &#39;微蓝的天空有好的喜爱搜哦啊接&#39;, &#39;content&#39;: &#39;微蓝的天空有好的喜爱搜哦啊接微蓝的天空有好的喜爱搜哦啊接微蓝的天空有好的喜爱搜哦啊接微蓝的天空有好的喜爱搜哦啊接微蓝的天空有好的喜爱搜哦啊接微蓝的天空有好的喜爱搜哦啊接微蓝的天空有好的喜爱搜&#39;, &#39;isRead&#39;: False, &#39;understandEnabled&#39;: False, &#39;entityType&#39;: 3, &#39;entityId&#39;: 26, &#39;receiveTime&#39;: None, &#39;appUrl&#39;: None, &#39;webUrl&#39;: None}, {&#39;messageId&#39;: 24, &#39;title&#39;: &#39;打扫打扫打扫1&#39;, &#39;content&#39;: &#39;这是摘要&#39;, &#39;isRead&#39;: False, &#39;understandEnabled&#39;: False, &#39;entityType&#39;: 1, &#39;entityId&#39;: 19, &#39;receiveTime&#39;: None, &#39;appUrl&#39;: None, &#39;webUrl&#39;: None}, {&#39;messageId&#39;: 23, &#39;title&#39;: &#39;打扫打扫打扫2&#39;, &#39;content&#39;: &#39;这是摘要&#39;, &#39;isRead&#39;: False, &#39;understandEnabled&#39;: False, &#39;entityType&#39;: 1, &#39;entityId&#39;: 19, &#39;receiveTime&#39;: None, &#39;appUrl&#39;: None, &#39;webUrl&#39;: None}, {&#39;messageId&#39;: 22, &#39;title&#39;: &#39;打扫打扫打扫3&#39;, &#39;content&#39;: &#39;这是摘要&#39;, &#39;isRead&#39;: False, &#39;understandEnabled&#39;: False, &#39;entityType&#39;: 0, &#39;entityId&#39;: None, &#39;receiveTime&#39;: None, &#39;appUrl&#39;: None, &#39;webUrl&#39;: None}, {&#39;messageId&#39;: 21, &#39;title&#39;: &#39;是大法官水电费&#39;, &#39;content&#39;: &#39;是大法官水电费格式的&#39;, &#39;isRead&#39;: False, &#39;understandEnabled&#39;: False, &#39;entityType&#39;: 1, &#39;entityId&#39;: 2, &#39;receiveTime&#39;: None, &#39;appUrl&#39;: None, &#39;webUrl&#39;: None}, {&#39;messageId&#39;: 20, &#39;title&#39;: &#39;好消息好消息&#39;, &#39;content&#39;: &#39;好消息好消息好消息好消息好消息好消息&#39;, &#39;isRead&#39;: False, &#39;understandEnabled&#39;: False, &#39;entityType&#39;: 4, &#39;entityId&#39;: None, &#39;receiveTime&#39;: None, &#39;appUrl&#39;: None, &#39;webUrl&#39;: None}, {&#39;messageId&#39;: 18, &#39;title&#39;: &#39;阿大苏打水大神&#39;, &#39;content&#39;: &#39;爱的大dad生生世世生生世世生生世世死死死死死死死死死死死死死死死死死死&#39;, &#39;isRead&#39;: False, &#39;understandEnabled&#39;: False, &#39;entityType&#39;: 1, &#39;entityId&#39;: 34, &#39;receiveTime&#39;: None, &#39;appUrl&#39;: None, &#39;webUrl&#39;: None}, {&#39;messageId&#39;: 16, &#39;title&#39;: &#39;ll这样勉励志愿者&#39;, &#39;content&#39;: &#39;志愿服务是现代社会文明进步的重要标志。习近平总书记一直十分关心志愿服务事业，就志愿服务组织发展和志愿者队伍建设作出一系列重要指示。他多次点赞志愿者，对广大志愿者、志愿服务组织、志愿服务工作者提出殷切希望。&#39;, &#39;isRead&#39;: False, &#39;understandEnabled&#39;: False, &#39;entityType&#39;: 0, &#39;entityId&#39;: None, &#39;receiveTime&#39;: None, &#39;appUrl&#39;: None, &#39;webUrl&#39;: None}, {&#39;messageId&#39;: 15, &#39;title&#39;: &#39;新的一轮活动来也&#39;, &#39;content&#39;: &#39;药药，切克闹，我说鸡蛋你说要。&#39;, &#39;isRead&#39;: False, &#39;understandEnabled&#39;: False, &#39;entityType&#39;: 1, &#39;entityId&#39;: 3, &#39;receiveTime&#39;: None, &#39;appUrl&#39;: None, &#39;webUrl&#39;: None}, {&#39;messageId&#39;: 14, &#39;title&#39;: &#39;我说鸡蛋你说要。&#39;, &#39;content&#39;: &#39;药药，切克闹，我说鸡蛋你说要。&#39;, &#39;isRead&#39;: False, &#39;understandEnabled&#39;: False, &#39;entityType&#39;: 1, &#39;entityId&#39;: 6, &#39;receiveTime&#39;: None, &#39;appUrl&#39;: None, &#39;webUrl&#39;: None}, {&#39;messageId&#39;: 12, &#39;title&#39;: &#39;AboutCG上新啦&#39;, &#39;content&#39;: &#39;AboutCG上新啦，O(∩_∩)O哈哈~&#39;, &#39;isRead&#39;: False, &#39;understandEnabled&#39;: False, &#39;entityType&#39;: 3, &#39;entityId&#39;: 22, &#39;receiveTime&#39;: None, &#39;appUrl&#39;: None, &#39;webUrl&#39;: None}, {&#39;messageId&#39;: 9, &#39;title&#39;: &#39;杭州发布暴雨黄色预警&#39;, &#39;content&#39;: &#39;杭州发布暴雨黄色预警 北山路积水严重&#39;, &#39;isRead&#39;: False, &#39;understandEnabled&#39;: False, &#39;entityType&#39;: 0, &#39;entityId&#39;: None, &#39;receiveTime&#39;: None, &#39;appUrl&#39;: None, &#39;webUrl&#39;: None}, {&#39;messageId&#39;: 7, &#39;title&#39;: &#39;中国经济在高质量发展的大道&#39;, &#39;content&#39;: &#39;近日，麦肯锡全球研究院发表报告指出，中国在融入世界经济的历程中取得长足发展，并已成为具有全球影响力的贸易大国，世界对中国经济的依存度上升。报告显示，2000年到2017年，世界对中国经济的综合依存度指数从0.4逐步增长到1.2；&#39;, &#39;isRead&#39;: False, &#39;understandEnabled&#39;: False, &#39;entityType&#39;: 1, &#39;entityId&#39;: 7, &#39;receiveTime&#39;: None, &#39;appUrl&#39;: None, &#39;webUrl&#39;: None}, {&#39;messageId&#39;: 6, &#39;title&#39;: &#39;2018年资助各类家庭经济困难学生&#39;, &#39;content&#39;: &#39;中新社兰州7月10日电 (记者 丁思)中国教育部财务司副司长赵建军10日在兰州召开的教育部新闻发布会上介绍称，2018年全国资助各类家庭经济困难学生近1亿人次，中国基本做到了家庭经济困难学生“应助尽助”，有力地保障了公民的受教育权&#39;, &#39;isRead&#39;: False, &#39;understandEnabled&#39;: False, &#39;entityType&#39;: 3, &#39;entityId&#39;: 25, &#39;receiveTime&#39;: None, &#39;appUrl&#39;: None, &#39;webUrl&#39;: None}, {&#39;messageId&#39;: 4, &#39;title&#39;: &#39;丽江是一个让人念念不忘的地方&#39;, &#39;content&#39;: &#39;丽江古城，是采风活动中必不可少的一站。走过古城水车，踏上石板路，就进了丽江古城。四方街上的青石板还在诉说着茶马古道的往日岁月，5G覆盖之下的城区已按捺不住联接中外、沟通世界的激情。&#39;, &#39;isRead&#39;: False, &#39;understandEnabled&#39;: False, &#39;entityType&#39;: 3, &#39;entityId&#39;: 23, &#39;receiveTime&#39;: None, &#39;appUrl&#39;: None, &#39;webUrl&#39;: None}, {&#39;messageId&#39;: 3, &#39;title&#39;: &#39;收入不平等水平影响父母育儿的方式&#39;, &#39;content&#39;: &#39;经济激励塑造了父母育儿的方式。当不平等程度上升使得教育的重要性上升时，父母通过选择密集型教养方式以帮助孩子取得成功。我们发现育儿经济学能够很好地解释过去30年中育儿的总体变化：在不平等大幅上升时，“虎妈”“虎爸”和“直升机育儿&#39;, &#39;isRead&#39;: False, &#39;understandEnabled&#39;: False, &#39;entityType&#39;: 1, &#39;entityId&#39;: 4, &#39;receiveTime&#39;: None, &#39;appUrl&#39;: None, &#39;webUrl&#39;: None}, {&#39;messageId&#39;: 2, &#39;title&#39;: &#39;中国小学生跳绳世界杯勇夺60枚金牌&#39;, &#39;content&#39;: &#39;据微信公众号“广州黄埔发布”8日消息，2019年跳绳世界杯赛（挪威）于7月2日-7月12日在奥斯陆举行。广州东荟花园小学20名跳绳队员与来自全国各地的18支队伍共同组建中国跳绳国家队，出征2019年WJR跳绳世界杯赛。&#39;, &#39;isRead&#39;: False, &#39;understandEnabled&#39;: False, &#39;entityType&#39;: 3, &#39;entityId&#39;: 23, &#39;receiveTime&#39;: None, &#39;appUrl&#39;: None, &#39;webUrl&#39;: None}, {&#39;messageId&#39;: 1, &#39;title&#39;: &#39;KK抓这个重要风向标&#39;, &#39;content&#39;: &#39;7月9日，中央和国家机关党的建设工作会议在北京召开。习近平出席会议并发表重要讲话，精辟论述了加强和改进中央和国家机关党的建设的重大意义，深刻阐明了新形势下中央和国家机关党的建设的使命任务、重点工作、关键举措。&#39;, &#39;isRead&#39;: False, &#39;understandEnabled&#39;: False, &#39;entityType&#39;: 4, &#39;entityId&#39;: None, &#39;receiveTime&#39;: None, &#39;appUrl&#39;: None, &#39;webUrl&#39;: None}]}</pre>
+                          
+                        </td>
+                      </tr>
+                    
+                  </table>
+              </div>
+              
+
+              <h3>Validators:</h3>
+                <div style="overflow: auto">
+                
+                
+                <table>
+                    <tr>
+                      <th>check</th>
+                      <th>comparator</th>
+                      <th>expect value</th>
+                      <th>actual value</th>
+                    </tr>
+                    
+                    <tr>
+                      
+                      <td class="passed">
+                      
+                        status_code
+                      </td>
+                      <td>equals</td>
+                      <td>200</td>
+                      <td>200</td>
+                    </tr>
+                    
+                    <tr>
+                      
+                      <td class="passed">
+                      
+                        headers.Content-Type
+                      </td>
+                      <td>equals</td>
+                      <td>application/json;charset=UTF-8</td>
+                      <td>application/json;charset=UTF-8</td>
+                    </tr>
+                    
+                    <tr>
+                      
+                      <td class="passed">
+                      
+                        content.code
+                      </td>
+                      <td>equals</td>
+                      <td>1000</td>
+                      <td>1000</td>
+                    </tr>
+                    
+                    <tr>
+                      
+                      <td class="passed">
+                      
+                        content.message
+                      </td>
+                      <td>equals</td>
+                      <td>成功</td>
+                      <td>成功</td>
+                    </tr>
+                    
+                </table>
+                
+
+                
+                
+              </div>
+
+              <h3>Statistics:</h3>
+              <div style="overflow: auto">
+                <table>
+                  <tr>
+                      <th>content_size(bytes)</th>
+                      <td>7467</td>
+                    </tr>
+                  <tr>
+                    <th>response_time(ms)</th>
+                    <td>57.97</td>
+                  </tr>
+                  <tr>
+                    <th>elapsed(ms)</th>
+                    <td>55.66</td>
+                  </tr>
+                </table>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        
+
+        
+
+      </td>
+    </tr>
+  
+    
+    
+    <tr id="record_1_8">
+      <th class="success" style="width:5em;">success</th>
+      <td colspan="2">/home</td>
+      <td style="text-align:center;width:6em;">787.52 ms</td>
+      <td class="detail">
+
+        
+        
+        <a class="button" href="#popup_log_1_8_1">log-1</a>
+        <div id="popup_log_1_8_1" class="overlay">
+          <div class="popup">
+            <h2>Request and Response data</h2>
+            <a class="close" href="#record_1_8_1">&times;</a>
+
+            <div class="content">
+              <h3>Name: /home</h3>
+
+              
+
+              
+
+              <h3>Request:</h3>
+              <div style="overflow: auto">
+                <table>
+                  
+                    <tr>
+                      <th>url</th>
+                      <td>
+                        
+                          https://w3-test.aboutcg.org/home
+                        
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <th>method</th>
+                      <td>
+                        
+                          GET
+                        
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <th>headers</th>
+                      <td>
+                        
+                          
+                          <div>
+                            <strong>User-Agent</strong>: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:80.0) Gecko/20100101 Firefox/80.0
+                          </div>
+                          
+                          <div>
+                            <strong>Accept-Encoding</strong>: gzip, deflate
+                          </div>
+                          
+                          <div>
+                            <strong>Accept</strong>: */*
+                          </div>
+                          
+                          <div>
+                            <strong>Connection</strong>: keep-alive
+                          </div>
+                          
+                          <div>
+                            <strong>If-None-Match</strong>: "224b9-RCfI+cxwi0Ge2fu8BqrkmUEkl9E"
+                          </div>
+                          
+                          <div>
+                            <strong>Cookie</strong>: acw_tc=76b20f4616073306534141586e29ce756ac153874482cf817d7e535e329e0b
+                          </div>
+                          
+                        
+                      </td>
+                    </tr>
+                  
+                </table>
+              </div>
+
+              <h3>Response:</h3>
+              <div style="overflow: auto">
+                <table>
+                    
+                      <tr>
+                        <th>ok</th>
+                        <td>
+                          
+                            True
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>url</th>
+                        <td>
+                          
+                            https://w3-test.aboutcg.org/home
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>status_code</th>
+                        <td>
+                          
+                            200
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>reason</th>
+                        <td>
+                          
+                            OK
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>cookies</th>
+                        <td>
+                          
+                            {}
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>encoding</th>
+                        <td>
+                          
+                            utf-8
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>headers</th>
+                        <td>
+                          
+                            
+                            <div>
+                              <strong>Date</strong>: Mon, 07 Dec 2020 08:44:14 GMT
+                            </div>
+                            
+                            <div>
+                              <strong>Content-Type</strong>: text/html; charset=utf-8
+                            </div>
+                            
+                            <div>
+                              <strong>Transfer-Encoding</strong>: chunked
+                            </div>
+                            
+                            <div>
+                              <strong>Server</strong>: nginx/1.16.1
+                            </div>
+                            
+                            <div>
+                              <strong>X-Powered-By</strong>: Express
+                            </div>
+                            
+                            <div>
+                              <strong>ETag</strong>: "224b9-qeGbPvzuA2gqtpifqIts20NUNzs"
+                            </div>
+                            
+                            <div>
+                              <strong>Accept-Ranges</strong>: none
+                            </div>
+                            
+                            <div>
+                              <strong>Vary</strong>: Accept-Encoding
+                            </div>
+                            
+                            <div>
+                              <strong>Content-Encoding</strong>: gzip
+                            </div>
+                            
+                            <div>
+                              <strong>Connection</strong>: keep-alive
+                            </div>
+                            
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>content_type</th>
+                        <td>
+                          
+                            text/html; charset=utf-8
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>text</th>
+                        <td>
+                          
+                              <pre>&lt;!doctype html&gt;
+&lt;html data-n-head-ssr&gt;
+  &lt;head &gt;
+    &lt;title&gt;ABOUTCG在线课堂 | 高端CG教育&lt;/title&gt;&lt;meta data-n-head=&#34;ssr&#34; charset=&#34;utf-8&#34;&gt;&lt;meta data-n-head=&#34;ssr&#34; data-hid=&#34;keywords&#34; name=&#34;keywords&#34; content=&#34;%s&#34;&gt;&lt;meta data-n-head=&#34;ssr&#34; data-hid=&#34;description&#34; name=&#34;description&#34; content=&#34;%s&#34;&gt;&lt;meta data-n-head=&#34;ssr&#34; name=&#34;renderer&#34; content=&#34;webkit&#34;&gt;&lt;meta data-n-head=&#34;ssr&#34; name=&#34;format-detection&#34; content=&#34;address=no, date=no, email=no, telephone=no&#34;&gt;&lt;meta data-n-head=&#34;ssr&#34; name=&#34;msapplication-tap-highlight&#34; content=&#34;no&#34;&gt;&lt; ... OMITTED 134820 CHARACTORS ...</pre>
+                          
+                        </td>
+                      </tr>
+                    
+                  </table>
+              </div>
+              
+
+              <h3>Validators:</h3>
+                <div style="overflow: auto">
+                
+                
+                <table>
+                    <tr>
+                      <th>check</th>
+                      <th>comparator</th>
+                      <th>expect value</th>
+                      <th>actual value</th>
+                    </tr>
+                    
+                    <tr>
+                      
+                      <td class="passed">
+                      
+                        status_code
+                      </td>
+                      <td>equals</td>
+                      <td>200</td>
+                      <td>200</td>
+                    </tr>
+                    
+                    <tr>
+                      
+                      <td class="passed">
+                      
+                        headers.Content-Type
+                      </td>
+                      <td>equals</td>
+                      <td>text/html; charset=utf-8</td>
+                      <td>text/html; charset=utf-8</td>
+                    </tr>
+                    
+                </table>
+                
+
+                
+                
+              </div>
+
+              <h3>Statistics:</h3>
+              <div style="overflow: auto">
+                <table>
+                  <tr>
+                      <th>content_size(bytes)</th>
+                      <td>140473</td>
+                    </tr>
+                  <tr>
+                    <th>response_time(ms)</th>
+                    <td>787.52</td>
+                  </tr>
+                  <tr>
+                    <th>elapsed(ms)</th>
+                    <td>756.388</td>
+                  </tr>
+                </table>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        
+
+        
+
+      </td>
+    </tr>
+  
+  </table>
+  
+</body>

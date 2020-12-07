@@ -1,0 +1,2317 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'/>
+    <meta name='description' content=''/>
+    <meta name='robots' content='noodp, noydir'/>
+    <meta name='viewport' content='width=device-width, initial-scale=1'/>
+    <meta id="timeStampFormat" name="timeStampFormat" content='MMM d, yyyy hh:mm:ss a'/>
+
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <link href='http://extentreports.com/resx/dist/css/extent.css' type='text/css' rel='stylesheet'/>
+
+    <title> - TestReport</title>
+
+    <style type='text/css'>
+        .node.level-1 ul {
+            display: none;
+        }
+
+        .node.level-1.active ul {
+            display: block;
+        }
+
+        .card-panel.environment th:first-child {
+            width: 30%;
+        }
+        .separator {
+            color:royalblue;
+        }
+        #test-collection li, #category-collection li, #exception-collection li{
+            padding: 15px 20px;
+        }
+        .code-block {
+            border: 1px solid #ebedef;
+            border-radius: 2px;
+            color: #222 !important;
+            font-family: Consolas, monospace;
+            font-size: 13px;
+            margin: 0;
+            padding: 5px;
+            overflow: auto;
+        }
+        #checkvalue td:first-child,tr:first-child {
+            width: 150px
+        }
+        #checkvalue td:nth-child(5),tr:nth-child(5) {
+            width: 60px
+        }
+        #checkvalue td:nth-child(2),tr:nth-child(2) {
+            width: 60px
+        }
+        #checkvalue td:nth-child(3),tr:nth-child(3) {
+            min-width: 100px;
+        }
+        #checkvalue td:nth-child(4),tr:nth-child(4) {
+            min-width: 100px;
+        }
+        .noncar-seventy-five {
+            display: inline-block;
+            width: 100%;
+            float: left;
+            height: 200px;
+        }
+        .noncar-wrap {
+            width: 50%;
+            display: inline-block;
+            float: left;
+        }
+        .noncar-inside, .noncar-inside-last {
+            border-radius: 4px;
+            height: 200px;
+        }
+        .noncar-title {
+            height: 40px;
+        }
+        .noncar-content {
+            margin-bottom: 40px;
+        }
+        .noncar-content-l, .noncar-content-r {
+            display: inline-block;
+            height: 140px;
+            float: left;
+        }
+        .noncar-content-r {
+            width: 60%;
+        }
+        .noncar-content-l {
+            width: 35%;
+            padding-top: 30px;
+        }
+        .panel-name {
+            font-size: 16px;
+            padding-left: 16px;
+        }
+        .tooltipped {
+            padding-left: 25px;
+        }
+
+    </style>
+
+</head>
+
+<body class='extent standard default hide-overflow dark'>
+<div id='theme-selector' alt='切换主题，默认黑色' title='切换主题'>
+    <span><i class='material-icons'>desktop_windows</i></span>
+</div>
+
+<nav>
+    <div class="nav-wrapper">
+        <a href="#!" class="brand-logo blue darken-3">Report</a>
+
+        <!-- slideout menu -->
+        <ul id='slide-out' class='side-nav fixed hide-on-med-and-down'>
+            <li class='waves-effect active'><a href='#!' view='test-view'
+                                               onclick="configureView(0);chartsView('test');"><i class='material-icons'>dashboard</i></a>
+            </li>
+            <li class='waves-effect'><a href='#!' view='category-view' onclick="configureView(1)"><i
+                    class='material-icons'>label_outline</i></a></li>
+        </ul>
+
+        <!-- report name -->
+        <span class='report-name'>Test Report: </span>
+
+        <!-- report headline -->
+        <span class='report-headline'></span>
+
+        <!-- nav-right -->
+        <ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
+            <li>
+                <a href='#!'>
+                    <span class='label suite-start-time blue darken-3'>StartTime: &nbsp;1607329956.4117517</span>
+                </a>
+            </li>
+            <li>
+                <a href='#!'>
+                    <span class='label blue darken-3'>Time Taken:&nbsp;2.605 seconds</span>
+                </a>
+            </li>
+            <li>
+                <a href='#!'>
+                    <span class='label blue darken-3'>HttpRunner &nbsp;2.4.3 </span>
+                </a>
+            </li>
+            <li>
+                <a href='#!'>
+                    <span class='label blue darken-3'>CPython 3.7.0 </span>
+                </a>
+            </li>
+            <li>
+                <a href='#!'>
+                    <span class='label blue darken-3'>Windows-10-10.0.18362-SP0</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<!-- container -->
+<div class='container'>
+
+    <div id='test-view' class='view'>
+
+        <section id='controls'>
+            <div class='controls grey lighten-4'>
+                <!-- test toggle -->
+                <div class='chip transparent'>
+                    <a class='dropdown-button tests-toggle' data-activates='tests-toggle' data-constrainwidth='true'
+                       data-beloworigin='true' data-hover='true' href='#'>
+                        <i class='material-icons'>warning</i> Status
+                    </a>
+                    <ul id='tests-toggle' class='dropdown-content'>
+                        <li status='pass'><a href='#!' onclick="filters_testcases(this.type)" type="pass" >Pass<i class='material-icons green-text'>check_circle</i></a></li>
+                        <li status='fail'><a href='#!'onclick="filters_testcases(this.type)" type="fail" >Fail<i class='material-icons red-text'>cancel</i></a></li>
+                        <!-- <li status="skip"><a href="#!">Skip<i class="material-icons cyan-text">redo</i></a></li> -->
+                        <li class='divider'></li>
+                        <li status='clear' clear='true'><a href='#!' onclick="filters_testcases(this.type)" type="clear" >Clear Filters <i
+                                class='material-icons'>clear</i></a></li>
+                    </ul>
+                </div>
+                <!-- test toggle -->
+
+                <!-- clear filters -->
+                <div class='chip transparent hide'>
+                    <a class='' id='clear-filters' alt='Clear Filters' title='Clear Filters'>
+                        <i class='material-icons'>close</i> Clear
+                    </a>
+                </div>
+                <!-- clear filters -->
+
+                <!-- enable dashboard -->
+                <div id='toggle-test-view-charts' class='chip transparent'>
+                    <a class='pink-text' id='enable-dashboard' alt='Enable Dashboard' title='Enable Dashboard'>
+                        <i class='material-icons'>track_changes</i> Dashboard
+                    </a>
+                </div>
+                <!-- enable dashboard -->
+
+                <!-- search -->
+                <div class='chip transparent' alt='Search Tests' title='Search Tests'>
+                    <a href="#" class='search-div'>
+                        <i class='material-icons'>search</i> Search
+                    </a>
+
+                    <div class='input-field left hide'>
+                        <input style="color: red" id='search-tests' type='text' class='validate browser-default'
+                               placeholder='Search Tests...'>
+                    </div>
+
+                </div>
+                <!-- search -->
+            </div>
+        </section>
+        <div id='test-view-charts' class='subview-full noncar-seventy-five'>
+            <div id='charts-row' class='noncar-wrap'>
+                <div class=' noncar-inside'>
+                    <div class='noncar-title'>
+                        <div class='left panel-name'>TESTCASES</div>
+                    </div>
+                    <div class="noncar-content">
+                        <div class="noncar-content-l" >
+                            <div class='block text'>
+                                <span class='strong tooltipped' data-position='top'>total testcases:  1</span>
+                            </div>
+                            <div class='block text'>
+                                <span class='strong tooltipped' data-position='top'>success testcases:  1</span>
+                            </div>
+                            <div class='block text'>
+                                <span class='strong tooltipped' data-position='top'>fail testcases:  0</span>
+                            </div>
+                        </div>
+                        <div class="noncar-content-r" style="-webkit-tap-highlight-color: transparent; user-select: none; position: relative; background: transparent;">
+                            <div class='chart-box'  width="369" height="140" data-zr-dom-id="zr_0" style="position: absolute; left: 0px; top: 0px; width: 369px; height: 140px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); padding: 0px; margin: 0px; border-width: 0px;">
+                                <canvas id="child-analysis" width="369" height="140" style="position: absolute; left: 0px; top: 0px; width: 369px; height: 140px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); padding: 0px; margin: 0px; border-width: 0px;">
+                                </canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id='charts-row' class='noncar-wrap'>
+                <div class=' noncar-inside'>
+                    <div class='noncar-title'>
+                        <div class='left panel-name'>TESTSTEPS</div>
+                    </div>
+                    <div class="noncar-content">
+                        <div class="noncar-content-l" >
+                            <div class='block text'>
+                                <span class='strong tooltipped' data-position='top'>total teststeps:  8</span>
+                            </div>
+                            <div class='block text'>
+                                <span class='strong tooltipped' data-position='top'>successes teststeps:  8</span>
+                            </div>
+                            <div class='block text'>
+                                <span class='strong tooltipped' data-position='top'>failures teststeps:  0</span>
+                            </div>
+                            <div class='block text'>
+                                <span class='strong tooltipped' data-position='top'>errors teststeps:  0</span>
+                            </div>
+                            <div class='block text'>
+                                <span class='strong tooltipped' data-position='top'>skipped teststeps:  0</span>
+                            </div>
+                        </div>
+                        <div class="noncar-content-r" style="-webkit-tap-highlight-color: transparent; user-select: none; position: relative; background: transparent;">
+                            <div class='chart-box'  width="369" height="140" style="position: absolute; left: 0px; top: 0px; width: 369px; height: 140px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); padding: 0px; margin: 0px; border-width: 0px;">
+                                <canvas id='parent-analysis' width='369' height='140' style="position: absolute; left: 0px; top: 0px; width: 369px; height: 140px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); padding: 0px; margin: 0px; border-width: 0px;"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class='subview-left left'>
+
+            <div class='view-summary'>
+                <h5>TESTCASES</h5>
+                <ul id='test-collection' class='test-collection'>
+
+                    
+                        
+                            <li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='testcase description_1'>
+                        
+                        <div class='test-heading'>
+                            <span class='test-name'>testcase description</span>
+                            
+                                <span class='test-status right pass'>pass</span>
+                            
+
+                        </div>
+                        <div class='test-content hide'>
+                            <div class='test-time-info'>
+                                <span class='label start-time'>1607329956.4117517</span>
+                                <span class='label end-time'>2.605 seconds</span>
+                            </div>
+                            <div class='test-desc'>Pass: 8 ;
+                                Fail: 0 ;
+                                Error: 0
+                                Skip: 0 ;
+                            </div>
+                            <ul class='collapsible node-list' data-collapsible='accordion'>
+                                
+                                
+                                
+                                    
+                                        <li class='node level-1 leaf pass' status='pass'
+                                            test-id='testcase description_/auth/auth/login_1'>
+                                            
+                                <div class='collapsible-header'>
+                                    <div class='node-name'>/auth/auth/login</div>
+                                    <span class='node-duration'>response_time: 1044.38 ms</span>
+                                    
+                                        <span class='test-status right pass'>pass</span>
+                                    
+
+                                </div>
+                                <div class='collapsible-body'>
+                                    
+                                    
+                                    <div class='node-steps'>
+                                        
+                                            <table class='bordered table-results'>
+                                                <thead>
+                                                <tr>
+                                                    <th>Status</th>
+                                                    <th>Params</th>
+                                                    <th>Details</th>
+                                                </tr>
+                                                </thead>
+                                                
+                                                    
+                                                    <tbody>
+                                                    <tr class='info' status='info'>
+                                                        <td class='status info' title='接口地址' alt='info'><i
+                                                                class='material-icons'>low_priority</i></td>
+                                                        <td class='timestamp'>url</td>
+                                                        <td class='step-details'>https://w3-test.aboutcg.org/auth/auth/login</td>
+                                                    </tr>
+                                                    
+                                                    <tr class='info' status='info'>
+                                                        <td class='status info' title='请求方式' alt='info'><i
+                                                                class='material-icons'>low_priority</i></td>
+                                                        <td class='timestamp'>method</td>
+                                                        <td class='step-details'>POST</td>
+                                                    </tr>
+                                                    
+                                                    <tr class='info' status='info'>
+                                                        <td class='status info' title='状态码' alt='info'><i
+                                                                class='material-icons'>low_priority</i></td>
+                                                        <td class='timestamp'>status_code</td>
+                                                        <td class='step-details'>200</td>
+                                                    </tr>
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                            <tr class='warning' status='warning'>
+                                                                <td class='status warning' title='headers' alt='warning'><i
+                                                                        class='material-icons'>low_priority</i></td>
+                                                                
+                                                                    <td class='timestamp'>req_header</td>
+                                                                
+                                                                <td class='step-details'>
+                                                                    
+                                                                        
+                                                                            <div>Date:&nbsp;Mon, 07 Dec 2020 08:32:37 GMT</div>
+                                                                        
+                                                                            <div>Content-Type:&nbsp;application/json;charset=UTF-8</div>
+                                                                        
+                                                                            <div>Transfer-Encoding:&nbsp;chunked</div>
+                                                                        
+                                                                            <div>Set-Cookie:&nbsp;acw_tc=781bad2016073299570182670e689ae93e8f325b64e4332cb2e0df8aac9c8d;path=/;HttpOnly;Max-Age=1800</div>
+                                                                        
+                                                                            <div>Server:&nbsp;nginx/1.16.1</div>
+                                                                        
+                                                                            <div>Connection:&nbsp;keep-alive</div>
+                                                                        
+                                                                    
+                                                                </td>
+                                                            </tr>
+                                                        
+                                                    
+                                                        
+                                                            <tr class='warning' status='warning'>
+                                                                <td class='status warning' title='body' alt='warning'><i
+                                                                        class='material-icons'>low_priority</i></td>
+                                                                
+                                                                    <td class='timestamp'>body</td>
+                                                                
+                                                                <td class='step-details'>
+                                                                    
+                                                                        password=Qwer%401234&username=test02
+                                                                    
+                                                                </td>
+                                                            </tr>
+                                                        
+                                                    
+                                                    
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                            <tr class='error' status='error'>
+                                                                <td class='status error' title='cookies' alt='error'><i
+                                                                        class='material-icons'>low_priority</i></td>
+                                                                
+                                                                    <td class='timestamp'>cookies</td>
+                                                                
+                                                                <td class='step-details'>
+                                                                    
+                                                                        
+                                                                            <pre>acw_tc:&nbsp;781bad2016073299570182670e689ae93e8f325b64e4332cb2e0df8aac9c8d</pre>
+                                                                        
+                                                                    
+                                                                </td>
+                                                            </tr>
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                            <tr class='error' status='error'>
+                                                                <td class='status error' title='headers' alt='error'><i
+                                                                        class='material-icons'>low_priority</i></td>
+                                                                
+                                                                    <td class='timestamp'>rsp_header</td>
+                                                                
+                                                                <td class='step-details'>
+                                                                    
+                                                                        
+                                                                            <pre class="code-block">Date:&nbsp;Mon, 07 Dec 2020 08:32:37 GMT</pre>
+                                                                        
+                                                                            <pre class="code-block">Content-Type:&nbsp;application/json;charset=UTF-8</pre>
+                                                                        
+                                                                            <pre class="code-block">Transfer-Encoding:&nbsp;chunked</pre>
+                                                                        
+                                                                            <pre class="code-block">Set-Cookie:&nbsp;acw_tc=781bad2016073299570182670e689ae93e8f325b64e4332cb2e0df8aac9c8d;path=/;HttpOnly;Max-Age=1800</pre>
+                                                                        
+                                                                            <pre class="code-block">Server:&nbsp;nginx/1.16.1</pre>
+                                                                        
+                                                                            <pre class="code-block">Connection:&nbsp;keep-alive</pre>
+                                                                        
+                                                                    
+                                                                </td>
+                                                            </tr>
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                            <tr class='error' status='error'>
+                                                                <td class='status error' title='json' alt='error'><i
+                                                                        class='material-icons'>low_priority</i></td>
+                                                                
+                                                                    <td class='timestamp'>json</td>
+                                                                
+                                                                <td class='step-details'>
+                                                                    
+                                                                        
+                                                                            <pre>{"code": "1000", "data": {"access_token": "c5b6c49f-0894-4fea-a071-0a46f9efb526", "code": null, "email": null, "error": null, "error_description": null, "expires_in": null, "isGuest": false, "message": null, "phone": null, "refresh_token": "8892585d-b5e2-4caf-b785-57caf0dd4f08", "scope": "server", "token_type": "bearer", "user_id": 231550, "username": "test02"}, "message": "\u6210\u529f"}</pre>
+                                                                        
+                                                                    
+                                                                </td>
+                                                            </tr>
+                                                        
+                                                    
+
+                                                    <tr class='pass' status='pass'>
+                                                        <td class='status pass' title='断言' alt='pass'><i
+                                                                class='material-icons'>low_priority</i></td>
+                                                        <td class='timestamp'>Validators</td>
+                                                        <td >
+                                                                <table id="checkvalue" >
+                                                                <tr>
+                                                                    <th >check</th>
+                                                                    <th>comparator</th>
+                                                                    <th>expect value</th>
+                                                                    <th>actual value</th>
+                                                                    <th>result</th>
+                                                                </tr>
+                                                                
+                                                                <tr>
+                                                                    <td ></td>
+                                                                    <td></td>
+                                                                    <td></td>
+                                                                    <td></td>
+                                                                    
+                                                                </tr>
+                                                                
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+
+                                                    <tr class='info' status='info'>
+                                                        <td class='status info' title='info' alt='info'><i
+                                                                class='material-icons'>low_priority</i></td>
+                                                        <td class='timestamp'>Statistics</td>
+                                                        <td class='step-details'>
+                                                            <div>
+                                                                content_size(bytes): 353
+                                                            </div>
+                                                            <div>
+                                                                response_time(ms): 1044.38
+                                                            </div>
+                                                            <div>
+                                                                elapsed(ms): 28.33
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+
+                                                    
+                                                    </tbody>
+                                                
+                                                </table>
+                                        
+                                    </div>
+                                    
+                                </div>
+                                </li>
+                                
+                                
+                                
+                                    
+                                        <li class='node level-1 leaf pass' status='pass'
+                                            test-id='testcase description_/api/auth/message/sendSmsCode_2'>
+                                            
+                                <div class='collapsible-header'>
+                                    <div class='node-name'>/api/auth/message/sendSmsCode</div>
+                                    <span class='node-duration'>response_time: 36.98 ms</span>
+                                    
+                                        <span class='test-status right pass'>pass</span>
+                                    
+
+                                </div>
+                                <div class='collapsible-body'>
+                                    
+                                    
+                                    <div class='node-steps'>
+                                        
+                                            <table class='bordered table-results'>
+                                                <thead>
+                                                <tr>
+                                                    <th>Status</th>
+                                                    <th>Params</th>
+                                                    <th>Details</th>
+                                                </tr>
+                                                </thead>
+                                                
+                                                    
+                                                    <tbody>
+                                                    <tr class='info' status='info'>
+                                                        <td class='status info' title='接口地址' alt='info'><i
+                                                                class='material-icons'>low_priority</i></td>
+                                                        <td class='timestamp'>url</td>
+                                                        <td class='step-details'>https://w3-test.aboutcg.org/api/auth/message/sendSmsCode?phone=17633710286&type=7</td>
+                                                    </tr>
+                                                    
+                                                    <tr class='info' status='info'>
+                                                        <td class='status info' title='请求方式' alt='info'><i
+                                                                class='material-icons'>low_priority</i></td>
+                                                        <td class='timestamp'>method</td>
+                                                        <td class='step-details'>GET</td>
+                                                    </tr>
+                                                    
+                                                    <tr class='info' status='info'>
+                                                        <td class='status info' title='状态码' alt='info'><i
+                                                                class='material-icons'>low_priority</i></td>
+                                                        <td class='timestamp'>status_code</td>
+                                                        <td class='step-details'>200</td>
+                                                    </tr>
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                            <tr class='warning' status='warning'>
+                                                                <td class='status warning' title='headers' alt='warning'><i
+                                                                        class='material-icons'>low_priority</i></td>
+                                                                
+                                                                    <td class='timestamp'>req_header</td>
+                                                                
+                                                                <td class='step-details'>
+                                                                    
+                                                                        
+                                                                            <div>Date:&nbsp;Mon, 07 Dec 2020 08:32:37 GMT</div>
+                                                                        
+                                                                            <div>Content-Type:&nbsp;application/json;charset=UTF-8</div>
+                                                                        
+                                                                            <div>Transfer-Encoding:&nbsp;chunked</div>
+                                                                        
+                                                                            <div>Server:&nbsp;nginx/1.16.1</div>
+                                                                        
+                                                                            <div>Connection:&nbsp;keep-alive</div>
+                                                                        
+                                                                    
+                                                                </td>
+                                                            </tr>
+                                                        
+                                                    
+                                                    
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                            <tr class='error' status='error'>
+                                                                <td class='status error' title='headers' alt='error'><i
+                                                                        class='material-icons'>low_priority</i></td>
+                                                                
+                                                                    <td class='timestamp'>rsp_header</td>
+                                                                
+                                                                <td class='step-details'>
+                                                                    
+                                                                        
+                                                                            <pre class="code-block">Date:&nbsp;Mon, 07 Dec 2020 08:32:37 GMT</pre>
+                                                                        
+                                                                            <pre class="code-block">Content-Type:&nbsp;application/json;charset=UTF-8</pre>
+                                                                        
+                                                                            <pre class="code-block">Transfer-Encoding:&nbsp;chunked</pre>
+                                                                        
+                                                                            <pre class="code-block">Server:&nbsp;nginx/1.16.1</pre>
+                                                                        
+                                                                            <pre class="code-block">Connection:&nbsp;keep-alive</pre>
+                                                                        
+                                                                    
+                                                                </td>
+                                                            </tr>
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                            <tr class='error' status='error'>
+                                                                <td class='status error' title='json' alt='error'><i
+                                                                        class='material-icons'>low_priority</i></td>
+                                                                
+                                                                    <td class='timestamp'>json</td>
+                                                                
+                                                                <td class='step-details'>
+                                                                    
+                                                                        
+                                                                            <pre>{"code": "1000", "data": {"key": "4b5c92fc-58df-4820-bf9d-e3a6de4af530"}, "message": "\u6210\u529f"}</pre>
+                                                                        
+                                                                    
+                                                                </td>
+                                                            </tr>
+                                                        
+                                                    
+
+                                                    <tr class='pass' status='pass'>
+                                                        <td class='status pass' title='断言' alt='pass'><i
+                                                                class='material-icons'>low_priority</i></td>
+                                                        <td class='timestamp'>Validators</td>
+                                                        <td >
+                                                                <table id="checkvalue" >
+                                                                <tr>
+                                                                    <th >check</th>
+                                                                    <th>comparator</th>
+                                                                    <th>expect value</th>
+                                                                    <th>actual value</th>
+                                                                    <th>result</th>
+                                                                </tr>
+                                                                
+                                                                <tr>
+                                                                    <td ></td>
+                                                                    <td></td>
+                                                                    <td></td>
+                                                                    <td></td>
+                                                                    
+                                                                </tr>
+                                                                
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+
+                                                    <tr class='info' status='info'>
+                                                        <td class='status info' title='info' alt='info'><i
+                                                                class='material-icons'>low_priority</i></td>
+                                                        <td class='timestamp'>Statistics</td>
+                                                        <td class='step-details'>
+                                                            <div>
+                                                                content_size(bytes): 88
+                                                            </div>
+                                                            <div>
+                                                                response_time(ms): 36.98
+                                                            </div>
+                                                            <div>
+                                                                elapsed(ms): 33.358
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+
+                                                    
+                                                    </tbody>
+                                                
+                                                </table>
+                                        
+                                    </div>
+                                    
+                                </div>
+                                </li>
+                                
+                                
+                                
+                                    
+                                        <li class='node level-1 leaf pass' status='pass'
+                                            test-id='testcase description_/api/auth/checkSmsCode_3'>
+                                            
+                                <div class='collapsible-header'>
+                                    <div class='node-name'>/api/auth/checkSmsCode</div>
+                                    <span class='node-duration'>response_time: 29.98 ms</span>
+                                    
+                                        <span class='test-status right pass'>pass</span>
+                                    
+
+                                </div>
+                                <div class='collapsible-body'>
+                                    
+                                    
+                                    <div class='node-steps'>
+                                        
+                                            <table class='bordered table-results'>
+                                                <thead>
+                                                <tr>
+                                                    <th>Status</th>
+                                                    <th>Params</th>
+                                                    <th>Details</th>
+                                                </tr>
+                                                </thead>
+                                                
+                                                    
+                                                    <tbody>
+                                                    <tr class='info' status='info'>
+                                                        <td class='status info' title='接口地址' alt='info'><i
+                                                                class='material-icons'>low_priority</i></td>
+                                                        <td class='timestamp'>url</td>
+                                                        <td class='step-details'>https://w3-test.aboutcg.org/api/auth/checkSmsCode</td>
+                                                    </tr>
+                                                    
+                                                    <tr class='info' status='info'>
+                                                        <td class='status info' title='请求方式' alt='info'><i
+                                                                class='material-icons'>low_priority</i></td>
+                                                        <td class='timestamp'>method</td>
+                                                        <td class='step-details'>POST</td>
+                                                    </tr>
+                                                    
+                                                    <tr class='info' status='info'>
+                                                        <td class='status info' title='状态码' alt='info'><i
+                                                                class='material-icons'>low_priority</i></td>
+                                                        <td class='timestamp'>status_code</td>
+                                                        <td class='step-details'>200</td>
+                                                    </tr>
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                            <tr class='warning' status='warning'>
+                                                                <td class='status warning' title='headers' alt='warning'><i
+                                                                        class='material-icons'>low_priority</i></td>
+                                                                
+                                                                    <td class='timestamp'>req_header</td>
+                                                                
+                                                                <td class='step-details'>
+                                                                    
+                                                                        
+                                                                            <div>Date:&nbsp;Mon, 07 Dec 2020 08:32:37 GMT</div>
+                                                                        
+                                                                            <div>Content-Type:&nbsp;application/json;charset=UTF-8</div>
+                                                                        
+                                                                            <div>Transfer-Encoding:&nbsp;chunked</div>
+                                                                        
+                                                                            <div>Server:&nbsp;nginx/1.16.1</div>
+                                                                        
+                                                                            <div>Connection:&nbsp;keep-alive</div>
+                                                                        
+                                                                    
+                                                                </td>
+                                                            </tr>
+                                                        
+                                                    
+                                                        
+                                                            <tr class='warning' status='warning'>
+                                                                <td class='status warning' title='body' alt='warning'><i
+                                                                        class='material-icons'>low_priority</i></td>
+                                                                
+                                                                    <td class='timestamp'>body</td>
+                                                                
+                                                                <td class='step-details'>
+                                                                    
+                                                                        code=460633&phone=17633710286&type=7
+                                                                    
+                                                                </td>
+                                                            </tr>
+                                                        
+                                                    
+                                                    
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                            <tr class='error' status='error'>
+                                                                <td class='status error' title='headers' alt='error'><i
+                                                                        class='material-icons'>low_priority</i></td>
+                                                                
+                                                                    <td class='timestamp'>rsp_header</td>
+                                                                
+                                                                <td class='step-details'>
+                                                                    
+                                                                        
+                                                                            <pre class="code-block">Date:&nbsp;Mon, 07 Dec 2020 08:32:37 GMT</pre>
+                                                                        
+                                                                            <pre class="code-block">Content-Type:&nbsp;application/json;charset=UTF-8</pre>
+                                                                        
+                                                                            <pre class="code-block">Transfer-Encoding:&nbsp;chunked</pre>
+                                                                        
+                                                                            <pre class="code-block">Server:&nbsp;nginx/1.16.1</pre>
+                                                                        
+                                                                            <pre class="code-block">Connection:&nbsp;keep-alive</pre>
+                                                                        
+                                                                    
+                                                                </td>
+                                                            </tr>
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                            <tr class='error' status='error'>
+                                                                <td class='status error' title='json' alt='error'><i
+                                                                        class='material-icons'>low_priority</i></td>
+                                                                
+                                                                    <td class='timestamp'>json</td>
+                                                                
+                                                                <td class='step-details'>
+                                                                    
+                                                                        
+                                                                            <pre>{"code": "9001", "data": null, "message": "\u7cfb\u7edf\u5f02\u5e38"}</pre>
+                                                                        
+                                                                    
+                                                                </td>
+                                                            </tr>
+                                                        
+                                                    
+
+                                                    <tr class='pass' status='pass'>
+                                                        <td class='status pass' title='断言' alt='pass'><i
+                                                                class='material-icons'>low_priority</i></td>
+                                                        <td class='timestamp'>Validators</td>
+                                                        <td >
+                                                                <table id="checkvalue" >
+                                                                <tr>
+                                                                    <th >check</th>
+                                                                    <th>comparator</th>
+                                                                    <th>expect value</th>
+                                                                    <th>actual value</th>
+                                                                    <th>result</th>
+                                                                </tr>
+                                                                
+                                                                <tr>
+                                                                    <td ></td>
+                                                                    <td></td>
+                                                                    <td></td>
+                                                                    <td></td>
+                                                                    
+                                                                </tr>
+                                                                
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+
+                                                    <tr class='info' status='info'>
+                                                        <td class='status info' title='info' alt='info'><i
+                                                                class='material-icons'>low_priority</i></td>
+                                                        <td class='timestamp'>Statistics</td>
+                                                        <td class='step-details'>
+                                                            <div>
+                                                                content_size(bytes): 52
+                                                            </div>
+                                                            <div>
+                                                                response_time(ms): 29.98
+                                                            </div>
+                                                            <div>
+                                                                elapsed(ms): 27.935
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+
+                                                    
+                                                    </tbody>
+                                                
+                                                </table>
+                                        
+                                    </div>
+                                    
+                                </div>
+                                </li>
+                                
+                                
+                                
+                                    
+                                        <li class='node level-1 leaf pass' status='pass'
+                                            test-id='testcase description_/api/auth/getLoginValidToken_4'>
+                                            
+                                <div class='collapsible-header'>
+                                    <div class='node-name'>/api/auth/getLoginValidToken</div>
+                                    <span class='node-duration'>response_time: 28.98 ms</span>
+                                    
+                                        <span class='test-status right pass'>pass</span>
+                                    
+
+                                </div>
+                                <div class='collapsible-body'>
+                                    
+                                    
+                                    <div class='node-steps'>
+                                        
+                                            <table class='bordered table-results'>
+                                                <thead>
+                                                <tr>
+                                                    <th>Status</th>
+                                                    <th>Params</th>
+                                                    <th>Details</th>
+                                                </tr>
+                                                </thead>
+                                                
+                                                    
+                                                    <tbody>
+                                                    <tr class='info' status='info'>
+                                                        <td class='status info' title='接口地址' alt='info'><i
+                                                                class='material-icons'>low_priority</i></td>
+                                                        <td class='timestamp'>url</td>
+                                                        <td class='step-details'>https://w3-test.aboutcg.org/api/auth/getLoginValidToken</td>
+                                                    </tr>
+                                                    
+                                                    <tr class='info' status='info'>
+                                                        <td class='status info' title='请求方式' alt='info'><i
+                                                                class='material-icons'>low_priority</i></td>
+                                                        <td class='timestamp'>method</td>
+                                                        <td class='step-details'>POST</td>
+                                                    </tr>
+                                                    
+                                                    <tr class='info' status='info'>
+                                                        <td class='status info' title='状态码' alt='info'><i
+                                                                class='material-icons'>low_priority</i></td>
+                                                        <td class='timestamp'>status_code</td>
+                                                        <td class='step-details'>200</td>
+                                                    </tr>
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                            <tr class='warning' status='warning'>
+                                                                <td class='status warning' title='headers' alt='warning'><i
+                                                                        class='material-icons'>low_priority</i></td>
+                                                                
+                                                                    <td class='timestamp'>req_header</td>
+                                                                
+                                                                <td class='step-details'>
+                                                                    
+                                                                        
+                                                                            <div>Date:&nbsp;Mon, 07 Dec 2020 08:32:37 GMT</div>
+                                                                        
+                                                                            <div>Content-Type:&nbsp;application/json;charset=UTF-8</div>
+                                                                        
+                                                                            <div>Transfer-Encoding:&nbsp;chunked</div>
+                                                                        
+                                                                            <div>Server:&nbsp;nginx/1.16.1</div>
+                                                                        
+                                                                            <div>Connection:&nbsp;keep-alive</div>
+                                                                        
+                                                                    
+                                                                </td>
+                                                            </tr>
+                                                        
+                                                    
+                                                        
+                                                            <tr class='warning' status='warning'>
+                                                                <td class='status warning' title='body' alt='warning'><i
+                                                                        class='material-icons'>low_priority</i></td>
+                                                                
+                                                                    <td class='timestamp'>body</td>
+                                                                
+                                                                <td class='step-details'>
+                                                                    
+                                                                        userId=231550
+                                                                    
+                                                                </td>
+                                                            </tr>
+                                                        
+                                                    
+                                                    
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                            <tr class='error' status='error'>
+                                                                <td class='status error' title='headers' alt='error'><i
+                                                                        class='material-icons'>low_priority</i></td>
+                                                                
+                                                                    <td class='timestamp'>rsp_header</td>
+                                                                
+                                                                <td class='step-details'>
+                                                                    
+                                                                        
+                                                                            <pre class="code-block">Date:&nbsp;Mon, 07 Dec 2020 08:32:37 GMT</pre>
+                                                                        
+                                                                            <pre class="code-block">Content-Type:&nbsp;application/json;charset=UTF-8</pre>
+                                                                        
+                                                                            <pre class="code-block">Transfer-Encoding:&nbsp;chunked</pre>
+                                                                        
+                                                                            <pre class="code-block">Server:&nbsp;nginx/1.16.1</pre>
+                                                                        
+                                                                            <pre class="code-block">Connection:&nbsp;keep-alive</pre>
+                                                                        
+                                                                    
+                                                                </td>
+                                                            </tr>
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                            <tr class='error' status='error'>
+                                                                <td class='status error' title='json' alt='error'><i
+                                                                        class='material-icons'>low_priority</i></td>
+                                                                
+                                                                    <td class='timestamp'>json</td>
+                                                                
+                                                                <td class='step-details'>
+                                                                    
+                                                                        
+                                                                            <pre>{"code": "3003", "data": null, "message": "\u767b\u5f55\u5f02\u5e38\u8bf7\u91cd\u65b0\u767b\u5f55"}</pre>
+                                                                        
+                                                                    
+                                                                </td>
+                                                            </tr>
+                                                        
+                                                    
+
+                                                    <tr class='pass' status='pass'>
+                                                        <td class='status pass' title='断言' alt='pass'><i
+                                                                class='material-icons'>low_priority</i></td>
+                                                        <td class='timestamp'>Validators</td>
+                                                        <td >
+                                                                <table id="checkvalue" >
+                                                                <tr>
+                                                                    <th >check</th>
+                                                                    <th>comparator</th>
+                                                                    <th>expect value</th>
+                                                                    <th>actual value</th>
+                                                                    <th>result</th>
+                                                                </tr>
+                                                                
+                                                                <tr>
+                                                                    <td ></td>
+                                                                    <td></td>
+                                                                    <td></td>
+                                                                    <td></td>
+                                                                    
+                                                                </tr>
+                                                                
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+
+                                                    <tr class='info' status='info'>
+                                                        <td class='status info' title='info' alt='info'><i
+                                                                class='material-icons'>low_priority</i></td>
+                                                        <td class='timestamp'>Statistics</td>
+                                                        <td class='step-details'>
+                                                            <div>
+                                                                content_size(bytes): 67
+                                                            </div>
+                                                            <div>
+                                                                response_time(ms): 28.98
+                                                            </div>
+                                                            <div>
+                                                                elapsed(ms): 26.915
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+
+                                                    
+                                                    </tbody>
+                                                
+                                                </table>
+                                        
+                                    </div>
+                                    
+                                </div>
+                                </li>
+                                
+                                
+                                
+                                    
+                                        <li class='node level-1 leaf pass' status='pass'
+                                            test-id='testcase description_/api/api/member/info_5'>
+                                            
+                                <div class='collapsible-header'>
+                                    <div class='node-name'>/api/api/member/info</div>
+                                    <span class='node-duration'>response_time: 70.96 ms</span>
+                                    
+                                        <span class='test-status right pass'>pass</span>
+                                    
+
+                                </div>
+                                <div class='collapsible-body'>
+                                    
+                                    
+                                    <div class='node-steps'>
+                                        
+                                            <table class='bordered table-results'>
+                                                <thead>
+                                                <tr>
+                                                    <th>Status</th>
+                                                    <th>Params</th>
+                                                    <th>Details</th>
+                                                </tr>
+                                                </thead>
+                                                
+                                                    
+                                                    <tbody>
+                                                    <tr class='info' status='info'>
+                                                        <td class='status info' title='接口地址' alt='info'><i
+                                                                class='material-icons'>low_priority</i></td>
+                                                        <td class='timestamp'>url</td>
+                                                        <td class='step-details'>https://w3-test.aboutcg.org/api/api/member/info</td>
+                                                    </tr>
+                                                    
+                                                    <tr class='info' status='info'>
+                                                        <td class='status info' title='请求方式' alt='info'><i
+                                                                class='material-icons'>low_priority</i></td>
+                                                        <td class='timestamp'>method</td>
+                                                        <td class='step-details'>GET</td>
+                                                    </tr>
+                                                    
+                                                    <tr class='info' status='info'>
+                                                        <td class='status info' title='状态码' alt='info'><i
+                                                                class='material-icons'>low_priority</i></td>
+                                                        <td class='timestamp'>status_code</td>
+                                                        <td class='step-details'>200</td>
+                                                    </tr>
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                            <tr class='warning' status='warning'>
+                                                                <td class='status warning' title='headers' alt='warning'><i
+                                                                        class='material-icons'>low_priority</i></td>
+                                                                
+                                                                    <td class='timestamp'>req_header</td>
+                                                                
+                                                                <td class='step-details'>
+                                                                    
+                                                                        
+                                                                            <div>Date:&nbsp;Mon, 07 Dec 2020 08:32:37 GMT</div>
+                                                                        
+                                                                            <div>Content-Type:&nbsp;application/json;charset=UTF-8</div>
+                                                                        
+                                                                            <div>Transfer-Encoding:&nbsp;chunked</div>
+                                                                        
+                                                                            <div>Server:&nbsp;nginx/1.16.1</div>
+                                                                        
+                                                                            <div>Connection:&nbsp;keep-alive</div>
+                                                                        
+                                                                    
+                                                                </td>
+                                                            </tr>
+                                                        
+                                                    
+                                                    
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                            <tr class='error' status='error'>
+                                                                <td class='status error' title='headers' alt='error'><i
+                                                                        class='material-icons'>low_priority</i></td>
+                                                                
+                                                                    <td class='timestamp'>rsp_header</td>
+                                                                
+                                                                <td class='step-details'>
+                                                                    
+                                                                        
+                                                                            <pre class="code-block">Date:&nbsp;Mon, 07 Dec 2020 08:32:37 GMT</pre>
+                                                                        
+                                                                            <pre class="code-block">Content-Type:&nbsp;application/json;charset=UTF-8</pre>
+                                                                        
+                                                                            <pre class="code-block">Transfer-Encoding:&nbsp;chunked</pre>
+                                                                        
+                                                                            <pre class="code-block">Server:&nbsp;nginx/1.16.1</pre>
+                                                                        
+                                                                            <pre class="code-block">Connection:&nbsp;keep-alive</pre>
+                                                                        
+                                                                    
+                                                                </td>
+                                                            </tr>
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                            <tr class='error' status='error'>
+                                                                <td class='status error' title='json' alt='error'><i
+                                                                        class='material-icons'>low_priority</i></td>
+                                                                
+                                                                    <td class='timestamp'>json</td>
+                                                                
+                                                                <td class='step-details'>
+                                                                    
+                                                                        
+                                                                            <pre>{"code": "1000", "data": {"avatar": "https://webcdn01.aboutcg.org/71d3541ceb3f4b1c8d6e874f4178eea4", "isTeacher": false, "isVip": true, "manageFlag": true, "myCourseNum": 35, "name": "test02"}, "message": "\u6210\u529f"}</pre>
+                                                                        
+                                                                    
+                                                                </td>
+                                                            </tr>
+                                                        
+                                                    
+
+                                                    <tr class='pass' status='pass'>
+                                                        <td class='status pass' title='断言' alt='pass'><i
+                                                                class='material-icons'>low_priority</i></td>
+                                                        <td class='timestamp'>Validators</td>
+                                                        <td >
+                                                                <table id="checkvalue" >
+                                                                <tr>
+                                                                    <th >check</th>
+                                                                    <th>comparator</th>
+                                                                    <th>expect value</th>
+                                                                    <th>actual value</th>
+                                                                    <th>result</th>
+                                                                </tr>
+                                                                
+                                                                <tr>
+                                                                    <td ></td>
+                                                                    <td></td>
+                                                                    <td></td>
+                                                                    <td></td>
+                                                                    
+                                                                </tr>
+                                                                
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+
+                                                    <tr class='info' status='info'>
+                                                        <td class='status info' title='info' alt='info'><i
+                                                                class='material-icons'>low_priority</i></td>
+                                                        <td class='timestamp'>Statistics</td>
+                                                        <td class='step-details'>
+                                                            <div>
+                                                                content_size(bytes): 198
+                                                            </div>
+                                                            <div>
+                                                                response_time(ms): 70.96
+                                                            </div>
+                                                            <div>
+                                                                elapsed(ms): 62.517
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+
+                                                    
+                                                    </tbody>
+                                                
+                                                </table>
+                                        
+                                    </div>
+                                    
+                                </div>
+                                </li>
+                                
+                                
+                                
+                                    
+                                        <li class='node level-1 leaf pass' status='pass'
+                                            test-id='testcase description_/api/api/member/cart/getCart_6'>
+                                            
+                                <div class='collapsible-header'>
+                                    <div class='node-name'>/api/api/member/cart/getCart</div>
+                                    <span class='node-duration'>response_time: 56.97 ms</span>
+                                    
+                                        <span class='test-status right pass'>pass</span>
+                                    
+
+                                </div>
+                                <div class='collapsible-body'>
+                                    
+                                    
+                                    <div class='node-steps'>
+                                        
+                                            <table class='bordered table-results'>
+                                                <thead>
+                                                <tr>
+                                                    <th>Status</th>
+                                                    <th>Params</th>
+                                                    <th>Details</th>
+                                                </tr>
+                                                </thead>
+                                                
+                                                    
+                                                    <tbody>
+                                                    <tr class='info' status='info'>
+                                                        <td class='status info' title='接口地址' alt='info'><i
+                                                                class='material-icons'>low_priority</i></td>
+                                                        <td class='timestamp'>url</td>
+                                                        <td class='step-details'>https://w3-test.aboutcg.org/api/api/member/cart/getCart</td>
+                                                    </tr>
+                                                    
+                                                    <tr class='info' status='info'>
+                                                        <td class='status info' title='请求方式' alt='info'><i
+                                                                class='material-icons'>low_priority</i></td>
+                                                        <td class='timestamp'>method</td>
+                                                        <td class='step-details'>GET</td>
+                                                    </tr>
+                                                    
+                                                    <tr class='info' status='info'>
+                                                        <td class='status info' title='状态码' alt='info'><i
+                                                                class='material-icons'>low_priority</i></td>
+                                                        <td class='timestamp'>status_code</td>
+                                                        <td class='step-details'>200</td>
+                                                    </tr>
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                            <tr class='warning' status='warning'>
+                                                                <td class='status warning' title='headers' alt='warning'><i
+                                                                        class='material-icons'>low_priority</i></td>
+                                                                
+                                                                    <td class='timestamp'>req_header</td>
+                                                                
+                                                                <td class='step-details'>
+                                                                    
+                                                                        
+                                                                            <div>Date:&nbsp;Mon, 07 Dec 2020 08:32:37 GMT</div>
+                                                                        
+                                                                            <div>Content-Type:&nbsp;application/json;charset=UTF-8</div>
+                                                                        
+                                                                            <div>Transfer-Encoding:&nbsp;chunked</div>
+                                                                        
+                                                                            <div>Server:&nbsp;nginx/1.16.1</div>
+                                                                        
+                                                                            <div>Connection:&nbsp;keep-alive</div>
+                                                                        
+                                                                    
+                                                                </td>
+                                                            </tr>
+                                                        
+                                                    
+                                                    
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                            <tr class='error' status='error'>
+                                                                <td class='status error' title='headers' alt='error'><i
+                                                                        class='material-icons'>low_priority</i></td>
+                                                                
+                                                                    <td class='timestamp'>rsp_header</td>
+                                                                
+                                                                <td class='step-details'>
+                                                                    
+                                                                        
+                                                                            <pre class="code-block">Date:&nbsp;Mon, 07 Dec 2020 08:32:37 GMT</pre>
+                                                                        
+                                                                            <pre class="code-block">Content-Type:&nbsp;application/json;charset=UTF-8</pre>
+                                                                        
+                                                                            <pre class="code-block">Transfer-Encoding:&nbsp;chunked</pre>
+                                                                        
+                                                                            <pre class="code-block">Server:&nbsp;nginx/1.16.1</pre>
+                                                                        
+                                                                            <pre class="code-block">Connection:&nbsp;keep-alive</pre>
+                                                                        
+                                                                    
+                                                                </td>
+                                                            </tr>
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                            <tr class='error' status='error'>
+                                                                <td class='status error' title='json' alt='error'><i
+                                                                        class='material-icons'>low_priority</i></td>
+                                                                
+                                                                    <td class='timestamp'>json</td>
+                                                                
+                                                                <td class='step-details'>
+                                                                    
+                                                                        
+                                                                            <pre>{"code": "1000", "data": {"carts": {"cartItemList": null, "couponVO": null, "totalPrice": null}}, "message": "\u6210\u529f"}</pre>
+                                                                        
+                                                                    
+                                                                </td>
+                                                            </tr>
+                                                        
+                                                    
+
+                                                    <tr class='pass' status='pass'>
+                                                        <td class='status pass' title='断言' alt='pass'><i
+                                                                class='material-icons'>low_priority</i></td>
+                                                        <td class='timestamp'>Validators</td>
+                                                        <td >
+                                                                <table id="checkvalue" >
+                                                                <tr>
+                                                                    <th >check</th>
+                                                                    <th>comparator</th>
+                                                                    <th>expect value</th>
+                                                                    <th>actual value</th>
+                                                                    <th>result</th>
+                                                                </tr>
+                                                                
+                                                                <tr>
+                                                                    <td ></td>
+                                                                    <td></td>
+                                                                    <td></td>
+                                                                    <td></td>
+                                                                    
+                                                                </tr>
+                                                                
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+
+                                                    <tr class='info' status='info'>
+                                                        <td class='status info' title='info' alt='info'><i
+                                                                class='material-icons'>low_priority</i></td>
+                                                        <td class='timestamp'>Statistics</td>
+                                                        <td class='step-details'>
+                                                            <div>
+                                                                content_size(bytes): 107
+                                                            </div>
+                                                            <div>
+                                                                response_time(ms): 56.97
+                                                            </div>
+                                                            <div>
+                                                                elapsed(ms): 54.357
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+
+                                                    
+                                                    </tbody>
+                                                
+                                                </table>
+                                        
+                                    </div>
+                                    
+                                </div>
+                                </li>
+                                
+                                
+                                
+                                    
+                                        <li class='node level-1 leaf pass' status='pass'
+                                            test-id='testcase description_/api/api/member/homepageMessages_7'>
+                                            
+                                <div class='collapsible-header'>
+                                    <div class='node-name'>/api/api/member/homepageMessages</div>
+                                    <span class='node-duration'>response_time: 68.96 ms</span>
+                                    
+                                        <span class='test-status right pass'>pass</span>
+                                    
+
+                                </div>
+                                <div class='collapsible-body'>
+                                    
+                                    
+                                    <div class='node-steps'>
+                                        
+                                            <table class='bordered table-results'>
+                                                <thead>
+                                                <tr>
+                                                    <th>Status</th>
+                                                    <th>Params</th>
+                                                    <th>Details</th>
+                                                </tr>
+                                                </thead>
+                                                
+                                                    
+                                                    <tbody>
+                                                    <tr class='info' status='info'>
+                                                        <td class='status info' title='接口地址' alt='info'><i
+                                                                class='material-icons'>low_priority</i></td>
+                                                        <td class='timestamp'>url</td>
+                                                        <td class='step-details'>https://w3-test.aboutcg.org/api/api/member/homepageMessages</td>
+                                                    </tr>
+                                                    
+                                                    <tr class='info' status='info'>
+                                                        <td class='status info' title='请求方式' alt='info'><i
+                                                                class='material-icons'>low_priority</i></td>
+                                                        <td class='timestamp'>method</td>
+                                                        <td class='step-details'>GET</td>
+                                                    </tr>
+                                                    
+                                                    <tr class='info' status='info'>
+                                                        <td class='status info' title='状态码' alt='info'><i
+                                                                class='material-icons'>low_priority</i></td>
+                                                        <td class='timestamp'>status_code</td>
+                                                        <td class='step-details'>200</td>
+                                                    </tr>
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                            <tr class='warning' status='warning'>
+                                                                <td class='status warning' title='headers' alt='warning'><i
+                                                                        class='material-icons'>low_priority</i></td>
+                                                                
+                                                                    <td class='timestamp'>req_header</td>
+                                                                
+                                                                <td class='step-details'>
+                                                                    
+                                                                        
+                                                                            <div>Date:&nbsp;Mon, 07 Dec 2020 08:32:37 GMT</div>
+                                                                        
+                                                                            <div>Content-Type:&nbsp;application/json;charset=UTF-8</div>
+                                                                        
+                                                                            <div>Transfer-Encoding:&nbsp;chunked</div>
+                                                                        
+                                                                            <div>Server:&nbsp;nginx/1.16.1</div>
+                                                                        
+                                                                            <div>Connection:&nbsp;keep-alive</div>
+                                                                        
+                                                                    
+                                                                </td>
+                                                            </tr>
+                                                        
+                                                    
+                                                    
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                            <tr class='error' status='error'>
+                                                                <td class='status error' title='headers' alt='error'><i
+                                                                        class='material-icons'>low_priority</i></td>
+                                                                
+                                                                    <td class='timestamp'>rsp_header</td>
+                                                                
+                                                                <td class='step-details'>
+                                                                    
+                                                                        
+                                                                            <pre class="code-block">Date:&nbsp;Mon, 07 Dec 2020 08:32:37 GMT</pre>
+                                                                        
+                                                                            <pre class="code-block">Content-Type:&nbsp;application/json;charset=UTF-8</pre>
+                                                                        
+                                                                            <pre class="code-block">Transfer-Encoding:&nbsp;chunked</pre>
+                                                                        
+                                                                            <pre class="code-block">Server:&nbsp;nginx/1.16.1</pre>
+                                                                        
+                                                                            <pre class="code-block">Connection:&nbsp;keep-alive</pre>
+                                                                        
+                                                                    
+                                                                </td>
+                                                            </tr>
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                            <tr class='error' status='error'>
+                                                                <td class='status error' title='json' alt='error'><i
+                                                                        class='material-icons'>low_priority</i></td>
+                                                                
+                                                                    <td class='timestamp'>json</td>
+                                                                
+                                                                <td class='step-details'>
+                                                                    
+                                                                        
+                                                                            <pre>{"code": "1000", "data": [{"appUrl": null, "content": "\u5927\u795e\u5927\u795e", "entityId": null, "entityType": 0, "isRead": false, "messageId": 32, "receiveTime": null, "title": "\u5012\u8428\u5927\u795e", "understandEnabled": false, "webUrl": null}, {"appUrl": null, "content": "1233590", "entityId": null, "entityType": 0, "isRead": false, "messageId": 31, "receiveTime": null, "title": "1234", "understandEnabled": false, "webUrl": null}, {"appUrl": null, "content": "\u6d4b\u8bd52222", "entityId": null, "entityType": 0, "isRead": false, "messageId": 30, "receiveTime": null, "title": "\u6d4b\u8bd5111", "understandEnabled": false, "webUrl": null}, {"appUrl": null, "content": "ceshi1222223333333333", "entityId": null, "entityType": 0, "isRead": false, "messageId": 29, "receiveTime": null, "title": "ceshi1111222222222222", "understandEnabled": false, "webUrl": null}, {"appUrl": null, "content": "eeeee", "entityId": 1, "entityType": 1, "isRead": false, "messageId": 28, "receiveTime": null, "title": "qqq", "understandEnabled": false, "webUrl": null}, {"appUrl": null, "content": "556", "entityId": 1, "entityType": 1, "isRead": false, "messageId": 27, "receiveTime": null, "title": "2334", "understandEnabled": false, "webUrl": null}, {"appUrl": null, "content": "\u8bfe\u7a0b\u8be6\u60c5", "entityId": 1, "entityType": 1, "isRead": false, "messageId": 26, "receiveTime": null, "title": "\u6d4b\u8bd5\u8bfe\u7a0b", "understandEnabled": false, "webUrl": null}, {"appUrl": null, "content": "\u5fae\u84dd\u7684\u5929\u7a7a\u6709\u597d\u7684\u559c\u7231\u641c\u54e6\u554a\u63a5\u5fae\u84dd\u7684\u5929\u7a7a\u6709\u597d\u7684\u559c\u7231\u641c\u54e6\u554a\u63a5\u5fae\u84dd\u7684\u5929\u7a7a\u6709\u597d\u7684\u559c\u7231\u641c\u54e6\u554a\u63a5\u5fae\u84dd\u7684\u5929\u7a7a\u6709\u597d\u7684\u559c\u7231\u641c\u54e6\u554a\u63a5\u5fae\u84dd\u7684\u5929\u7a7a\u6709\u597d\u7684\u559c\u7231\u641c\u54e6\u554a\u63a5\u5fae\u84dd\u7684\u5929\u7a7a\u6709\u597d\u7684\u559c\u7231\u641c\u54e6\u554a\u63a5\u5fae\u84dd\u7684\u5929\u7a7a\u6709\u597d\u7684\u559c\u7231\u641c", "entityId": 26, "entityType": 3, "isRead": false, "messageId": 25, "receiveTime": null, "title": "\u5fae\u84dd\u7684\u5929\u7a7a\u6709\u597d\u7684\u559c\u7231\u641c\u54e6\u554a\u63a5", "understandEnabled": false, "webUrl": null}, {"appUrl": null, "content": "\u8fd9\u662f\u6458\u8981", "entityId": 19, "entityType": 1, "isRead": false, "messageId": 24, "receiveTime": null, "title": "\u6253\u626b\u6253\u626b\u6253\u626b1", "understandEnabled": false, "webUrl": null}, {"appUrl": null, "content": "\u8fd9\u662f\u6458\u8981", "entityId": 19, "entityType": 1, "isRead": false, "messageId": 23, "receiveTime": null, "title": "\u6253\u626b\u6253\u626b\u6253\u626b2", "understandEnabled": false, "webUrl": null}, {"appUrl": null, "content": "\u8fd9\u662f\u6458\u8981", "entityId": null, "entityType": 0, "isRead": false, "messageId": 22, "receiveTime": null, "title": "\u6253\u626b\u6253\u626b\u6253\u626b3", "understandEnabled": false, "webUrl": null}, {"appUrl": null, "content": "\u662f\u5927\u6cd5\u5b98\u6c34\u7535\u8d39\u683c\u5f0f\u7684", "entityId": 2, "entityType": 1, "isRead": false, "messageId": 21, "receiveTime": null, "title": "\u662f\u5927\u6cd5\u5b98\u6c34\u7535\u8d39", "understandEnabled": false, "webUrl": null}, {"appUrl": null, "content": "\u597d\u6d88\u606f\u597d\u6d88\u606f\u597d\u6d88\u606f\u597d\u6d88\u606f\u597d\u6d88\u606f\u597d\u6d88\u606f", "entityId": null, "entityType": 4, "isRead": false, "messageId": 20, "receiveTime": null, "title": "\u597d\u6d88\u606f\u597d\u6d88\u606f", "understandEnabled": false, "webUrl": null}, {"appUrl": null, "content": "\u7231\u7684\u5927dad\u751f\u751f\u4e16\u4e16\u751f\u751f\u4e16\u4e16\u751f\u751f\u4e16\u4e16\u6b7b\u6b7b\u6b7b\u6b7b\u6b7b\u6b7b\u6b7b\u6b7b\u6b7b\u6b7b\u6b7b\u6b7b\u6b7b\u6b7b\u6b7b\u6b7b\u6b7b\u6b7b", "entityId": 34, "entityType": 1, "isRead": false, "messageId": 18, "receiveTime": null, "title": "\u963f\u5927\u82cf\u6253\u6c34\u5927\u795e", "understandEnabled": false, "webUrl": null}, {"appUrl": null, "content": "\u5fd7\u613f\u670d\u52a1\u662f\u73b0\u4ee3\u793e\u4f1a\u6587\u660e\u8fdb\u6b65\u7684\u91cd\u8981\u6807\u5fd7\u3002\u4e60\u8fd1\u5e73\u603b\u4e66\u8bb0\u4e00\u76f4\u5341\u5206\u5173\u5fc3\u5fd7\u613f\u670d\u52a1\u4e8b\u4e1a\uff0c\u5c31\u5fd7\u613f\u670d\u52a1\u7ec4\u7ec7\u53d1\u5c55\u548c\u5fd7\u613f\u8005\u961f\u4f0d\u5efa\u8bbe\u4f5c\u51fa\u4e00\u7cfb\u5217\u91cd\u8981\u6307\u793a\u3002\u4ed6\u591a\u6b21\u70b9\u8d5e\u5fd7\u613f\u8005\uff0c\u5bf9\u5e7f\u5927\u5fd7\u613f\u8005\u3001\u5fd7\u613f\u670d\u52a1\u7ec4\u7ec7\u3001\u5fd7\u613f\u670d\u52a1\u5de5\u4f5c\u8005\u63d0\u51fa\u6bb7\u5207\u5e0c\u671b\u3002", "entityId": null, "entityType": 0, "isRead": false, "messageId": 16, "receiveTime": null, "title": "ll\u8fd9\u6837\u52c9\u52b1\u5fd7\u613f\u8005", "understandEnabled": false, "webUrl": null}, {"appUrl": null, "content": "\u836f\u836f\uff0c\u5207\u514b\u95f9\uff0c\u6211\u8bf4\u9e21\u86cb\u4f60\u8bf4\u8981\u3002", "entityId": 3, "entityType": 1, "isRead": false, "messageId": 15, "receiveTime": null, "title": "\u65b0\u7684\u4e00\u8f6e\u6d3b\u52a8\u6765\u4e5f", "understandEnabled": false, "webUrl": null}, {"appUrl": null, "content": "\u836f\u836f\uff0c\u5207\u514b\u95f9\uff0c\u6211\u8bf4\u9e21\u86cb\u4f60\u8bf4\u8981\u3002", "entityId": 6, "entityType": 1, "isRead": false, "messageId": 14, "receiveTime": null, "title": "\u6211\u8bf4\u9e21\u86cb\u4f60\u8bf4\u8981\u3002", "understandEnabled": false, "webUrl": null}, {"appUrl": null, "content": "AboutCG\u4e0a\u65b0\u5566\uff0cO(\u2229_\u2229)O\u54c8\u54c8~", "entityId": 22, "entityType": 3, "isRead": false, "messageId": 12, "receiveTime": null, "title": "AboutCG\u4e0a\u65b0\u5566", "understandEnabled": false, "webUrl": null}, {"appUrl": null, "content": "\u676d\u5dde\u53d1\u5e03\u66b4\u96e8\u9ec4\u8272\u9884\u8b66 \u5317\u5c71\u8def\u79ef\u6c34\u4e25\u91cd", "entityId": null, "entityType": 0, "isRead": false, "messageId": 9, "receiveTime": null, "title": "\u676d\u5dde\u53d1\u5e03\u66b4\u96e8\u9ec4\u8272\u9884\u8b66", "understandEnabled": false, "webUrl": null}, {"appUrl": null, "content": "\u8fd1\u65e5\uff0c\u9ea6\u80af\u9521\u5168\u7403\u7814\u7a76\u9662\u53d1\u8868\u62a5\u544a\u6307\u51fa\uff0c\u4e2d\u56fd\u5728\u878d\u5165\u4e16\u754c\u7ecf\u6d4e\u7684\u5386\u7a0b\u4e2d\u53d6\u5f97\u957f\u8db3\u53d1\u5c55\uff0c\u5e76\u5df2\u6210\u4e3a\u5177\u6709\u5168\u7403\u5f71\u54cd\u529b\u7684\u8d38\u6613\u5927\u56fd\uff0c\u4e16\u754c\u5bf9\u4e2d\u56fd\u7ecf\u6d4e\u7684\u4f9d\u5b58\u5ea6\u4e0a\u5347\u3002\u62a5\u544a\u663e\u793a\uff0c2000\u5e74\u52302017\u5e74\uff0c\u4e16\u754c\u5bf9\u4e2d\u56fd\u7ecf\u6d4e\u7684\u7efc\u5408\u4f9d\u5b58\u5ea6\u6307\u6570\u4ece0.4\u9010\u6b65\u589e\u957f\u52301.2\uff1b", "entityId": 7, "entityType": 1, "isRead": false, "messageId": 7, "receiveTime": null, "title": "\u4e2d\u56fd\u7ecf\u6d4e\u5728\u9ad8\u8d28\u91cf\u53d1\u5c55\u7684\u5927\u9053", "understandEnabled": false, "webUrl": null}, {"appUrl": null, "content": "\u4e2d\u65b0\u793e\u5170\u5dde7\u670810\u65e5\u7535 (\u8bb0\u8005 \u4e01\u601d)\u4e2d\u56fd\u6559\u80b2\u90e8\u8d22\u52a1\u53f8\u526f\u53f8\u957f\u8d75\u5efa\u519b10\u65e5\u5728\u5170\u5dde\u53ec\u5f00\u7684\u6559\u80b2\u90e8\u65b0\u95fb\u53d1\u5e03\u4f1a\u4e0a\u4ecb\u7ecd\u79f0\uff0c2018\u5e74\u5168\u56fd\u8d44\u52a9\u5404\u7c7b\u5bb6\u5ead\u7ecf\u6d4e\u56f0\u96be\u5b66\u751f\u8fd11\u4ebf\u4eba\u6b21\uff0c\u4e2d\u56fd\u57fa\u672c\u505a\u5230\u4e86\u5bb6\u5ead\u7ecf\u6d4e\u56f0\u96be\u5b66\u751f\u201c\u5e94\u52a9\u5c3d\u52a9\u201d\uff0c\u6709\u529b\u5730\u4fdd\u969c\u4e86\u516c\u6c11\u7684\u53d7\u6559\u80b2\u6743", "entityId": 25, "entityType": 3, "isRead": false, "messageId": 6, "receiveTime": null, "title": "2018\u5e74\u8d44\u52a9\u5404\u7c7b\u5bb6\u5ead\u7ecf\u6d4e\u56f0\u96be\u5b66\u751f", "understandEnabled": false, "webUrl": null}, {"appUrl": null, "content": "\u4e3d\u6c5f\u53e4\u57ce\uff0c\u662f\u91c7\u98ce\u6d3b\u52a8\u4e2d\u5fc5\u4e0d\u53ef\u5c11\u7684\u4e00\u7ad9\u3002\u8d70\u8fc7\u53e4\u57ce\u6c34\u8f66\uff0c\u8e0f\u4e0a\u77f3\u677f\u8def\uff0c\u5c31\u8fdb\u4e86\u4e3d\u6c5f\u53e4\u57ce\u3002\u56db\u65b9\u8857\u4e0a\u7684\u9752\u77f3\u677f\u8fd8\u5728\u8bc9\u8bf4\u7740\u8336\u9a6c\u53e4\u9053\u7684\u5f80\u65e5\u5c81\u6708\uff0c5G\u8986\u76d6\u4e4b\u4e0b\u7684\u57ce\u533a\u5df2\u6309\u637a\u4e0d\u4f4f\u8054\u63a5\u4e2d\u5916\u3001\u6c9f\u901a\u4e16\u754c\u7684\u6fc0\u60c5\u3002", "entityId": 23, "entityType": 3, "isRead": false, "messageId": 4, "receiveTime": null, "title": "\u4e3d\u6c5f\u662f\u4e00\u4e2a\u8ba9\u4eba\u5ff5\u5ff5\u4e0d\u5fd8\u7684\u5730\u65b9", "understandEnabled": false, "webUrl": null}, {"appUrl": null, "content": "\u7ecf\u6d4e\u6fc0\u52b1\u5851\u9020\u4e86\u7236\u6bcd\u80b2\u513f\u7684\u65b9\u5f0f\u3002\u5f53\u4e0d\u5e73\u7b49\u7a0b\u5ea6\u4e0a\u5347\u4f7f\u5f97\u6559\u80b2\u7684\u91cd\u8981\u6027\u4e0a\u5347\u65f6\uff0c\u7236\u6bcd\u901a\u8fc7\u9009\u62e9\u5bc6\u96c6\u578b\u6559\u517b\u65b9\u5f0f\u4ee5\u5e2e\u52a9\u5b69\u5b50\u53d6\u5f97\u6210\u529f\u3002\u6211\u4eec\u53d1\u73b0\u80b2\u513f\u7ecf\u6d4e\u5b66\u80fd\u591f\u5f88\u597d\u5730\u89e3\u91ca\u8fc7\u53bb30\u5e74\u4e2d\u80b2\u513f\u7684\u603b\u4f53\u53d8\u5316\uff1a\u5728\u4e0d\u5e73\u7b49\u5927\u5e45\u4e0a\u5347\u65f6\uff0c\u201c\u864e\u5988\u201d\u201c\u864e\u7238\u201d\u548c\u201c\u76f4\u5347\u673a\u80b2\u513f", "entityId": 4, "entityType": 1, "isRead": false, "messageId": 3, "receiveTime": null, "title": "\u6536\u5165\u4e0d\u5e73\u7b49\u6c34\u5e73\u5f71\u54cd\u7236\u6bcd\u80b2\u513f\u7684\u65b9\u5f0f", "understandEnabled": false, "webUrl": null}, {"appUrl": null, "content": "\u636e\u5fae\u4fe1\u516c\u4f17\u53f7\u201c\u5e7f\u5dde\u9ec4\u57d4\u53d1\u5e03\u201d8\u65e5\u6d88\u606f\uff0c2019\u5e74\u8df3\u7ef3\u4e16\u754c\u676f\u8d5b\uff08\u632a\u5a01\uff09\u4e8e7\u67082\u65e5-7\u670812\u65e5\u5728\u5965\u65af\u9646\u4e3e\u884c\u3002\u5e7f\u5dde\u4e1c\u835f\u82b1\u56ed\u5c0f\u5b6620\u540d\u8df3\u7ef3\u961f\u5458\u4e0e\u6765\u81ea\u5168\u56fd\u5404\u5730\u768418\u652f\u961f\u4f0d\u5171\u540c\u7ec4\u5efa\u4e2d\u56fd\u8df3\u7ef3\u56fd\u5bb6\u961f\uff0c\u51fa\u5f812019\u5e74WJR\u8df3\u7ef3\u4e16\u754c\u676f\u8d5b\u3002", "entityId": 23, "entityType": 3, "isRead": false, "messageId": 2, "receiveTime": null, "title": "\u4e2d\u56fd\u5c0f\u5b66\u751f\u8df3\u7ef3\u4e16\u754c\u676f\u52c7\u593a60\u679a\u91d1\u724c", "understandEnabled": false, "webUrl": null}, {"appUrl": null, "content": "7\u67089\u65e5\uff0c\u4e2d\u592e\u548c\u56fd\u5bb6\u673a\u5173\u515a\u7684\u5efa\u8bbe\u5de5\u4f5c\u4f1a\u8bae\u5728\u5317\u4eac\u53ec\u5f00\u3002\u4e60\u8fd1\u5e73\u51fa\u5e2d\u4f1a\u8bae\u5e76\u53d1\u8868\u91cd\u8981\u8bb2\u8bdd\uff0c\u7cbe\u8f9f\u8bba\u8ff0\u4e86\u52a0\u5f3a\u548c\u6539\u8fdb\u4e2d\u592e\u548c\u56fd\u5bb6\u673a\u5173\u515a\u7684\u5efa\u8bbe\u7684\u91cd\u5927\u610f\u4e49\uff0c\u6df1\u523b\u9610\u660e\u4e86\u65b0\u5f62\u52bf\u4e0b\u4e2d\u592e\u548c\u56fd\u5bb6\u673a\u5173\u515a\u7684\u5efa\u8bbe\u7684\u4f7f\u547d\u4efb\u52a1\u3001\u91cd\u70b9\u5de5\u4f5c\u3001\u5173\u952e\u4e3e\u63aa\u3002", "entityId": null, "entityType": 4, "isRead": false, "messageId": 1, "receiveTime": null, "title": "KK\u6293\u8fd9\u4e2a\u91cd\u8981\u98ce\u5411\u6807", "understandEnabled": false, "webUrl": null}], "message": "\u6210\u529f"}</pre>
+                                                                        
+                                                                    
+                                                                </td>
+                                                            </tr>
+                                                        
+                                                    
+
+                                                    <tr class='pass' status='pass'>
+                                                        <td class='status pass' title='断言' alt='pass'><i
+                                                                class='material-icons'>low_priority</i></td>
+                                                        <td class='timestamp'>Validators</td>
+                                                        <td >
+                                                                <table id="checkvalue" >
+                                                                <tr>
+                                                                    <th >check</th>
+                                                                    <th>comparator</th>
+                                                                    <th>expect value</th>
+                                                                    <th>actual value</th>
+                                                                    <th>result</th>
+                                                                </tr>
+                                                                
+                                                                <tr>
+                                                                    <td ></td>
+                                                                    <td></td>
+                                                                    <td></td>
+                                                                    <td></td>
+                                                                    
+                                                                </tr>
+                                                                
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+
+                                                    <tr class='info' status='info'>
+                                                        <td class='status info' title='info' alt='info'><i
+                                                                class='material-icons'>low_priority</i></td>
+                                                        <td class='timestamp'>Statistics</td>
+                                                        <td class='step-details'>
+                                                            <div>
+                                                                content_size(bytes): 7467
+                                                            </div>
+                                                            <div>
+                                                                response_time(ms): 68.96
+                                                            </div>
+                                                            <div>
+                                                                elapsed(ms): 59.733
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+
+                                                    
+                                                    </tbody>
+                                                
+                                                </table>
+                                        
+                                    </div>
+                                    
+                                </div>
+                                </li>
+                                
+                                
+                                
+                                    
+                                        <li class='node level-1 leaf pass' status='pass'
+                                            test-id='testcase description_/home_8'>
+                                            
+                                <div class='collapsible-header'>
+                                    <div class='node-name'>/home</div>
+                                    <span class='node-duration'>response_time: 792.53 ms</span>
+                                    
+                                        <span class='test-status right pass'>pass</span>
+                                    
+
+                                </div>
+                                <div class='collapsible-body'>
+                                    
+                                    
+                                    <div class='node-steps'>
+                                        
+                                            <table class='bordered table-results'>
+                                                <thead>
+                                                <tr>
+                                                    <th>Status</th>
+                                                    <th>Params</th>
+                                                    <th>Details</th>
+                                                </tr>
+                                                </thead>
+                                                
+                                                    
+                                                    <tbody>
+                                                    <tr class='info' status='info'>
+                                                        <td class='status info' title='接口地址' alt='info'><i
+                                                                class='material-icons'>low_priority</i></td>
+                                                        <td class='timestamp'>url</td>
+                                                        <td class='step-details'>https://w3-test.aboutcg.org/home</td>
+                                                    </tr>
+                                                    
+                                                    <tr class='info' status='info'>
+                                                        <td class='status info' title='请求方式' alt='info'><i
+                                                                class='material-icons'>low_priority</i></td>
+                                                        <td class='timestamp'>method</td>
+                                                        <td class='step-details'>GET</td>
+                                                    </tr>
+                                                    
+                                                    <tr class='info' status='info'>
+                                                        <td class='status info' title='状态码' alt='info'><i
+                                                                class='material-icons'>low_priority</i></td>
+                                                        <td class='timestamp'>status_code</td>
+                                                        <td class='step-details'>200</td>
+                                                    </tr>
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                            <tr class='warning' status='warning'>
+                                                                <td class='status warning' title='headers' alt='warning'><i
+                                                                        class='material-icons'>low_priority</i></td>
+                                                                
+                                                                    <td class='timestamp'>req_header</td>
+                                                                
+                                                                <td class='step-details'>
+                                                                    
+                                                                        
+                                                                            <div>Date:&nbsp;Mon, 07 Dec 2020 08:32:38 GMT</div>
+                                                                        
+                                                                            <div>Content-Type:&nbsp;text/html; charset=utf-8</div>
+                                                                        
+                                                                            <div>Transfer-Encoding:&nbsp;chunked</div>
+                                                                        
+                                                                            <div>Server:&nbsp;nginx/1.16.1</div>
+                                                                        
+                                                                            <div>X-Powered-By:&nbsp;Express</div>
+                                                                        
+                                                                            <div>ETag:&nbsp;&#34;224b9-qeGbPvzuA2gqtpifqIts20NUNzs&#34;</div>
+                                                                        
+                                                                            <div>Accept-Ranges:&nbsp;none</div>
+                                                                        
+                                                                            <div>Vary:&nbsp;Accept-Encoding</div>
+                                                                        
+                                                                            <div>Content-Encoding:&nbsp;gzip</div>
+                                                                        
+                                                                            <div>Connection:&nbsp;keep-alive</div>
+                                                                        
+                                                                    
+                                                                </td>
+                                                            </tr>
+                                                        
+                                                    
+                                                    
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                            <tr class='error' status='error'>
+                                                                <td class='status error' title='headers' alt='error'><i
+                                                                        class='material-icons'>low_priority</i></td>
+                                                                
+                                                                    <td class='timestamp'>rsp_header</td>
+                                                                
+                                                                <td class='step-details'>
+                                                                    
+                                                                        
+                                                                            <pre class="code-block">Date:&nbsp;Mon, 07 Dec 2020 08:32:38 GMT</pre>
+                                                                        
+                                                                            <pre class="code-block">Content-Type:&nbsp;text/html; charset=utf-8</pre>
+                                                                        
+                                                                            <pre class="code-block">Transfer-Encoding:&nbsp;chunked</pre>
+                                                                        
+                                                                            <pre class="code-block">Server:&nbsp;nginx/1.16.1</pre>
+                                                                        
+                                                                            <pre class="code-block">X-Powered-By:&nbsp;Express</pre>
+                                                                        
+                                                                            <pre class="code-block">ETag:&nbsp;"224b9-qeGbPvzuA2gqtpifqIts20NUNzs"</pre>
+                                                                        
+                                                                            <pre class="code-block">Accept-Ranges:&nbsp;none</pre>
+                                                                        
+                                                                            <pre class="code-block">Vary:&nbsp;Accept-Encoding</pre>
+                                                                        
+                                                                            <pre class="code-block">Content-Encoding:&nbsp;gzip</pre>
+                                                                        
+                                                                            <pre class="code-block">Connection:&nbsp;keep-alive</pre>
+                                                                        
+                                                                    
+                                                                </td>
+                                                            </tr>
+                                                        
+                                                    
+                                                        
+                                                    
+                                                        
+                                                            <tr class='error' status='error'>
+                                                                <td class='status error' title='text' alt='error'><i
+                                                                        class='material-icons'>low_priority</i></td>
+                                                                
+                                                                    <td class='timestamp'>text</td>
+                                                                
+                                                                <td class='step-details'>
+                                                                    
+                                                                        
+                                                                            <pre>&lt;!doctype html&gt;
+&lt;html data-n-head-ssr&gt;
+  &lt;head &gt;
+    &lt;title&gt;ABOUTCG在线课堂 | 高端CG教育&lt;/title&gt;&lt;meta data-n-head=&#34;ssr&#34; charset=&#34;utf-8&#34;&gt;&lt;meta data-n-head=&#34;ssr&#34; data-hid=&#34;keywords&#34; name=&#34;keywords&#34; content=&#34;%s&#34;&gt;&lt;meta data-n-head=&#34;ssr&#34; data-hid=&#34;description&#34; name=&#34;description&#34; content=&#34;%s&#34;&gt;&lt;meta data-n-head=&#34;ssr&#34; name=&#34;renderer&#34; content=&#34;webkit&#34;&gt;&lt;meta data-n-head=&#34;ssr&#34; name=&#34;format-detection&#34; content=&#34;address=no, date=no, email=no, telephone=no&#34;&gt;&lt;meta data-n-head=&#34;ssr&#34; name=&#34;msapplication-tap-highlight&#34; content=&#34;no&#34;&gt;&lt; ... OMITTED 134820 CHARACTORS ...</pre>
+                                                                        
+                                                                    
+                                                                </td>
+                                                            </tr>
+                                                        
+                                                    
+
+                                                    <tr class='pass' status='pass'>
+                                                        <td class='status pass' title='断言' alt='pass'><i
+                                                                class='material-icons'>low_priority</i></td>
+                                                        <td class='timestamp'>Validators</td>
+                                                        <td >
+                                                                <table id="checkvalue" >
+                                                                <tr>
+                                                                    <th >check</th>
+                                                                    <th>comparator</th>
+                                                                    <th>expect value</th>
+                                                                    <th>actual value</th>
+                                                                    <th>result</th>
+                                                                </tr>
+                                                                
+                                                                <tr>
+                                                                    <td ></td>
+                                                                    <td></td>
+                                                                    <td></td>
+                                                                    <td></td>
+                                                                    
+                                                                </tr>
+                                                                
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+
+                                                    <tr class='info' status='info'>
+                                                        <td class='status info' title='info' alt='info'><i
+                                                                class='material-icons'>low_priority</i></td>
+                                                        <td class='timestamp'>Statistics</td>
+                                                        <td class='step-details'>
+                                                            <div>
+                                                                content_size(bytes): 140473
+                                                            </div>
+                                                            <div>
+                                                                response_time(ms): 792.53
+                                                            </div>
+                                                            <div>
+                                                                elapsed(ms): 772.452
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+
+                                                    
+                                                    </tbody>
+                                                
+                                                </table>
+                                        
+                                    </div>
+                                    
+                                </div>
+                                </li>
+                                
+                            </ul>
+                        </div>
+                    
+                </ul>
+            </div>
+        </div>
+        <!-- subview left -->
+
+        <div class='subview-right left'>
+            <div class='view-summary'>
+                <h6 class='test-name'></h6>
+
+                <div id='step-filters' class="right">
+                    <span status="pass" alt="pass" title="pass"><a href='#!' onclick="step_filter(this.type)" type="pass"><i class="material-icons green-text">check_circle</i></a></span>
+                    <span status="fail" alt="fail" title="fail"><a href='#!' onclick="step_filter(this.type)" type="fail"><i
+                            class="material-icons red-text">cancel</i></a></span>
+                    <span class="text-lighten-1" status="error" alt="error" title="error"><a href='#!' onclick="step_filter(this.type)" type="error"><i
+                            class="material-icons pink-text ">error</i></a></span>
+                    <span status="skip" alt="skip" title="skip"><a href='#!' onclick="step_filter(this.type)" type="skip"><i
+                            class="material-icons teal-text">redo</i></a></span>
+                    <span status="clear" alt="Clear filters" title="Clear filters"><a href='#!' onclick="step_filter(this.type)" type="clear"><i
+                            class="material-icons">clear</i></a></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- subview right -->
+    <!-- test view -->
+    <div id='category-view' class='view hide'>
+
+        <section id='controls'>
+            <div class='controls grey lighten-4'>
+                <!-- search -->
+                <div class='chip transparent' alt='Search Tests' title='Search Tests'>
+                    <a href="#" class='search-div'>
+                        <i class='material-icons'>search</i> Search
+                    </a>
+
+                    <div class='input-field left hide'>
+                        <input style="color: red;" id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
+                    </div>
+
+                </div>
+                <!-- search -->
+            </div>
+        </section>
+
+        <div class='subview-left left'>
+
+            <div class='view-summary'>
+                <h5>Categories</h5>
+                <ul id='category-collection' class='category-collection'>
+
+                    <li class='category displayed active'>
+                        <div class='category-heading'>
+                            <span class='category-name'>All TESTCASES</span>
+                            <span class='category-status right'>
+							    <span class='label pass'>1 </span>
+                                
+                                </span>
+                        </div>
+                        <div class='category-content hide'>
+                            <div class='category-status-counts'>
+                                <span class='label green accent-4 white-text'>Passed: 8</span>
+                                <span class='label red lighten-1 white-text'>Failed: 0</span>
+                                <span class='label blue lighten-1 white-text'>Errored: 0</span>
+                                <span class="label yellow darken-2 white-text">Skipped: 0</span>
+                            </div>
+
+                            <div class='category-tests'>
+                                <table class='bordered table-results'>
+                                    <thead>
+                                    <tr>
+                                        <th>Timestamp</th>
+                                        <th>TestName</th>
+                                        <th>Status</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    
+                                        <tr style="border: 1px solid #49cc90; background-color: rgba(73, 204, 144, .1)">
+                                            <td>2.605 s</td>
+                                            <td class='linked'
+                                                test-id='testcase description_1'>testcase description</td>
+                                            
+                                                <td><span class='test-status pass'>pass</span></td>
+                                            
+
+                                        </tr>
+                                        
+                                            <tr>
+                                                <td>1044.38 ms</td>
+                                                <td class='linked'
+                                                    test-id='testcase description_1'>/auth/auth/login</td>
+                                                
+                                                    <td><span class='test-status pass'>pass</span></td>
+                                                
+                                            </tr>
+                                        
+                                            <tr>
+                                                <td>36.98 ms</td>
+                                                <td class='linked'
+                                                    test-id='testcase description_2'>/api/auth/message/sendSmsCode</td>
+                                                
+                                                    <td><span class='test-status pass'>pass</span></td>
+                                                
+                                            </tr>
+                                        
+                                            <tr>
+                                                <td>29.98 ms</td>
+                                                <td class='linked'
+                                                    test-id='testcase description_3'>/api/auth/checkSmsCode</td>
+                                                
+                                                    <td><span class='test-status pass'>pass</span></td>
+                                                
+                                            </tr>
+                                        
+                                            <tr>
+                                                <td>28.98 ms</td>
+                                                <td class='linked'
+                                                    test-id='testcase description_4'>/api/auth/getLoginValidToken</td>
+                                                
+                                                    <td><span class='test-status pass'>pass</span></td>
+                                                
+                                            </tr>
+                                        
+                                            <tr>
+                                                <td>70.96 ms</td>
+                                                <td class='linked'
+                                                    test-id='testcase description_5'>/api/api/member/info</td>
+                                                
+                                                    <td><span class='test-status pass'>pass</span></td>
+                                                
+                                            </tr>
+                                        
+                                            <tr>
+                                                <td>56.97 ms</td>
+                                                <td class='linked'
+                                                    test-id='testcase description_6'>/api/api/member/cart/getCart</td>
+                                                
+                                                    <td><span class='test-status pass'>pass</span></td>
+                                                
+                                            </tr>
+                                        
+                                            <tr>
+                                                <td>68.96 ms</td>
+                                                <td class='linked'
+                                                    test-id='testcase description_7'>/api/api/member/homepageMessages</td>
+                                                
+                                                    <td><span class='test-status pass'>pass</span></td>
+                                                
+                                            </tr>
+                                        
+                                            <tr>
+                                                <td>792.53 ms</td>
+                                                <td class='linked'
+                                                    test-id='testcase description_8'>/home</td>
+                                                
+                                                    <td><span class='test-status pass'>pass</span></td>
+                                                
+                                            </tr>
+                                        
+                                    
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </li>
+
+                    
+                        <li class='category displayed active'>
+                            <div class='category-heading'>
+                                <span class='category-name'>testcase description</span>
+                                <span class='category-status right'>
+							    <span class='label pass'>8 </span>
+                                    
+                                    
+                                    
+                                </span>
+                            </div>
+                            <div class='category-content hide'>
+                                <div class='category-status-counts'>
+                                    <span class='label green accent-4 white-text'>Passed: 8</span>
+                                    <span class='label red lighten-1 white-text'>Failed: 0</span>
+                                    <span class='label blue lighten-1 white-text'>Errored: 0</span>
+                                    <span class="label yellow darken-2 white-text">Skipped: 0</span>
+                                </div>
+
+                                <div class='category-tests'>
+                                    <table class='bordered table-results'>
+                                        <thead>
+                                        <tr>
+                                            <th>Timestamp</th>
+                                            <th>TestName</th>
+                                            <th>Status</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        
+                                            <tr>
+                                                <td>1044.38</td>
+                                                <td class='linked'
+                                                    test-id='testcase description_1'>/auth/auth/login</td>
+                                                
+                                                    <td><span class='test-status pass'>pass</span></td>
+                                                
+                                            </tr>
+                                        
+                                            <tr>
+                                                <td>36.98</td>
+                                                <td class='linked'
+                                                    test-id='testcase description_2'>/api/auth/message/sendSmsCode</td>
+                                                
+                                                    <td><span class='test-status pass'>pass</span></td>
+                                                
+                                            </tr>
+                                        
+                                            <tr>
+                                                <td>29.98</td>
+                                                <td class='linked'
+                                                    test-id='testcase description_3'>/api/auth/checkSmsCode</td>
+                                                
+                                                    <td><span class='test-status pass'>pass</span></td>
+                                                
+                                            </tr>
+                                        
+                                            <tr>
+                                                <td>28.98</td>
+                                                <td class='linked'
+                                                    test-id='testcase description_4'>/api/auth/getLoginValidToken</td>
+                                                
+                                                    <td><span class='test-status pass'>pass</span></td>
+                                                
+                                            </tr>
+                                        
+                                            <tr>
+                                                <td>70.96</td>
+                                                <td class='linked'
+                                                    test-id='testcase description_5'>/api/api/member/info</td>
+                                                
+                                                    <td><span class='test-status pass'>pass</span></td>
+                                                
+                                            </tr>
+                                        
+                                            <tr>
+                                                <td>56.97</td>
+                                                <td class='linked'
+                                                    test-id='testcase description_6'>/api/api/member/cart/getCart</td>
+                                                
+                                                    <td><span class='test-status pass'>pass</span></td>
+                                                
+                                            </tr>
+                                        
+                                            <tr>
+                                                <td>68.96</td>
+                                                <td class='linked'
+                                                    test-id='testcase description_7'>/api/api/member/homepageMessages</td>
+                                                
+                                                    <td><span class='test-status pass'>pass</span></td>
+                                                
+                                            </tr>
+                                        
+                                            <tr>
+                                                <td>792.53</td>
+                                                <td class='linked'
+                                                    test-id='testcase description_8'>/home</td>
+                                                
+                                                    <td><span class='test-status pass'>pass</span></td>
+                                                
+                                            </tr>
+                                        
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </li>
+                    
+                </ul>
+            </div>
+        </div>
+
+        <div class='subview-right left'>
+            <div class='view-summary'>
+                <h5 class='category-name'></h5>
+            </div>
+        </div>
+    </div>
+    <!-- category view -->
+
+
+    <!-- testrunner-logs view -->
+    <!-- container -->
+</div>
+<script>
+    var test_suite_success = 0;
+    
+        
+            test_suite_success = test_suite_success + 1;
+        
+
+    
+
+    var statusGroup = {
+        passParent: 8,
+        failParent: 0,
+        fatalParent: 0,
+        errorParent: 0,
+        warningParent: 0,
+        skipParent: 0,
+        exceptionsParent: 0,
+
+        passChild: test_suite_success,
+        failChild: 1 -test_suite_success,
+        fatalChild: 0,
+        errorChild: 0,
+        warningChild: 0,
+        skipChild: 0,
+        infoChild: 0,
+        exceptionsChild: 0,
+
+        passGrandChild: 0,
+        failGrandChild: 0,
+        fatalGrandChild: 0,
+        errorGrandChild: 0,
+        warningGrandChild: 0,
+        skipGrandChild: 0,
+        infoGrandChild: 0,
+        exceptionsGrandChild: 0,
+    };
+
+</script>
+
+<script src='http://extentreports.com/resx/dist/js/extent.js' type='text/javascript'></script>
+
+
+<script type='text/javascript'>
+    $(window).off("keydown");
+</script>
+
+<script type="text/javascript">
+    function filters_testcases(mytype){
+        testcases = document.getElementById('test-collection').getElementsByClassName('displayed')
+        if (mytype == 'pass'){
+            for (var i=0,len=testcases.length;i < len; i++){
+                if (testcases[i].getAttribute('bdd') == 'false'){
+                    testcases[i].style.display="none"
+                }else{
+                    testcases[i].style.display="block"
+                }
+            }
+        }else if(mytype == 'fail'){
+            for (var i=0,len=testcases.length;i < len; i++){
+                if (testcases[i].getAttribute('bdd') == 'true'){
+                    testcases[i].style.display="none"
+                }else{
+                    testcases[i].style.display="block"
+                }
+            }
+        }else if(mytype == 'clear'){
+            for (var i=0,len=testcases.length;i < len; i++){
+                testcases[i].style.display="block"
+            }
+        }
+    };
+</script>>
+<script type="text/javascript">
+    function step_filter(mytype){
+        testcontents = document.getElementsByClassName('test-content')
+        teststeps = testcontents[testcontents.length - 1].getElementsByTagName('li');
+        stepfilters = document.getElementById('step-filters').getElementsByTagName('span');
+        for (var i=0, len=stepfilters.length;i<len;i++){
+            if (stepfilters[i].getAttribute('status') != mytype){
+                stepfilters[i].classList.remove('border-bottom-highlight')
+            }
+        }
+        for (var i=0,len=teststeps.length;i < len; i++){
+            if (mytype != 'clear'){
+                if (teststeps[i].getAttribute('status') == mytype){
+                    teststeps[i].style.display="block"
+                }else{
+                    teststeps[i].style.display="none"
+                }
+            }else{
+                teststeps[i].style.display="block"
+            }
+        }
+    }
+</script>>
+</body>
+
+</html>
