@@ -3,6 +3,9 @@ import requests
 import random
 from faker import Faker
 import pymysql
+import os
+os.environ['http_proxy'] = 'http://127.0.0.1:8888'
+os.environ['https_proxy'] = 'https://127.0.0.1:8888'
 
 #获取商会网站登录的token
 def get_access_token():

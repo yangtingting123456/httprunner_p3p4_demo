@@ -4,7 +4,7 @@ base_url: ${ENV(BASE_URL)}
 output: base_url,access_token
 request:
   method: POST
-  url: "/member/login"
+  url: "commerceapi/member/login"
   json:
     name: "admin"
     password: "e10adc3949ba59abbe56e057f20f883e"

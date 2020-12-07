@@ -27,9 +27,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4a831319-a7d4-4d06-94ae-160a84d32ca4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/start_run.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testcases/homework/ 2020-9462682" beforeDir="false" afterPath="$PROJECT_DIR$/testcases/homework/2020-9462682/ 2020-9462682" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/get_access_token.yml" beforeDir="false" afterPath="$PROJECT_DIR$/api/get_access_token.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/debugtalk.py" beforeDir="false" afterPath="$PROJECT_DIR$/debugtalk.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/api/get_access_token.parse_failed.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/testcases/member_updatepassword_success.parse_failed.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testcases/20201204/acg-login-interfaces.yml" beforeDir="false" afterPath="$PROJECT_DIR$/testcases/20201204/acg-login-interfaces.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testcases/homework/2020-9462682/ 2020-9462682" beforeDir="false" afterPath="$PROJECT_DIR$/testcases/homework/2020-9462682/ 2020-9462682" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,7 +90,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/reports/templates" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -101,11 +107,11 @@
       <recent name="E:\pythonwokebook\python-unittest-requests-htmlrunner\httprunner_demo\testsuites\20201201" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\pythonwokebook\python-unittest-requests-htmlrunner\httprunner_demo\reports\templates" />
       <recent name="E:\pythonwokebook\python-unittest-requests-htmlrunner\httprunner_demo\testcases\20201201" />
       <recent name="E:\pythonwokebook\python-unittest-requests-htmlrunner\httprunner_demo\testsuites\20201130" />
       <recent name="E:\pythonwokebook\python-unittest-requests-htmlrunner\httprunner_demo\api\20201130" />
       <recent name="E:\pythonwokebook\python-unittest-requests-htmlrunner\httprunner_demo\testsuites\20201127" />
-      <recent name="E:\pythonwokebook\python-unittest-requests-htmlrunner\httprunner_demo\api" />
     </key>
   </component>
   <component name="RunManager" selected="Python.start_run">
@@ -231,7 +237,7 @@
       <workItem from="1606701033085" duration="12000" />
       <workItem from="1606701496460" duration="36136000" />
       <workItem from="1606874773135" duration="20070000" />
-      <workItem from="1607071425973" duration="3367000" />
+      <workItem from="1607071425973" duration="24068000" />
     </task>
     <task id="LOCAL-00001" summary="aa">
       <created>1604479417441</created>
@@ -408,7 +414,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607071001726</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="charles 脚本录制777">
+      <created>1607076129046</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1607076129046</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -462,7 +475,8 @@
     <MESSAGE value="httprunner 乱码解决" />
     <MESSAGE value="httprunner 乱码解决2222" />
     <MESSAGE value="charles 脚本录制" />
-    <option name="LAST_COMMIT_MESSAGE" value="charles 脚本录制" />
+    <MESSAGE value="charles 脚本录制777" />
+    <option name="LAST_COMMIT_MESSAGE" value="charles 脚本录制777" />
   </component>
   <component name="WindowStateProjectService">
     <state x="674" y="113" key="#Project_Structure" timestamp="1606701233397">
@@ -473,14 +487,14 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="772" y="168" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1604479732318" />
-    <state x="1021" y="321" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1607065319197">
+    <state x="1021" y="321" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1607326016928">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1021" y="321" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1607065319197" />
-    <state x="839" y="107" key="CommitChangelistDialog2" timestamp="1607070996362">
+    <state x="1021" y="321" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1607326016928" />
+    <state x="839" y="107" key="CommitChangelistDialog2" timestamp="1607076119547">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="839" y="107" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1607070996362" />
+    <state x="839" y="107" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1607076119547" />
     <state x="869" y="124" width="955" height="840" key="DiffContextDialog" timestamp="1606386403436">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -489,34 +503,34 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1175" y="267" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1607071144628" />
-    <state width="1127" height="431" key="GridCell.Tab.0.bottom" timestamp="1607073458402">
+    <state width="873" height="198" key="GridCell.Tab.0.bottom" timestamp="1607321929369">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1127" height="431" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1607073458402" />
-    <state width="1127" height="431" key="GridCell.Tab.0.center" timestamp="1607073458402">
+    <state width="873" height="198" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1607321929369" />
+    <state width="873" height="198" key="GridCell.Tab.0.center" timestamp="1607321929363">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1127" height="431" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1607073458402" />
-    <state width="1127" height="431" key="GridCell.Tab.0.left" timestamp="1607073458401">
+    <state width="873" height="198" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1607321929363" />
+    <state width="873" height="198" key="GridCell.Tab.0.left" timestamp="1607321929358">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1127" height="431" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1607073458401" />
-    <state width="1127" height="431" key="GridCell.Tab.0.right" timestamp="1607073458402">
+    <state width="873" height="198" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1607321929358" />
+    <state width="873" height="198" key="GridCell.Tab.0.right" timestamp="1607321929367">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1127" height="431" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1607073458402" />
-    <state x="349" y="172" key="SettingsEditor" timestamp="1606729679537">
+    <state width="873" height="198" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1607321929367" />
+    <state x="349" y="172" key="SettingsEditor" timestamp="1607328579659">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="349" y="172" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1606729679537" />
+    <state x="349" y="172" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1607328579659" />
     <state x="983" y="231" key="VCS.ChangeListViewerDialog" timestamp="1606989314948">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="983" y="231" key="VCS.ChangeListViewerDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1606989314948" />
-    <state x="982" y="246" key="Vcs.Push.Dialog.v2" timestamp="1607071016994">
+    <state x="982" y="246" key="Vcs.Push.Dialog.v2" timestamp="1607076128110">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="982" y="246" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1607071016994" />
+    <state x="982" y="246" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1607076128110" />
     <state x="1029" y="261" key="VcsDiffUtil.ChangesDialog" timestamp="1604483406822">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
