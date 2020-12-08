@@ -21,14 +21,24 @@
         <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
         <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
         <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:origin/dev" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </select>
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4a831319-a7d4-4d06-94ae-160a84d32ca4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/testcases/20201207/phpwind_operator01.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/reports/1607418935.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/reports/1607419081.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/reports/1607419225.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/reports/1607419380.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/reports/1607419627.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testcases/20201207/phpwind_operator02.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testcases/20201207/phpwind_operator03.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testsuites/20201207/phpwind_testsuit.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testcases/homework/2020-9498174" beforeDir="false" afterPath="$PROJECT_DIR$/testcases/homework/2020--9498174/2020-9498174" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/1607329956.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/1607330653.html" beforeDir="false" afterPath="$PROJECT_DIR$/reports/1607420094.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testcases/20201207/phpwind_operator01.yml" beforeDir="false" afterPath="$PROJECT_DIR$/testcases/20201207/phpwind_operator01.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,12 +88,13 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="ASKED_MARK_IGNORED_FILES_AS_EXCLUDED" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/reports/templates" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/testcases/20201207" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -100,11 +111,11 @@
       <recent name="E:\pythonwokebook\python-unittest-requests-htmlrunner\httprunner_demo\testcases\20201304" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\pythonwokebook\python-unittest-requests-htmlrunner\httprunner_demo\testcases\20201207" />
       <recent name="E:\pythonwokebook\python-unittest-requests-htmlrunner\httprunner_demo\reports\templates" />
       <recent name="E:\pythonwokebook\python-unittest-requests-htmlrunner\httprunner_demo\testcases\20201201" />
       <recent name="E:\pythonwokebook\python-unittest-requests-htmlrunner\httprunner_demo\testsuites\20201130" />
       <recent name="E:\pythonwokebook\python-unittest-requests-htmlrunner\httprunner_demo\api\20201130" />
-      <recent name="E:\pythonwokebook\python-unittest-requests-htmlrunner\httprunner_demo\testsuites\20201127" />
     </key>
   </component>
   <component name="RunManager" selected="Python.start_run">
@@ -230,7 +241,7 @@
       <workItem from="1606701033085" duration="12000" />
       <workItem from="1606701496460" duration="36136000" />
       <workItem from="1606874773135" duration="20070000" />
-      <workItem from="1607071425973" duration="25970000" />
+      <workItem from="1607071425973" duration="47551000" />
     </task>
     <task id="LOCAL-00001" summary="aa">
       <created>1604479417441</created>
@@ -435,7 +446,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607332960691</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="phpwind_operator01.yml first commit">
+      <created>1607334701590</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1607334701590</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -450,7 +468,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/dev" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -458,6 +488,7 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="aa" />
     <MESSAGE value="6666666666666" />
     <MESSAGE value="httprunner 接口测试代码提交" />
@@ -480,7 +511,8 @@
     <MESSAGE value="charles 脚本录制777" />
     <MESSAGE value="代理设置，命令行，allure整合测试报告" />
     <MESSAGE value="allure整合测试模板提交" />
-    <option name="LAST_COMMIT_MESSAGE" value="allure整合测试模板提交" />
+    <MESSAGE value="phpwind_operator01.yml first commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="phpwind_operator01.yml first commit" />
   </component>
   <component name="WindowStateProjectService">
     <state x="674" y="113" key="#Project_Structure" timestamp="1606701233397">
@@ -495,10 +527,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1021" y="321" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1607326016928" />
-    <state x="839" y="107" key="CommitChangelistDialog2" timestamp="1607332951403">
+    <state x="839" y="107" key="CommitChangelistDialog2" timestamp="1607334691135">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="839" y="107" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1607332951403" />
+    <state x="839" y="107" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1607334691135" />
     <state x="869" y="124" width="955" height="840" key="DiffContextDialog" timestamp="1606386403436">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -531,10 +563,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="983" y="231" key="VCS.ChangeListViewerDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1607332974680" />
-    <state x="982" y="246" key="Vcs.Push.Dialog.v2" timestamp="1607333009017">
+    <state x="982" y="246" key="Vcs.Push.Dialog.v2" timestamp="1607334754218">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="982" y="246" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1607333009017" />
+    <state x="982" y="246" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1607334754218" />
     <state x="1029" y="261" key="VcsDiffUtil.ChangesDialog" timestamp="1604483406822">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -559,10 +591,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1070" y="391" key="git4idea.rebase.GitRebaseDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1604630997406" />
-    <state x="948" y="366" key="git4idea.ui.GitTagDialog" timestamp="1607332989344">
+    <state x="948" y="366" key="git4idea.ui.GitTagDialog" timestamp="1607334744720">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="948" y="366" key="git4idea.ui.GitTagDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1607332989344" />
+    <state x="948" y="366" key="git4idea.ui.GitTagDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1607334744720" />
     <state x="1248" y="303" key="refactoring.ChangeSignatureDialog" timestamp="1605260552459">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

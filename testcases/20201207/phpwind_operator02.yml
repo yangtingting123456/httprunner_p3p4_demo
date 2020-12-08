@@ -1,0 +1,77 @@
+- config:
+    name: 注册
+    base_url: http://47.107.178.45
+    export:
+      - token
+      - state
+      - name
+      - email
+- test:
+    name: 打开注册页面
+    request:
+        url: /phpwind/
+        method: GET
+        params:
+          m: u
+          c: register
+    extract:
+        token: name="csrf_token" value="(.+?)"/>
+    validate:
+        - eq : ['status_code',200]
+
+- test:
+    name: 注册操作
+    request:
+      url: /phpwind/index.php
+      method: POST
+      headers:
+        User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:80.0) Gecko/20100101 Firefox/80.0
+        Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+        Content-Type: application/x-www-form-urlencoded
+      params:
+        m: u
+        c: register
+        a: dorun
+      data:
+        username: $name
+        password: yang12346
+        repassword: yang12346
+        email: $email
+        csrf_token: $token
+    validate:
+      - eq: ['status_code',200]
+
+- test:
+    name: 增加积分
+    request:
+        url:  /phpwind/index.php
+        method: POST
+        params:
+          m: u
+          a: showcredit
+        data:
+          csrf_token: $token
+        headers:
+          User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:80.0) Gecko/20100101 Firefox/80.0
+          Accept: application/json, text/javascript, */*; q=0.01
+          Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+          X-Requested-With: XMLHttpRequest
+    extract:
+      state: content.state
+    validate:
+        - eq : ['status_code',200]
+        - eq: [$state,'success']
+- test:
+    name: 退出
+    request:
+        url:  /phpwind/index.php
+        method: POST
+        params:
+          m: u
+          c: login
+          a: logout
+        headers:
+          User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:80.0) Gecko/20100101 Firefox/80.0
+          Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+    validate:
+        - eq : ['status_code',200]

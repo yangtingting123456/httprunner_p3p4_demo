@@ -1,0 +1,15 @@
+#参数化
+config:
+  name: 注册参数haul
+
+testcases:
+  phpwind_operator02:
+    testcase: testcases/20201207/phpwind_operator02.yml
+    parameters:
+      name-email: [
+      ['p3p43','p3p43@qq.com'],
+      ['p3p433','p3p433@qq.com'],
+      ['p3p4333','p3p4333@qq.com'],
+      ['p3p43333','p3p43333@qq.com'],
+      ['p3p433333','p3p433333@qq.com']
+      ]
