@@ -7,8 +7,8 @@
         - _statu
         - state
         - username
-#        - refresh
-#        - state
+        - refresh
+        - state
 - test:
     name: 打开首页获取csrf_token
     request:
@@ -56,7 +56,6 @@
     validate:
         - eq: ['status_code',200]
 
-
 - test:
     name: 登录成功后进入主页
     request:
@@ -71,31 +70,3 @@
         - eq: ['status_code',200]
         - eq: [$username,'test01']
 
-
-
-
-- test:
-    name: 发帖
-    request:
-        url: /phpwind/index.php?c=post&a=doadd&_json=1&fid=65
-        method: POST
-        headers:
-            User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:80.0) Gecko/20100101 Firefox/80.0
-            Accept: application/json, text/javascript, */*; q=0.01
-            X-Requested-With: XMLHttpRequest
-            Content-Type: multipart/form-data;boundary=---------------------------24809324401468408688203127902
-        files:
-            atc_title: [null,'自动发帖标题011']
-            atc_content: [null,'自动发帖内容011']
-            pid: [null,null]
-            tid: [null,null]
-            special: [null,default]
-            reply_notice: [null,1]
-            csrf_token: [null,$csrf_token]
-#    extract:
-#        refresh: content.refresh
-#        state: content.state
-    validate:
-        - eq: ['status_code',200]
-#        - eq: [$refresh,'true']
-#        - eq: [$state,'success']
